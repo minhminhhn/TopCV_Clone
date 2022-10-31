@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>TopCV - CV xịn việc làm chất - Tạo CV & Tìm việc miễn phí</title>
+
+    <link rel="stylesheet" href="./v2/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" as="style" href="./v3/css/perfect-scrollbar.css">
+
+    <link rel="stylesheet" href="./v3/css/notification.css?v=1.0.9">
+    <link rel="stylesheet" href="/static/v4/css/style.479d17923b117bf7.css">
+    <link rel="stylesheet" href="/static/v4/css/app.min.17482ab77c017e10.css">
+    <link rel="stylesheet" href="/static/v4/css/icon.min.5d7e3e3f97d92afb.css">
+
+    <link rel="stylesheet" href="/static/v4/css/components/desktop/welcome.min.70c67aaa89562d5e.css">
+    <style>
+        .btn-topcv-primary {
+            background-color: #00B14F;
+            color: white;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        .banner {
+            background-color: #f6fbf9 !important;
+        }
+
+        .banner h1 {
+            color: #00B14F;
+            font-weight: bold;
+            font-size: 44px
+        }
+
+        .banner h3 {
+            color: #00B14F;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 22px;
+        }
+
+        .banner p {
+            color: #212F3F;
+            font-size: 16px;
+            margin-top: 20px;
+            font-weight: 600
+        }
+
+        .banner>.row {
+            width: 85%;
+            margin: auto;
+        }
+
+        .banner>.container>.row>div:first-child {
+            padding-top: 20px;
+        }
+
+        .btn-green {
+            background: #00B14F;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-yellow {
+            background: #f1c40e;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn-custom:hover,
+        .btn-custom:active {
+            color: white;
+        }
+
+        .btn-custom {
+            border-radius: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: white !important;
+            padding: 10px 20px 10px;
+            margin-right: 20px;
+            width: 200px;
+        }
+
+        @media only screen and (max-device-width: 992px) and (min-device-width: 900px) {
+            .banner .row {
+                text-align: center !important;
+            }
+        }
+
+        @media only screen and (max-device-width: 900px) {
+            .banner h1 {
+                font-size: 26px;
+            }
+
+            .banner .row {
+                text-align: center !important;
+                margin-bottom: 30px;
+            }
+
+            .banner h3 {
+                font-size: 18px;
+            }
+
+            .banner>.container>.row>div:first-child {
+                padding-top: 30px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .btn-custom {
+                margin-bottom: 0px;
+                font-size: 16px;
+                width: 160px;
+            }
+
+            .banner img {
+                display: inline-block;
+            }
+        }
+
+        nav.navbar.navbar-default {
+            background: #f6fbf9;
+        }
+
+        .btn-topcv-primary {
+            background-color: #00B14F;
+            color: white;
+        }
+
+        .btn-topcv-primary:hover,
+        .btn-topcv-primary:focus,
+        .btn-topcv-primary:active {
+            background-color: #27AE60;
+            color: white;
+        }
+
+        .btn-yellow:focus,
+        .btn-yellow:active,
+        .btn-yellow:hover {
+            color: white;
+            background: #e2b400;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="./v2/js/jquery-1.11.2.min.js"></script>
+    <script src="./v2/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./v3/js/common.js"></script>
+    <noscript id="deferred-styles">
+        <link rel='stylesheet' href="./v3/plugins/slick/slick.css">
+        <link rel='stylesheet' href="./v3/plugins/slick/slick-theme.css">
+        <link rel="stylesheet" href="./v3/plugins/icon8/css/styles.min.css">
+        <link rel='stylesheet' href="./v2/plugins/select2/css/select2.min.css" />
+        <link rel="stylesheet" href="./v3/css/support-ticket.css">
+        <link rel="preload" as="style" onload="this.rel='stylesheet'" href="./v3/css/jquery-ui.css">
+    </noscript>
+    <script>
+        var loadDeferredStyles = function () {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function () {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <div id="page-welcome">
+        <section id="box-group">
+            <nav class="navbar ta-top">
+                <div class="container-fluid px-30">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="navbar-left__item group
+            ">
+                            <a href="https://www.topcv.vn/viec-lam">
+                                Việc làm
+                            </a>
+                            <div class="group-hover:menu navbar__item__dropdown-menu">
+                                <ul class="nav navbar-menu">
+                                    <li class="navbar-menu__item ">
+                                        <a href="https://www.topcv.vn/viec-lam" class="text-sm">
+                                            <i class="icon fa-light fa-radar"></i>
+                                            Tìm việc làm
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item ">
+                                        <a href="https://www.topcv.vn/viec-lam-phu-hop" class="text-sm">
+                                            <i class="icon fa-light fa-user-robot"></i>
+                                            Việc làm phù hợp
+                                            <span class="label label-primary">Hot</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item ">
+                                        <a href="https://www.topcv.vn/viec-lam-it" class="text-sm">
+                                            <i class="fa-light fa-display-code icon"></i>
+                                            Việc làm IT <span class="label label-new">Mới</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item ">
+                                        <a href="https://www.topcv.vn/viec-lam-senior" class="text-sm">
+                                            <i class="icon fa-light fa-user-graduate"></i>
+                                            Việc làm Senior <span class="label label-new">Mới</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="navbar-left__item group
+            ">
+                            <a href=" https://www.topcv.vn/mau-cv " title="Hồ sơ & CV">
+                                Hồ sơ & CV
+                            </a>
+                            <div class="group-hover:menu navbar__item__dropdown-menu">
+                                <ul class="nav navbar-menu">
+                                    <li class="navbar-menu__item mb-0 border-b-1 ">
+                                        <a href="https://www.topcv.vn/mau-cv" class="text-sm">
+                                            <i class="icon fa-light fa-id-badge"></i>
+                                            Mẫu CV
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item mt-0 ">
+                                        <a href="https://www.topcv.vn/mau-cover-letter-thu-xin-viec" class="text-sm">
+                                            <i class="icon fa-light fa-file-lines"></i>
+                                            Mẫu Cover Letter
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item mb-0 border-b-1">
+                                        <a href="https://reviewcv.topcv.vn/" target="_blank" class="text-sm">
+                                            <i class="icon fa-light fa-file-user"></i>
+                                            Dịch vụ tư vấn CV
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item mt-0">
+                                        <a href="https://www.topcv.vn/huong-dan-viet-cv-chi-tiet-theo-nganh"
+                                            target="_blank" class="text-sm">
+                                            <i class="icon fa-light fa-file-user"></i>
+                                            Hướng dẫn viết CV theo ngành nghề
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item ">
+                                        <a href="https://www.topcv.vn/profile" class="text-sm">
+                                            <i class="icon fa-light fa-pager"></i>
+                                            TopCV Profile
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="navbar-left__item group
+            ">
+                            <a href="https://www.topcv.vn/cong-ty" title="Công ty">
+                                Công ty
+                            </a>
+                            <div class="group-hover:menu navbar__item__dropdown-menu">
+                                <ul class="nav navbar-menu">
+                                    <li class="navbar-menu__item mb-0 border-b-1 ">
+                                        <a href="https://www.topcv.vn/cong-ty" class="text-sm">
+                                            <i class="icon fa-light fa-building"></i>
+                                            Danh sách công ty
+                                        </a>
+                                    </li>
+                                    <li class="navbar-menu__item mt-0 ">
+                                        <a href="https://www.topcv.vn/top-cong-ty" class="text-sm">
+                                            <i class="icon fa-light fa-buildings"></i>
+                                            Top công ty
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="navbar-right__item">
+                            <a class="btn btn-outline-primary" href="/login/login.html">
+                                Đăng nhập
+                            </a>
+                        </li>
+                        <li class="navbar-right__item">
+                            <a class="btn btn-primary" href="https://www.topcv.vn/sign-up">
+                                Đăng ký
+                            </a>
+                        </li>
+                        <li class="navbar-right__item">
+                            <a type="button" class="btn btn-dark"
+                                href="https://tuyendung.topcv.vn?utm_source=epl-btn&utm_medium=nav-button&utm_campaign=click-tracking"
+                                target="_blank">
+                                Đăng tuyển & tìm hồ sơ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="box-search-job">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12">
+                            <h1>Tìm việc phù hợp với bạn</h1>
+                            <div class="form-search">
+                                <form id="frm-search-job" method="GET" onsubmit="return false;">
+                                    <div class="box-search">
+                                        <div class="col-input">
+                                            <span class="input-icon"><i class="icons8-zoom"></i></span>
+                                            <input class="form-control input-search ui-autocomplete-input border-hover"
+                                                value="" placeholder="Tên công việc, vị trí bạn muốn ứng tuyển ..."
+                                                id="keyword" autocomplete="off">
+                                            <div class="search-advanced">
+                                                <div class="d-flex mt-2">
+                                                    <p class="title">Tìm kiếm nâng cao</p>
+                                                    <button type="button" class="less-content"><i
+                                                            class="fa-light fa-arrow-up-from-dotted-line d-none"></i>
+                                                        Thu gọn</button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="form-group">
+                                                        <select name="category" id="category"
+                                                            class="form-control select2">
+                                                            <option value="">Ngành nghề</option>
+                                                            <option value="10101">&nbsp;An toàn lao động</option>
+                                                            <option value="10102">&nbsp;Bán hàng kỹ thuật</option>
+                                                            <option value="10103">&nbsp;Bán lẻ / bán sỉ</option>
+                                                            <option value="10004">&nbsp;Báo chí / Truyền hình</option>
+                                                            <option value="10006">&nbsp;Bảo hiểm</option>
+                                                            <option value="10104">&nbsp;Bảo trì / Sữa chữa</option>
+                                                            <option value="10007">&nbsp;Bất động sản</option>
+                                                            <option value="10003">&nbsp;Biên / Phiên dịch</option>
+                                                            <option value="10005">&nbsp;Bưu chính - Viễn thông</option>
+                                                            <option value="10008">&nbsp;Chứng khoán / Vàng / Ngoại tệ
+                                                            </option>
+                                                            <option value="10010">&nbsp;Cơ khí / Chế tạo / Tự động hóa
+                                                            </option>
+                                                            <option value="10009">&nbsp;Công nghệ cao</option>
+                                                            <option value="10052">&nbsp;Công nghệ Ô tô</option>
+                                                            <option value="10131">&nbsp;Công nghệ thông tin</option>
+                                                            <option value="10012">&nbsp;Dầu khí/Hóa chất</option>
+                                                            <option value="10013">&nbsp;Dệt may / Da giày</option>
+                                                            <option value="10111">&nbsp;Địa chất / Khoáng sản</option>
+                                                            <option value="10014">&nbsp;Dịch vụ khách hàng</option>
+                                                            <option value="10016">&nbsp;Điện / Điện tử / Điện lạnh
+                                                            </option>
+                                                            <option value="10015">&nbsp;Điện tử viễn thông</option>
+                                                            <option value="10011">&nbsp;Du lịch</option>
+                                                            <option value="10110">&nbsp;Dược phẩm / Công nghệ sinh học
+                                                            </option>
+                                                            <option value="10017">&nbsp;Giáo dục / Đào tạo</option>
+                                                            <option value="10113">&nbsp;Hàng cao cấp</option>
+                                                            <option value="10020">&nbsp;Hàng gia dụng</option>
+                                                            <option value="10021">&nbsp;Hàng hải</option>
+                                                            <option value="10022">&nbsp;Hàng không</option>
+                                                            <option value="10117">&nbsp;Hàng tiêu dùng</option>
+                                                            <option value="10023">&nbsp;Hành chính / Văn phòng</option>
+                                                            <option value="10018">&nbsp;Hoá học / Sinh học</option>
+                                                            <option value="10019">&nbsp;Hoạch định/Dự án</option>
+                                                            <option value="10024">&nbsp;In ấn / Xuất bản</option>
+                                                            <option value="10025">&nbsp;IT Phần cứng / Mạng</option>
+                                                            <option value="10026">&nbsp;IT phần mềm</option>
+                                                            <option value="10028">&nbsp;Kế toán / Kiểm toán</option>
+                                                            <option value="10027">&nbsp;Khách sạn / Nhà hàng</option>
+                                                            <option value="10120">&nbsp;Kiến trúc</option>
+                                                            <option value="10001">&nbsp;Kinh doanh / Bán hàng</option>
+                                                            <option value="10048">&nbsp;Logistics</option>
+                                                            <option value="10036">&nbsp;Luật/Pháp lý</option>
+                                                            <option value="10029">&nbsp;Marketing / Truyền thông / Quảng
+                                                                cáo</option>
+                                                            <option value="10030">&nbsp;Môi trường / Xử lý chất thải
+                                                            </option>
+                                                            <option value="10031">&nbsp;Mỹ phẩm / Trang sức</option>
+                                                            <option value="10032">&nbsp;Mỹ thuật / Nghệ thuật / Điện ảnh
+                                                            </option>
+                                                            <option value="10033">&nbsp;Ngân hàng / Tài chính</option>
+                                                            <option value="11000">&nbsp;Ngành nghề khác</option>
+                                                            <option value="10132">&nbsp;NGO / Phi chính phủ / Phi lợi
+                                                                nhuận</option>
+                                                            <option value="10034">&nbsp;Nhân sự</option>
+                                                            <option value="10035">&nbsp;Nông / Lâm / Ngư nghiệp</option>
+                                                            <option value="10124">&nbsp;Phi chính phủ / Phi lợi nhuận
+                                                            </option>
+                                                            <option value="10037">&nbsp;Quản lý chất lượng (QA/QC)
+                                                            </option>
+                                                            <option value="10038">&nbsp;Quản lý điều hành</option>
+                                                            <option value="10125">&nbsp;Sản phẩm công nghiệp</option>
+                                                            <option value="10126">&nbsp;Sản xuất</option>
+                                                            <option value="10130">&nbsp;Spa / Làm đẹp</option>
+                                                            <option value="10127">&nbsp;Tài chính / Đầu tư</option>
+                                                            <option value="10039">&nbsp;Thiết kế đồ họa</option>
+                                                            <option value="10128">&nbsp;Thiết kế nội thất</option>
+                                                            <option value="10042">&nbsp;Thời trang</option>
+                                                            <option value="10129">&nbsp;Thư ký / Trợ lý</option>
+                                                            <option value="10043">&nbsp;Thực phẩm / Đồ uống</option>
+                                                            <option value="10046">&nbsp;Tổ chức sự kiện / Quà tặng
+                                                            </option>
+                                                            <option value="10045">&nbsp;Tư vấn</option>
+                                                            <option value="10047">&nbsp;Vận tải / Kho vận</option>
+                                                            <option value="10050">&nbsp;Xây dựng</option>
+                                                            <option value="10049">&nbsp;Xuất nhập khẩu</option>
+                                                            <option value="10051">&nbsp;Y tế / Dược</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="company-field-advanced"
+                                                            id="company-field-advanced" class="form-control select2">
+                                                            <option value="">Lĩnh vực công ty</option>
+                                                            <option value="33">&nbsp;Agency (Design/Development)
+                                                            </option>
+                                                            <option value="34">&nbsp;Agency (Marketing/Advertising)
+                                                            </option>
+                                                            <option value="11">&nbsp;Bán lẻ - Hàng tiêu dùng - FMCG
+                                                            </option>
+                                                            <option value="4">&nbsp;Bảo hiểm</option>
+                                                            <option value="20">&nbsp;Bảo trì / Sửa chữa</option>
+                                                            <option value="5">&nbsp;Bất động sản</option>
+                                                            <option value="13">&nbsp;Chứng khoán</option>
+                                                            <option value="23">&nbsp;Cơ khí</option>
+                                                            <option value="30">&nbsp;Cơ quan nhà nước</option>
+                                                            <option value="31">&nbsp;Du lịch</option>
+                                                            <option value="6">&nbsp;Dược phẩm / Y tế / Công nghệ sinh
+                                                                học</option>
+                                                            <option value="21">&nbsp;Điện tử / Điện lạnh</option>
+                                                            <option value="36">&nbsp;Giải trí</option>
+                                                            <option value="26">&nbsp;Giáo dục / Đào tạo</option>
+                                                            <option value="10">&nbsp;In ấn / Xuất bản</option>
+                                                            <option value="7">&nbsp;Internet / Online</option>
+                                                            <option value="37">&nbsp;IT - Phần cứng</option>
+                                                            <option value="1">&nbsp;IT - Phần mềm</option>
+                                                            <option value="2">&nbsp;Kế toán / Kiểm toán</option>
+                                                            <option value="10000">&nbsp;Khác</option>
+                                                            <option value="28">&nbsp;Logistics - Vận tải</option>
+                                                            <option value="3">&nbsp;Luật</option>
+                                                            <option value="8">&nbsp;Marketing / Truyền thông / Quảng cáo
+                                                            </option>
+                                                            <option value="18">&nbsp;Môi trường</option>
+                                                            <option value="35">&nbsp;Năng lượng</option>
+                                                            <option value="15">&nbsp;Ngân hàng</option>
+                                                            <option value="9">&nbsp;Nhà hàng / Khách sạn</option>
+                                                            <option value="16">&nbsp;Nhân sự</option>
+                                                            <option value="38">&nbsp;Nông Lâm Ngư nghiệp</option>
+                                                            <option value="12">&nbsp;Sản xuất</option>
+                                                            <option value="39">&nbsp;Tài chính</option>
+                                                            <option value="17">&nbsp;Thiết kế / kiến trúc</option>
+                                                            <option value="22">&nbsp;Thời trang</option>
+                                                            <option value="27">&nbsp;Thương mại điện tử</option>
+                                                            <option value="29">&nbsp;Tổ chức phi lợi nhuận</option>
+                                                            <option value="32">&nbsp;Tự động hóa</option>
+                                                            <option value="24">&nbsp;Tư vấn</option>
+                                                            <option value="25">&nbsp;Viễn thông</option>
+                                                            <option value="14">&nbsp;Xây dựng</option>
+                                                            <option value="19">&nbsp;Xuất nhập khẩu</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="city" id="city" class="form-control select2">
+                                                            <option value="">Địa điểm</option>
+                                                            <option value="1">&nbsp;Hà Nội</option>
+                                                            <option value="2">&nbsp;Hồ Chí Minh</option>
+                                                            <option value="3">&nbsp;Bình Dương</option>
+                                                            <option value="4">&nbsp;Bắc Ninh</option>
+                                                            <option value="5">&nbsp;Đồng Nai</option>
+                                                            <option value="6">&nbsp;Hưng Yên</option>
+                                                            <option value="7">&nbsp;Hải Dương</option>
+                                                            <option value="8">&nbsp;Đà Nẵng</option>
+                                                            <option value="9">&nbsp;Hải Phòng</option>
+                                                            <option value="10">&nbsp;An Giang</option>
+                                                            <option value="11">&nbsp;Bà Rịa-Vũng Tàu</option>
+                                                            <option value="12">&nbsp;Bắc Giang</option>
+                                                            <option value="13">&nbsp;Bắc Kạn</option>
+                                                            <option value="14">&nbsp;Bạc Liêu</option>
+                                                            <option value="15">&nbsp;Bến Tre</option>
+                                                            <option value="16">&nbsp;Bình Định</option>
+                                                            <option value="17">&nbsp;Bình Phước</option>
+                                                            <option value="18">&nbsp;Bình Thuận</option>
+                                                            <option value="19">&nbsp;Cà Mau</option>
+                                                            <option value="20">&nbsp;Cần Thơ</option>
+                                                            <option value="21">&nbsp;Cao Bằng</option>
+                                                            <option value="22">&nbsp;Cửu Long</option>
+                                                            <option value="23">&nbsp;Đắk Lắk</option>
+                                                            <option value="24">&nbsp;Đắc Nông</option>
+                                                            <option value="25">&nbsp;Điện Biên</option>
+                                                            <option value="26">&nbsp;Đồng Tháp</option>
+                                                            <option value="27">&nbsp;Gia Lai</option>
+                                                            <option value="28">&nbsp;Hà Giang</option>
+                                                            <option value="29">&nbsp;Hà Nam</option>
+                                                            <option value="30">&nbsp;Hà Tĩnh</option>
+                                                            <option value="31">&nbsp;Hậu Giang</option>
+                                                            <option value="32">&nbsp;Hoà Bình</option>
+                                                            <option value="33">&nbsp;Khánh Hoà</option>
+                                                            <option value="34">&nbsp;Kiên Giang</option>
+                                                            <option value="35">&nbsp;Kon Tum</option>
+                                                            <option value="36">&nbsp;Lai Châu</option>
+                                                            <option value="37">&nbsp;Lâm Đồng</option>
+                                                            <option value="38">&nbsp;Lạng Sơn</option>
+                                                            <option value="39">&nbsp;Lào Cai</option>
+                                                            <option value="40">&nbsp;Long An</option>
+                                                            <option value="41">&nbsp;Miền Bắc</option>
+                                                            <option value="42">&nbsp;Miền Nam</option>
+                                                            <option value="43">&nbsp;Miền Trung</option>
+                                                            <option value="44">&nbsp;Nam Định</option>
+                                                            <option value="45">&nbsp;Nghệ An</option>
+                                                            <option value="46">&nbsp;Ninh Bình</option>
+                                                            <option value="47">&nbsp;Ninh Thuận</option>
+                                                            <option value="48">&nbsp;Phú Thọ</option>
+                                                            <option value="49">&nbsp;Phú Yên</option>
+                                                            <option value="50">&nbsp;Quảng Bình</option>
+                                                            <option value="51">&nbsp;Quảng Nam</option>
+                                                            <option value="52">&nbsp;Quảng Ngãi</option>
+                                                            <option value="53">&nbsp;Quảng Ninh</option>
+                                                            <option value="54">&nbsp;Quảng Trị</option>
+                                                            <option value="55">&nbsp;Sóc Trăng</option>
+                                                            <option value="56">&nbsp;Sơn La</option>
+                                                            <option value="57">&nbsp;Tây Ninh</option>
+                                                            <option value="58">&nbsp;Thái Bình</option>
+                                                            <option value="59">&nbsp;Thái Nguyên</option>
+                                                            <option value="60">&nbsp;Thanh Hoá</option>
+                                                            <option value="61">&nbsp;Thừa Thiên Huế</option>
+                                                            <option value="62">&nbsp;Tiền Giang</option>
+                                                            <option value="63">&nbsp;Toàn Quốc</option>
+                                                            <option value="64">&nbsp;Trà Vinh</option>
+                                                            <option value="65">&nbsp;Tuyên Quang</option>
+                                                            <option value="66">&nbsp;Vĩnh Long</option>
+                                                            <option value="67">&nbsp;Vĩnh Phúc</option>
+                                                            <option value="68">&nbsp;Yên Bái</option>
+                                                            <option value="100">&nbsp;Nước Ngoài</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="position-advanced" id="position-advanced"
+                                                            class="form-control select2">
+                                                            <option value="">Cấp bậc</option>
+                                                            <option value="1">&nbsp;Nhân viên</option>
+                                                            <option value="2">&nbsp;Trưởng nhóm</option>
+                                                            <option value="3">&nbsp;Trưởng/Phó phòng</option>
+                                                            <option value="10">&nbsp;Quản lý / Giám sát</option>
+                                                            <option value="20">&nbsp;Trưởng chi nhánh</option>
+                                                            <option value="25">&nbsp;Phó giám đốc</option>
+                                                            <option value="30">&nbsp;Giám đốc</option>
+                                                            <option value="50">&nbsp;Thực tập sinh</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="type-advanced" id="type-advanced"
+                                                            class="form-control select2">
+                                                            <option value="">Hình thức làm việc</option>
+                                                            <option value="1">&nbsp;Toàn thời gian</option>
+                                                            <option value="3">&nbsp;Bán thời gian</option>
+                                                            <option value="5">&nbsp;Thực tập</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select name="salary-advanced" id="salary-advanced"
+                                                            class="form-control select2">
+                                                            <option value="">Mức lương</option>
+                                                            <option value="1">&nbsp;&nbsp;Dưới 3 triệu</option>
+                                                            <option value="2">&nbsp;&nbsp;3 - 5 triệu</option>
+                                                            <option value="3">&nbsp;&nbsp;5 - 7 triệu</option>
+                                                            <option value="4">&nbsp;&nbsp;7 - 10 triệu</option>
+                                                            <option value="5">&nbsp;&nbsp;10 - 12 triệu</option>
+                                                            <option value="6">&nbsp;&nbsp;12 - 15 triệu</option>
+                                                            <option value="7">&nbsp;&nbsp;15 - 20 triệu</option>
+                                                            <option value="8">&nbsp;&nbsp;20 - 25 triệu</option>
+                                                            <option value="9">&nbsp;&nbsp;25 - 30 triệu</option>
+                                                            <option value="10">&nbsp;&nbsp;Trên 30 triệu</option>
+                                                            <option value="127">&nbsp;&nbsp;Thoả thuận</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-button">
+                                            <button class="btn btn-topcv btn-search-job"><i
+                                                    class="fa-solid fa-magnifying-glass"></i> <span>Tìm việc
+                                                    ngay</span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <h4>Các công ty tuyển dụng hàng đầu trên TopCV</h4>
+                            <div id="company-top">
+                                <div class="item">
+                                    <img src="./v4/image/welcome/companies/onemoutn.png"
+                                        title="One Mount tuyển dụng tại TopCV" alt="One Mount tuyen dung tai TopCV"
+                                        class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="./v4/image/welcome/companies/prudential.png"
+                                        title="Prudential tuyển dụng tại TopCV" alt="Prudential tuyen dung tai TopCV"
+                                        class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="./v4/image/welcome/companies/fpt.png"
+                                        title="FPT Software tuyển dụng tại TopCV"
+                                        alt="FPT Software tuyen dung tai TopCV" class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="./v4/image/welcome/companies/tiki.png"
+                                        title="Tiki tuyển dụng tại TopCV" alt="Tiki tuyen dung tai TopCV"
+                                        class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="./v4/image/welcome/companies/viettel.png"
+                                        title="Viettel tuyển dụng tại TopCV" alt="Viettel tuyen dung tai TopCV"
+                                        class="img-responsive">
+                                </div>
+                                <div class="item">
+                                    <img src="./v4/image/welcome/companies/teachcombank.png"
+                                        title="Techcombank tuyển dụng tại TopCV" alt="Techcombank tuyen dung tai TopCV"
+                                        class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-12 box-search-job-image">
+                            <img src="./v4/image/welcome/image_topcv.png"
+                                title="Nhân viên tuyển dụng tại TopCV" alt="Nhan vien tuyen dung tai TopCV"
+                                class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="create-cv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box-create-cv mb-16">
+                            <div class="col-md-7 box-item">
+                                <h2>Tạo CV online ấn tượng </h2>
+                                <h3>TopCV hiện có 50+ mẫu CV chuyên nghiệp, độc đáo phù hợp với mọi ngành nghề</h3>
+                                <a href="https://www.topcv.vn/mau-cv" class="btn btn-topcv btn-search-job"
+                                    style="font-weight: bold;"><i class="fa-solid fa-plus"></i> Tạo CV ngay</a>
+                            </div>
+                            <div class="box-image">
+                                <img src="./v4/image/welcome/mau_cv.png"
+                                    alt="Tao CV online an tuong" title="Tạo CV online ấn tượng" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box-create-cv">
+                            <div class="col-md-7 box-item">
+                                <h2>Sử dụng CV sẵn có để tìm việc <label class="label label-new">Mới</label> </h2>
+                                <h3>Cách đơn giản để bắt đầu tìm việc làm tại TopCV, Nhà tuyển dụng sẽ nhìn thấy CV bạn
+                                    đã tải lên</h3>
+                                <a href="https://www.topcv.vn/upload-cv" class="btn btn-topcv btn-search-job"
+                                    style="font-weight: bold;"> <i class="fa-solid fa-upload"></i> Upload CV ngay</a>
+                            </div>
+                            <div class="box-image box-upload">
+                                <img src="./v4/image/welcome/upload-cv.png"
+                                    title="Sử dụng CV theo ngành nghề" alt="Su dung CV theo nganh nghe"
+                                    class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="list-feature-jobs">
+            <div class="container">
+                <section class="box_general" id="box-feature-jobs">
+                    
+                    <div class="box-header">
+                        <h2 class="text_ellipsis uppercase box-title">
+                            Tin tuyển dụng, việc làm tốt nhất
+                        </h2>
+                        <span class="pull-right feature-job-link"><a href="https://www.topcv.vn/viec-lam-tot-nhat"
+                                target="_blank">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a></span>
+                    </div>
+                    <div class="box-smart-filter box-smart-feature-jobs">
+                        <div class="box-smart-location">
+                            <div class="prev-location">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </div>
+                            <div class="box-smart-list-location">
+                                <div class="box-smart-item  active " data-city_id="0">
+                                    Ngẫu Nhiên
+                                </div>
+                                <div class="box-smart-item " data-city_id="1">
+                                    Hà Nội
+                                </div>
+                                <div class="box-smart-item " data-city_id="2">
+                                    Thành phố Hồ Chí Minh
+                                </div>
+                                <div class="box-smart-item " data-city_id="41">
+                                    Miền Bắc
+                                </div>
+                                <div class="box-smart-item " data-city_id="42">
+                                    Miền Nam
+                                </div>
+                            </div>
+                            <div class="next-location">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loadingg" v-if="isLoading" style="min-height: 735px;margin-bottom: 60px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                        <img src="./v4/image/loading/job-box.svg" class="img-responsive"
+                            width="340px" height="108px">
+                    </div>
+                    <div v-if="!isLoading">
+                        <div class="el-carousel feature-jobs">
+                            <div class="el-carousel-ctn" v-for="listFeatureJobs in featureJobs" v-cloak>
+                                <div class="row">
+                                    <div v-for="job in listFeatureJobs" :data-job-id="job.id"
+                                        class="col-md-4 col-sm-6 feature-job job-ta">
+                                        <div class="feature-job-item"
+                                            :class="[job.is_vip_employer ? 'bg-vip-employer' : '']">
+                                            <div class="cvo-flex">
+                                                <a :href="job.url" target="_blank">
+                                                    <div class="box-company-logo">
+                                                        <img :title="job.company.name + ' tuyển dụng tại TopCV'"
+                                                            :alt="job.company.name + ' tuyển dụng tại TopCV'"
+                                                            src=".v3/images/loading-small.gif"
+                                                            class="img-responsive lazy"
+                                                            :data-src="job.company.logo_url">
+                                                    </div>
+                                                </a>
+                                                <div class="col-title cvo-flex-grow">
+                                                    <a class="title text_ellipsis" data-toggle="tooltip"
+                                                        :title="job.title" data-placement="top" :href="job.url"
+                                                        target="_blank">
+                                                        <span v-if="job.is_vip_employer"
+                                                            class="label tag-employer-vip-home">Top</span>
+                                                        <span v-if="job.is_hot"
+                                                            class="label label-danger urgent">Hot</span>
+                                                        <span v-if="job.is_urgent"
+                                                            class="label label-warning urgent">Gấp</span>
+                                                        <span v-if="job.is_new"
+                                                            class="label label-danger new">Mới</span>
+                                                        <strong :class="[job.is_highlight ? 'highlight' : '']"
+                                                            class="underline-box-job" style="font-weight: bold;">
+                                                            {{ job.title }}
+                                                        </strong>
+                                                    </a>
+                                                    <a :href="job.company.url" target="_blank"
+                                                        class="text-silver company text_ellipsis underline-box-job"
+                                                        data-toggle="tooltip" :title="job.company.name"
+                                                        data-placement="top" data-container="body">
+                                                        {{ job.company.name }}
+                                                    </a>
+                                                </div>
+                                                <div class="col-like">
+                                                    <a
+                                                        href="javascript:showLoginPopup(null, 'Đăng nhập hoặc Đăng ký để lưu tin tuyển dụng')">
+                                                        <button class="btn-outline-hover">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-job-info">
+                                                <div class="salary text_ellipsis">{{ job.salary }}
+                                                </div>
+                                                <div v-if="job.is_remote" class="remote text_ellipsis">
+                                                    <a target="_blank" href=""
+                                                        data-toggle="tooltip"
+                                                        title="Công việc này có thể làm việc từ xa"
+                                                        data-placement="bottom" data-container="body">
+                                                        Remote
+                                                    </a>
+                                                </div>
+                                                <div v-else class="address text_ellipsis" data-html="true"
+                                                    data-toggle="tooltip" :title="job.cities" data-placement="top"
+                                                    data-container="body">
+                                                    {{ job.short_cities }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="featureJobs.length" class="feature-job-page" v-cloak>
+                        <span>Trang</span>
+                        <span class="slick-pagination">1/{{ featureJobs.length }}</span>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section id="box-category-top-professions">
+            <div class="loading">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw text-highlight"></i>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Top ngành nghề nổi bật</h2>
+                        <div class="row center-category-top-professions transition">
+                            <template v-for="categoryTopProfession in categoryTopProfessions">
+                                <div class="col-sm-4 col-xs-6">
+                                    <a :href="categoryTopProfession.access_url" target="_blank">
+                                        <div class="box-item">
+                                            <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+                                            <div class="text_ellipsis">
+                                                <h3 class="name_category">{{ categoryTopProfession.name }}</h3>
+                                                <p class="count_category">{{
+                                                    categoryTopProfession.job_category_count.toLocaleString() }} việc
+                                                    làm</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="self-growth">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Phát triển bản thân và sự nghiệp</h2>
+                        <div class="row">
+                            <div class="box-item col-md-6">
+                                <div class="box-main">
+                                    <img src="./v4/image/welcome/ic1.svg" class="img-responsive"
+                                        title="Trắc nghiệm tính cách" alt="Trac nghiem tinh cach">
+                                    <div class="">
+                                        <h3>Khám phá tính cách và năng lực bản thân</h3>
+                                        <p>Lựa chọn nghề nghiệp chính xác hơn thông qua các bài trắc nghiệm về tính
+                                            cách, khả năng giải quyết vấn đề, trí thông minh,...</p>
+                                        <div class="link">
+                                            <a class="btn-secondary-hover"
+                                                href=""
+                                                target="_blank">Trắc nghiệm MBTI</a>
+                                            <a class="btn-secondary-hover "
+                                                href=""
+                                                target="_blank">Trắc nghiệm MI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-item col-md-6">
+                                <div class="box-main">
+                                    <img src="./v4/image/welcome/ic2.svg" class="img-responsive"
+                                        alt="Tra cuu thong tin su nghiep" title="Tra cứu thông tin sự nghiệp">
+                                    <div class="">
+                                        <h3>Tra cứu thông tin sự nghiệp</h3>
+                                        <p>Dễ dàng tiếp cận và tìm hiểu về các chế độ, chính sách nhân sự cần biết thông
+                                            qua các công cụ hữu ích</p>
+                                        <div class="link">
+                                            <a class="btn-secondary-hover"
+                                                href="" target="_blank">Công cụ
+                                                tính lương Gross - Net</a>
+                                            <a class="btn-secondary-hover"
+                                                href=""
+                                                target="_blank">Công cụ tính BHTN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-item col-md-6">
+                                <div class="box-main">
+                                    <img src="./v4/image/welcome/ic3.svg" class="img-responsive"
+                                        alt="Quy y tuong TopCareer" title="Quỹ ý tưởng TopCareer">
+                                    <div class="">
+                                        <h3>Quỹ ý tưởng phát triển nghề nghiệp TopCareer</h3>
+                                        <p>Giúp học sinh, sinh viên hiểu về tầm quan trọng của giáo dục hướng nghiệp,
+                                            nhận diện nghề và nâng cao năng lực ứng tuyển</p>
+                                        <div class="link">
+                                            <a class="btn-secondary-hover" href=""
+                                                target="_blank">Tìm hiểu thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-item col-md-6">
+                                <div class="box-main">
+                                    <img src="./v4/image/welcome/ic4.svg" class="img-responsive"
+                                        alt="TopCV Contest cac khoa hoc va ki thi"
+                                        title="TopCV Contest các khóa học và kỳ thi">
+                                    <div class="">
+                                        <h3>TopCV Contest - Cổng học tập và đánh giá năng lực</h3>
+                                        <p>Cung cấp các khóa học, các kỳ thi giúp ứng viên hiểu rõ về xu hướng việc làm
+                                            và những tiêu chuẩn mới về Năng lực chuyên môn</p>
+                                        <div class="link">
+                                            <a class="btn-secondary-hover" href=""
+                                                target="_blank">Tìm hiểu thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-item col-md-6">
+                                <div class="box-main">
+                                    <img src="./v4/image/welcome/ic5.svg" class="img-responsive"
+                                        alt="Be phong su nghiep 4.0" title="Bệ phóng sự nghiệp 4.0">
+                                    <div class="">
+                                        <h3>Chương trình bệ phóng sự nghiệp 4.0</h3>
+                                        <p>Cung cấp cho sinh viên thông tin về thị trường tuyển dụng và đào tạo kỹ năng
+                                            ứng tuyển, kết nối Nhà trường và Doanh nghiệp</p>
+                                        <div class="link">
+                                            <a class="btn-secondary-hover" href="https://bephongsunghiep.topcv.vn"
+                                                target="_blank">Tìm hiểu thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer-desktop">
+            <div class="box-menu-footer">
+                <div class="container">
+                    <div class="footer-bottom-mobile text-dark-gray">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    © 2014 - 2022 <b>Công ty cổ phần TopCV Việt Nam</b> <br>
+                                    <strong>Trụ sở HN:</strong> <br> Tầng 3, 4 tòa FS - GoldSeason số 47 Nguyễn Tuân,
+                                    Thanh Xuân Trung, Thanh Xuân, Hà Nội <br>
+                                    <strong>Chi nhánh TP HCM:</strong> <br> Tầng 12, Tòa nhà Dali, 24C Phan Đăng Lưu,
+                                    Phường 6, Quận Bình Thạnh, TP Hồ Chí Minh
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <link rel="stylesheet"
+            href="./v4/components/desktop/partials/modal-accept-smart-box.f906a92d37f2611b.css">
+        <script>
+            window.isUserCityId = false;
+        </script>
+        <script>
+            window.isMobile = false;
+        </script>
+        <script>
+            window.isPageHome = true;
+        </script>
+        <link rel="stylesheet"href="/static/v4/components/desktop/partials/modal-accept-smart-box.f906a92d37f2611b.css">
+        <script src="./v3/plugins/slick/slick.min.js"></script>
+        <script src="./v2/plugins/select2/js/select2.min.js"></script>
+        <script src="./v2/plugins/select2/js/i18n/vi.js"></script>
+        <script src="./v3/js/jobs.js?v=2.0.8" type="text/javascript"></script>
+        <script src="./v3/js/jquery-ui.min.js"></script>
+        <script src="./js/jquery.cookie.js"></script>
+        <script src="./v3/js/vue.min.js"></script>
+        <script src="./v3/js/perfect-scrollbar.min.js"></script>
+        <script src="./v3/js/navigation-mobile.js?v=1.0.6"></script>
+        <script src="./v3/js/axios.js"></script>
+        <!-- <script src="/static/v4/js/components/partials/save-option-job.9d6d04890469cfd2.js"></script> -->
+        <script>
+            var vietnameseRestoreSignMap = {
+                "nhan vien kinh doanh": "nh\u00e2n vi\u00ean kinh doanh",
+                "chuyen vien kinh doanh": "chuy\u00ean vi\u00ean kinh doanh",
+                "tro ly kinh doanh": "tr\u1ee3 l\u00fd kinh doanh",
+                "nhan vien ban hang": "nh\u00e2n vi\u00ean b\u00e1n h\u00e0ng",
+                "tu van ban hang": "t\u01b0 v\u1ea5n b\u00e1n h\u00e0ng",
+                "receptionist": "receptionist",
+                "nhan vien mua hang": "nh\u00e2n vi\u00ean mua h\u00e0ng",
+                "purchasing": "purchasing",
+                "nhan vien thu mua": "nh\u00e2n vi\u00ean thu mua",
+                "office manager": "office manager",
+                "truong phong kinh doanh": "tr\u01b0\u1edfng ph\u00f2ng kinh doanh",
+                "quan ly kinh doanh": "qu\u1ea3n l\u00fd kinh doanh",
+                "tong dai vien": "t\u1ed5ng \u0111\u00e0i vi\u00ean",
+                "nhan vien goi dien": "nh\u00e2n vi\u00ean g\u1ecdi \u0111i\u1ec7n",
+                "sales manager": "sales manager",
+                "sales admin": "sales admin",
+                "giam doc dieu hanh": "gi\u00e1m \u0111\u1ed1c \u0111i\u1ec1u h\u00e0nh",
+                "giam doc du an": "gi\u00e1m \u0111\u1ed1c d\u1ef1 \u00e1n",
+                "tro ly giam doc": "tr\u1ee3 l\u00fd gi\u00e1m \u0111\u1ed1c",
+                "tro ly tong giam doc giam doc": "tr\u1ee3 l\u00fd t\u1ed5ng gi\u00e1m \u0111\u1ed1c gi\u00e1m \u0111\u1ed1c",
+                "ceo assistant": "ceo assistant",
+                "giam doc kinh doanh": "gi\u00e1m \u0111\u1ed1c kinh doanh",
+                "truong nhom kinh doanh": "tr\u01b0\u1edfng nh\u00f3m kinh doanh",
+                "sales team leader": "sales team leader",
+                "nhan vien telesales": "nh\u00e2n vi\u00ean telesales",
+                "truong phong cham soc khach hang": "tr\u01b0\u1edfng ph\u00f2ng ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng",
+                "nhan vien cham soc khach hang": "nh\u00e2n vi\u00ean ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng",
+                "cham soc khach hang": "ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng",
+                "customer service manager": "customer service manager",
+                "customer service": "customer service",
+                "telesales": "telesales",
+                "giam sat ban hang": "gi\u00e1m s\u00e1t b\u00e1n h\u00e0ng",
+                "nhan vien tu van tuyen sinh": "nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n tuy\u1ec3n sinh",
+                "nhan vien tu van": "nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n",
+                "tu van tuyen sinh": "t\u01b0 v\u1ea5n tuy\u1ec3n sinh",
+                "chuyen vien tu van": "chuy\u00ean vi\u00ean t\u01b0 v\u1ea5n",
+                "giao dich vien": "giao d\u1ecbch vi\u00ean",
+                "tu van tin dung": "t\u01b0 v\u1ea5n t\u00edn d\u1ee5ng",
+                "thuc tap sinh kinh doanh": "th\u1ef1c t\u1eadp sinh kinh doanh",
+                "dich vu khach hang": "d\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng",
+                "dai dien kinh doanh": "\u0111\u1ea1i di\u1ec7n kinh doanh",
+                "sales representative": "sales representative",
+                "quan ly nha hang": "qu\u1ea3n l\u00fd nh\u00e0 h\u00e0ng",
+                "quan ly cua hang": "qu\u1ea3n l\u00fd c\u1eeda h\u00e0ng",
+                "giao vien tieng anh": "gi\u00e1o vi\u00ean ti\u1ebfng anh",
+                "giao vien": "gi\u00e1o vi\u00ean",
+                "tro giang": "tr\u1ee3 gi\u1ea3ng",
+                "nhan vien le tan": "nh\u00e2n vi\u00ean l\u1ec5 t\u00e2n",
+                "le tan": "l\u1ec5 t\u00e2n",
+                "trinh duoc vien": "tr\u00ecnh d\u01b0\u1ee3c vi\u00ean",
+                "nhan vien hanh chinh van phong": "nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh v\u0103n ph\u00f2ng",
+                "nhan vien van phong": "nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng",
+                "truong phong hanh chinh nhan su": "tr\u01b0\u1edfng ph\u00f2ng h\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1",
+                "truong phong hanh chinh": "tr\u01b0\u1edfng ph\u00f2ng h\u00e0nh ch\u00ednh",
+                "truong phong nhan su": "tr\u01b0\u1edfng ph\u00f2ng nh\u00e2n s\u1ef1",
+                "hanh chinh nhan su": "h\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1",
+                "nhan vien hanh chinh": "nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh",
+                "nhan vien admin": "nh\u00e2n vi\u00ean admin",
+                "nhan vien hanh chinh nhan su": "nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1",
+                "tuyen dung nhan su": "tuy\u1ec3n d\u1ee5ng nh\u00e2n s\u1ef1",
+                "chuyen vien tuyen dung": "chuy\u00ean vi\u00ean tuy\u1ec3n d\u1ee5ng",
+                "thuc tap sinh nhan su": "th\u1ef1c t\u1eadp sinh nh\u00e2n s\u1ef1",
+                "nhan vien phap che": "nh\u00e2n vi\u00ean ph\u00e1p ch\u1ebf",
+                "chuyen vien phap che": "chuy\u00ean vi\u00ean ph\u00e1p ch\u1ebf",
+                "chuyen vien quan he khach hang": "chuy\u00ean vi\u00ean quan h\u1ec7 kh\u00e1ch h\u00e0ng",
+                "quan he khach hang": "quan h\u1ec7 kh\u00e1ch h\u00e0ng",
+                "nhan vien nhap lieu": "nh\u00e2n vi\u00ean nh\u1eadp li\u1ec7u",
+                "nhan vien phuc vu": "nh\u00e2n vi\u00ean ph\u1ee5c v\u1ee5",
+                "sales executive": "sales executive",
+                "sales": "sales",
+                "hanh chinh": "h\u00e0nh ch\u00ednh",
+                "nhan su": "nh\u00e2n s\u1ef1",
+                "truong phong marketing": "tr\u01b0\u1edfng ph\u00f2ng marketing",
+                "brand manager": "brand manager",
+                "marketing facebook": "marketing facebook",
+                "facebook marketing": "facebook marketing",
+                "fb marketing": "fb marketing",
+                "performance marketing": "performance marketing",
+                "digital marketing": "digital marketing",
+                "marketing online": "marketing online",
+                "online marketing": "online marketing",
+                "facebook ads": "facebook ads",
+                "content marketing": "content marketing",
+                "truong phong trade marketing": "tr\u01b0\u1edfng ph\u00f2ng trade marketing",
+                "trade marketing": "trade marketing",
+                "nhan vien marketing": "nh\u00e2n vi\u00ean marketing",
+                "chuyen vien marketing": "chuy\u00ean vi\u00ean marketing",
+                "marketing executive": "marketing executive",
+                "thuc tap sinh marketing": "th\u1ef1c t\u1eadp sinh marketing",
+                "marketing manager": "marketing manager",
+                "marketing leader": "marketing leader",
+                "truong nhom marketing": "tr\u01b0\u1edfng nh\u00f3m marketing",
+                "giam doc marketing": "gi\u00e1m \u0111\u1ed1c marketing",
+                "marketing director": "marketing director",
+                "telemarketing": "telemarketing",
+                "marketing & sales": "marketing & sales",
+                "sales & marketing": "sales & marketing",
+                "nhan vien seo": "nh\u00e2n vi\u00ean seo",
+                "content writer": "content writer",
+                "content creator": "content creator",
+                "nhan vien sang tao noi dung": "nh\u00e2n vi\u00ean s\u00e1ng t\u1ea1o n\u1ed9i dung",
+                "nhan vien chay quang cao": "nh\u00e2n vi\u00ean ch\u1ea1y qu\u1ea3ng c\u00e1o",
+                "nhan vien truyen thong": "nh\u00e2n vi\u00ean truy\u1ec1n th\u00f4ng",
+                "truyen thong noi bo": "truy\u1ec1n th\u00f4ng n\u1ed9i b\u1ed9",
+                "internal communicator": "internal communicator",
+                "truyen thong": "truy\u1ec1n th\u00f4ng",
+                "nhan vien quang cao": "nh\u00e2n vi\u00ean qu\u1ea3ng c\u00e1o",
+                "nhan vien phat trien thi truong": "nh\u00e2n vi\u00ean ph\u00e1t tri\u1ec3n th\u1ecb tr\u01b0\u1eddng",
+                "video editor": "video editor",
+                "quay dung video": "quay d\u1ef1ng video",
+                "google ads": "google ads",
+                "communication leader": "communication leader",
+                "account executive": "account executive",
+                "product coordinator": "product coordinator",
+                "nhan vien dieu phoi": "nh\u00e2n vi\u00ean \u0111i\u1ec1u ph\u1ed1i",
+                "product marketing": "product marketing",
+                "nhan vien quay phim": "nh\u00e2n vi\u00ean quay phim",
+                "marketing intern": "marketing intern",
+                "marketing": "marketing",
+                "copywriter": "copywriter",
+                "nhan vien ke toan": "nh\u00e2n vi\u00ean k\u1ebf to\u00e1n",
+                "ke toan vien": "k\u1ebf to\u00e1n vi\u00ean",
+                "ke toan truong": "k\u1ebf to\u00e1n tr\u01b0\u1edfng",
+                "ke toan tong hop": "k\u1ebf to\u00e1n t\u1ed5ng h\u1ee3p",
+                "ke toan thue": "k\u1ebf to\u00e1n thu\u1ebf",
+                "ke toan kho": "k\u1ebf to\u00e1n kho",
+                "ke toan tien luong": "k\u1ebf to\u00e1n ti\u1ec1n l\u01b0\u01a1ng",
+                "ke toan ban hang": "k\u1ebf to\u00e1n b\u00e1n h\u00e0ng",
+                "ke toan du an": "k\u1ebf to\u00e1n d\u1ef1 \u00e1n",
+                "ke toan sieu thi": "k\u1ebf to\u00e1n si\u00eau th\u1ecb",
+                "thuc tap sinh ke toan": "th\u1ef1c t\u1eadp sinh k\u1ebf to\u00e1n",
+                "ke toan cong no": "k\u1ebf to\u00e1n c\u00f4ng n\u1ee3",
+                "ke toan hanh chinh": "k\u1ebf to\u00e1n h\u00e0nh ch\u00ednh",
+                "ke toan thanh toan": "k\u1ebf to\u00e1n thanh to\u00e1n",
+                "ke toan doanh thu": "k\u1ebf to\u00e1n doanh thu",
+                "nhan vien thu ngan": "nh\u00e2n vi\u00ean thu ng\u00e2n",
+                "thu ngan": "thu ng\u00e2n",
+                "nhan vien kiem soat noi bo": "nh\u00e2n vi\u00ean ki\u1ec3m so\u00e1t n\u1ed9i b\u1ed9",
+                "ke toan noi bo": "k\u1ebf to\u00e1n n\u1ed9i b\u1ed9",
+                "ke toan ngan hang": "k\u1ebf to\u00e1n ng\u00e2n h\u00e0ng",
+                "accountant collaborator": "accountant collaborator",
+                "ke toan": "k\u1ebf to\u00e1n",
+                "accountant": "accountant",
+                "lap trinh vien php": "l\u1eadp tr\u00ecnh vi\u00ean php",
+                "php developer": "php developer",
+                "lap trinh php": "l\u1eadp tr\u00ecnh php",
+                "lap trinh javascript": "l\u1eadp tr\u00ecnh javascript",
+                "lap trinh vien javascript": "l\u1eadp tr\u00ecnh vi\u00ean javascript",
+                "lap trinh vien java": "l\u1eadp tr\u00ecnh vi\u00ean java",
+                "javascript developer": "javascript developer",
+                "java developer": "java developer",
+                "web developer": "web developer",
+                "lap trinh web": "l\u1eadp tr\u00ecnh web",
+                "react native developer": "react native developer",
+                "lap trinh vien react native": "l\u1eadp tr\u00ecnh vi\u00ean react native",
+                ".net developer": ".net developer",
+                "lap trinh vien .net": "l\u1eadp tr\u00ecnh vi\u00ean .net",
+                "front end developer": "front end developer",
+                "front end engineer": "front end engineer",
+                "frontend developer": "frontend developer",
+                "lap trinh frontend": "l\u1eadp tr\u00ecnh frontend",
+                "lap trinh front end": "l\u1eadp tr\u00ecnh front end",
+                "frontend engineer": "frontend engineer",
+                "backend developer": "backend developer",
+                "backend engineer": "backend engineer",
+                "back end developer": "back end developer",
+                "back end engineer": "back end engineer",
+                "lap trinh backend": "l\u1eadp tr\u00ecnh backend",
+                "lap trinh back end": "l\u1eadp tr\u00ecnh back end",
+                "mobile developer": "mobile developer",
+                "mobile engineer": "mobile engineer",
+                "business analyst": "business analyst",
+                "phan tich nghiep vu": "ph\u00e2n t\u00edch nghi\u1ec7p v\u1ee5",
+                "nhan vien phan tich nghiep vu": "nh\u00e2n vi\u00ean ph\u00e2n t\u00edch nghi\u1ec7p v\u1ee5",
+                "chuyen vien phan tich nghiep vu": "chuy\u00ean vi\u00ean ph\u00e2n t\u00edch nghi\u1ec7p v\u1ee5",
+                "data analyst": "data analyst",
+                "nhan vien phan tich du lieu": "nh\u00e2n vi\u00ean ph\u00e2n t\u00edch d\u1eef li\u1ec7u",
+                "chuyen vien vien phan tich du lieu": "chuy\u00ean vi\u00ean vi\u00ean ph\u00e2n t\u00edch d\u1eef li\u1ec7u",
+                "phan tich du lieu": "ph\u00e2n t\u00edch d\u1eef li\u1ec7u",
+                "data engineer": "data engineer",
+                "xu ly du lieu": "x\u1eed l\u00fd d\u1eef li\u1ec7u",
+                "solution architect": "solution architect",
+                "mobile app developer": "mobile app developer",
+                "game developer": "game developer",
+                "game artist": "game artist",
+                "unity developer": "unity developer",
+                "magento developer": "magento developer",
+                "ai engineer": "ai engineer",
+                "ky su ai": "k\u1ef9 s\u01b0 ai",
+                "machine learning engineer": "machine learning engineer",
+                "system engineer": "system engineer",
+                "system admin": "system admin",
+                "quan tri he thong": "qu\u1ea3n tr\u1ecb h\u1ec7 th\u1ed1ng",
+                "lap trinh game": "l\u1eadp tr\u00ecnh game",
+                "game designer": "game designer",
+                "game design": "game design",
+                "lap trinh vien mobile": "l\u1eadp tr\u00ecnh vi\u00ean mobile",
+                "ios developer": "ios developer",
+                "android developer": "android developer",
+                "ui\/ux designer": "ui\/ux designer",
+                "ux designer": "ux designer",
+                "ui designer": "ui designer",
+                "design ui\/ux": "design ui\/ux",
+                "fullstack developer": "fullstack developer",
+                "full stack developer": "full stack developer",
+                "fullstack engineer": "fullstack engineer",
+                "full stack engineer": "full stack engineer",
+                "senior developer": "senior developer",
+                "nhan vien it": "nh\u00e2n vi\u00ean it",
+                "chuyen vien it": "chuy\u00ean vi\u00ean it",
+                "it support": "it support",
+                "it helpdesk": "it helpdesk",
+                "nhan vien kiem thu phan mem": "nh\u00e2n vi\u00ean ki\u1ec3m th\u1eed ph\u1ea7n m\u1ec1m",
+                "test engineer": "test engineer",
+                "thiet ke do hoa designer": "thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda designer",
+                "nhan vien thiet ke do hoa": "nh\u00e2n vi\u00ean thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda",
+                "nhan vien thiet ke": "nh\u00e2n vi\u00ean thi\u1ebft k\u1ebf",
+                "thiet ke do hoa": "thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda",
+                "graphic designer": "graphic designer",
+                "thiet ke noi that": "thi\u1ebft k\u1ebf n\u1ed9i th\u1ea5t",
+                "thiet ke noi ngoai that": "thi\u1ebft k\u1ebf n\u1ed9i ngo\u1ea1i th\u1ea5t",
+                "dien hoa noi that": "di\u1ec5n ho\u1ea1 n\u1ed9i th\u1ea5t",
+                "thiet ke website": "thi\u1ebft k\u1ebf website",
+                "thiet ke web": "thi\u1ebft k\u1ebf web",
+                "web designer": "web designer",
+                "chuyen vien phan tich": "chuy\u00ean vi\u00ean ph\u00e2n t\u00edch",
+                "project manager": "project manager",
+                "quan tri website": "qu\u1ea3n tr\u1ecb website",
+                "qa\/qc": "qa\/qc",
+                "quality control": "quality control",
+                "quality assurance": "quality assurance",
+                "devops engineer": "devops engineer",
+                "nhan vien kinh doanh phan mem": "nh\u00e2n vi\u00ean kinh doanh ph\u1ea7n m\u1ec1m",
+                "nhan vien quan tri mang": "nh\u00e2n vi\u00ean qu\u1ea3n tr\u1ecb m\u1ea1ng",
+                "networking admin": "networking admin",
+                "data scientist": "data scientist",
+                "thuc tap sinh it": "th\u1ef1c t\u1eadp sinh it",
+                "nhan vien pqa": "nh\u00e2n vi\u00ean pqa",
+                "it comtor": "it comtor",
+                "comtor": "comtor",
+                "ky su cau noi": "k\u1ef9 s\u01b0 c\u1ea7u n\u1ed1i",
+                "brse": "brse",
+                "javascript": "javascript",
+                "java": "java",
+                "python": "python",
+                "php": "php",
+                "nodejs": "nodejs",
+                "react native": "react native",
+                "reactjs": "reactjs",
+                "react js": "react js",
+                "vuejs": "vuejs",
+                "vue js": "vue js",
+                "nuxtjs": "nuxtjs",
+                "nuxt js": "nuxt js",
+                "angularjs": "angularjs",
+                "angular js": "angular js",
+                "ios": "ios",
+                "android": "android",
+                "unity": "unity",
+                "tester": "tester",
+                "devops": "devops",
+                "magento": "magento",
+                "drupal": "drupal",
+                "seo": "seo",
+                "asp.net": "asp.net",
+                "angular": "angular",
+                "ui\/ux": "ui\/ux",
+                "laravel": "laravel",
+                "pqa": "pqa",
+                "machine learning": "machine learning",
+                "software engineer": "software engineer",
+                "software developer": "software developer",
+                "lap trinh vien": "l\u1eadp tr\u00ecnh vi\u00ean",
+                "ky su lap trinh": "k\u1ef9 s\u01b0 l\u1eadp tr\u00ecnh",
+                "developer": "developer",
+                "ruby on rails": "ruby on rails",
+                "designer": "designer",
+                "sua chua o to": "s\u1eeda ch\u1eefa \u00f4 t\u00f4",
+                "van hanh may": "v\u1eadn h\u00e0nh m\u00e1y",
+                "ky su may": "k\u1ef9 s\u01b0 m\u00e1y",
+                "ky su co khi": "k\u1ef9 s\u01b0 c\u01a1 kh\u00ed",
+                "tho han": "th\u1ee3 h\u00e0n",
+                "nhan vien co dien": "nh\u00e2n vi\u00ean c\u01a1 \u0111i\u1ec7n",
+                "nhan vien ky thuat": "nh\u00e2n vi\u00ean k\u1ef9 thu\u1eadt",
+                "phien dich tieng nhat": "phi\u00ean d\u1ecbch ti\u1ebfng nh\u1eadt",
+                "tieng trung": "ti\u1ebfng trung",
+                "tieng nhat": "ti\u1ebfng nh\u1eadt",
+                "tieng anh": "ti\u1ebfng anh",
+                "tieng han": "ti\u1ebfng h\u00e0n",
+                "tieng tay ban nha": "ti\u1ebfng t\u00e2y ban nha",
+                "phien dich": "phi\u00ean d\u1ecbch",
+                "bien dich": "bi\u00ean d\u1ecbch",
+                "nhan vien ban ve may bay": "nh\u00e2n vi\u00ean b\u00e1n v\u00e9 m\u00e1y bay",
+                "huong dan vien du lich": "h\u01b0\u1edbng d\u1eabn vi\u00ean du l\u1ecbch",
+                "dieu hanh tour": "\u0111i\u1ec1u h\u00e0nh tour",
+                "thuc tap sinh": "th\u1ef1c t\u1eadp sinh",
+                "nhan vien xu ly don hang": "nh\u00e2n vi\u00ean x\u1eed l\u00fd \u0111\u01a1n h\u00e0ng",
+                "chuyen vien thu hoi no": "chuy\u00ean vi\u00ean thu h\u1ed3i n\u1ee3",
+                "chuyen vien xu ly no": "chuy\u00ean vi\u00ean x\u1eed l\u00fd n\u1ee3",
+                "nhan vien thu hoi no": "nh\u00e2n vi\u00ean thu h\u1ed3i n\u1ee3",
+                "thu ky": "th\u01b0 k\u00fd",
+                "nhan vien kho": "nh\u00e2n vi\u00ean kho",
+                "nhan vien xuat nhap khau": "nh\u00e2n vi\u00ean xu\u1ea5t nh\u1eadp kh\u1ea9u",
+                "ky su xay dung": "k\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng",
+                "giam sat thi cong": "gi\u00e1m s\u00e1t thi c\u00f4ng",
+                "dieu duong": "\u0111i\u1ec1u d\u01b0\u1ee1ng",
+                "quan ly chat luong": "qu\u1ea3n l\u00fd ch\u1ea5t l\u01b0\u1ee3ng",
+                "lai xe": "l\u00e1i xe",
+                "tai xe": "t\u00e0i x\u1ebf",
+                "nhan vien giao hang": "nh\u00e2n vi\u00ean giao h\u00e0ng",
+                "shipper": "shipper",
+                "ban thoi gian": "b\u00e1n th\u1eddi gian",
+                "ngan hang": "ng\u00e2n h\u00e0ng",
+                "kinh doanh": "kinh doanh",
+                "bat dong san": "b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                "nhan vien kinh doanh bat dong san": "nh\u00e2n vi\u00ean kinh doanh b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                "chuyen vien kinh doanh bat dong san": "chuy\u00ean vi\u00ean kinh doanh b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                "nhan vien tu van bat dong san": "nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                "chuyen vien tu van bat dong san": "chuy\u00ean vi\u00ean t\u01b0 v\u1ea5n b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                "quan ly": "qu\u1ea3n l\u00fd",
+                "tro ly": "tr\u1ee3 l\u00fd"
+            };
+        </script>
+        <script type="text/javascript">
+            function makeid(length) {
+                var result = '';
+                var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for (var i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
+                return result;
+            }
+            $.fn.isInViewport = function (checkTitle = true) {
+                const taTop = $('.ta-top');
+                const taTopHeight = taTop.height() || 0;
+                let elementHeight = $(this).height();
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+                var scrollTop = $(window).scrollTop();
+                var viewportTop = scrollTop + taTopHeight;
+                var viewportBottom = scrollTop + $(window).height();
+
+                return (elementBottom > viewportTop + elementHeight && elementTop < viewportBottom - elementHeight) || (checkTitle && Array.from($(this).find('a:visible')).some((e) => $(e).isInViewport(false)));
+            };
+
+            function differenceOf2Arrays(array1, array2) {
+                if (array1.length == 0) {
+                    return array2;
+                }
+                if (array2.length == 0) {
+                    return array1;
+                }
+                var temp = [];
+                array1 = array1.toString().split(',').map(Number);
+                array2 = array2.toString().split(',').map(Number);
+
+                for (var i in array1) {
+                    if (array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
+                }
+                for (i in array2) {
+                    if (array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
+                }
+                return temp.sort((a, b) => a - b);
+            }
+
+            function lazyLoadImage(className, onFinish, onLoadAll) {
+                var lazyImages = [].slice.call(document.querySelectorAll(className));
+                setTimeout(() => {
+                    lazyImages.forEach((lazyImage) => {
+                        if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+
+                            lazyImages = lazyImages.filter((image) => {
+                                return image !== lazyImage;
+                            });
+                            if (onLoadAll && !lazyImages.length) {
+                                onLoadAll();
+                            }
+                        }
+                    });
+
+                    if (onFinish) {
+                        onFinish();
+                    }
+                }, 200);
+
+            }
+            var listSaveJobs = '[]';
+            listSaveJobs = JSON.parse(listSaveJobs);
+            var savedJobIds = {
+                data: {
+                    savedJobIds: listSaveJobs
+                },
+            };
+            $(document).ready(function () {
+                $('.btn-topcv-disble').tooltip();
+            })
+            $(document).on("click", ".save-job", function () {
+                var jobId = $(this).data("id");
+                var url = "";
+                if ($(this).hasClass("active")) {
+                    url = unsaveJobUrl;
+                } else {
+                    url = saveJobUrl;
+                }
+                var self = this;
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: {
+                        job_id: jobId,
+                    },
+                })
+                    .done(function (response) {
+                        if (response.status == 'success') {
+                            $("button.save-job[data-id=" + jobId + "]").each(function (index) {
+                                $(this).toggleClass("active")
+                            });
+
+                        } else if (response.status == 'failed') {
+                            showModalError(response.message);
+                        }
+                    })
+                    .fail(function () {
+                        console.log('error');
+                    })
+                    .always(function () { });
+            })
+
+            var taPage = 'HomePage'
+            var box = 'FeatureJobBox'
+            var onFeatureTrackingTa = '1'
+            var checkOniewMixin = {
+                data: {
+                    onScreenTrackJobIds: [],
+                    prevOnScreenTrackJobIds: [],
+                    trackedJobIds: new Set()
+                },
+                methods: {
+                    checkOnViewPort: (elem, parent) => {
+                        let viewMoreHeight = $('.feature-job-page').height()
+                        let viewportBoxTop = parent.offset().top
+                        let viewportBoxHeight = parent.height()
+                        let viewportBoxBottom = viewportBoxTop + viewportBoxHeight - viewMoreHeight
+                        let $window = jQuery(window)
+                        let viewportTop = $window.scrollTop()
+                        let viewportHeight = $window.height()
+                        let viewportBottom = viewportTop + viewportHeight
+                        let top = elem.offset().top
+                        let height = elem.height()
+                        let bottom = top + height
+                        return bottom >= viewportTop + height && top <= viewportBottom - height && bottom >= viewportBoxTop + height && top <= viewportBoxBottom - height;
+                    },
+                    sendTrackViewJobs: (jobInViewPort, jobOutViewPort, box) => {
+                        var self = this;
+                        if (jobInViewPort.length > 0) {
+                            for (job of jobInViewPort) {
+                                if (!self.trackedJobIds.has(job.id)) {
+                                    ta('JobInViewPort', {
+                                        jb_id: parseInt(job.id),
+                                        ts: new Date().getTime(),
+                                        p: taPage,
+                                        b: box,
+                                        impr_pos: job.index,
+                                    });
+                                    self.trackedJobIds.add(job.id);
+                                }
+                            }
+                        }
+                        // if (jobOutViewPort.length > 0) {
+                        //     for(job of jobOutViewPort) {
+                        //         ta('JobOutViewPort',{
+                        //             jb_id: job.id,
+                        //             ts: new Date().getTime(),
+                        //             p: taPage,
+                        //             b: box,
+                        //             impr_pos: job.index,
+                        //         })
+                        //     }
+                        // }
+                    },
+                    trackJobView(listJobs, boxId, boxName) {
+                        if (onFeatureTrackingTa) {
+                            this.onScreenTrackJobIds = []
+                            let prevOnCheckOnViewPort = false
+                            $.each(listJobs, (element, index) => {
+                                let company = {
+                                    id: '',
+                                    index: ''
+                                }
+                                let checkOnViewPort = this.checkOnViewPort($(boxId).find('div[data-job-id="' + element + '"]'), $(boxId + ' .feature-jobs'))
+                                if (!checkOnViewPort && prevOnCheckOnViewPort) {
+                                    return true
+                                }
+                                prevOnCheckOnViewPort = checkOnViewPort
+                                if (checkOnViewPort) {
+                                    company.id = element
+                                    company.index = index + 1
+                                    this.onScreenTrackJobIds.push(company)
+                                }
+                            });
+                            let jobOutViewPort = this.prevOnScreenTrackJobIds.filter(el => !this.onScreenTrackJobIds.some(e => el.id === e.id))
+                            let jobInViewPort = this.onScreenTrackJobIds.filter(el => !this.prevOnScreenTrackJobIds.some(e => el.id === e.id))
+                            if (jobInViewPort.length > 0 || jobOutViewPort.length > 0) {
+                                this.sendTrackViewJobs(jobInViewPort, jobOutViewPort, boxName)
+                            }
+                            this.prevOnScreenTrackJobIds = this.onScreenTrackJobIds
+                        }
+
+                    },
+                    jobRendered(jobs, box) {
+                        if (onFeatureTrackingTa) {
+                            let jobRenderedIds = [];
+                            for (job of jobs) {
+                                jobRenderedIds.push(job.id);
+                            }
+                            if (jobRenderedIds.length) {
+                                ta('jobRendered', {
+                                    ts: new Date().getTime(),
+                                    p: taPage,
+                                    b: box,
+                                    jb_ids: jobRenderedIds,
+                                })
+                            }
+                        }
+                    }
+                }
+            };
+
+            $.fn.isInViewport = function (checkTitle = true) {
+                const taTop = $('.ta-top');
+                const taTopHeight = taTop.height() || 0;
+                let elementHeight = $(this).height();
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+                var scrollTop = $(window).scrollTop();
+                var viewportTop = scrollTop + taTopHeight;
+                var viewportBottom = scrollTop + $(window).height();
+                return (elementBottom > viewportTop + elementHeight && elementTop < viewportBottom - elementHeight) || (checkTitle && Array.from($(this).find('a:visible')).some((e) => $(e).isInViewport(false)));
+            };
+
+            $(function () {
+                $('#slider').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 400,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    responsive: [{
+                        breakpoint: 1366,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 680,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    ]
+                });
+            });
+            $('.input-select2').select2();
+            var categories = {
+                "10101": {
+                    "id": 10101,
+                    "name": "An to\u00e0n lao \u0111\u1ed9ng",
+                    "alias": "an-toan-lao-dong"
+                },
+                "10102": {
+                    "id": 10102,
+                    "name": "B\u00e1n h\u00e0ng k\u1ef9 thu\u1eadt",
+                    "alias": "ban-hang-ky-thuat"
+                },
+                "10103": {
+                    "id": 10103,
+                    "name": "B\u00e1n l\u1ebb \/ b\u00e1n s\u1ec9",
+                    "alias": "ban-le-ban-si"
+                },
+                "10004": {
+                    "id": 10004,
+                    "name": "B\u00e1o ch\u00ed \/ Truy\u1ec1n h\u00ecnh",
+                    "alias": "bao-chi-truyen-hinh"
+                },
+                "10006": {
+                    "id": 10006,
+                    "name": "B\u1ea3o hi\u1ec3m",
+                    "alias": "bao-hiem"
+                },
+                "10104": {
+                    "id": 10104,
+                    "name": "B\u1ea3o tr\u00ec \/ S\u1eefa ch\u1eefa",
+                    "alias": "bao-tri-sua-chua"
+                },
+                "10007": {
+                    "id": 10007,
+                    "name": "B\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                    "alias": "bat-dong-san"
+                },
+                "10003": {
+                    "id": 10003,
+                    "name": "Bi\u00ean \/ Phi\u00ean d\u1ecbch",
+                    "alias": "bien-phien-dich"
+                },
+                "10005": {
+                    "id": 10005,
+                    "name": "B\u01b0u ch\u00ednh - Vi\u1ec5n th\u00f4ng",
+                    "alias": "buu-chinh-vien-thong"
+                },
+                "10008": {
+                    "id": 10008,
+                    "name": "Ch\u1ee9ng kho\u00e1n \/ V\u00e0ng \/ Ngo\u1ea1i t\u1ec7",
+                    "alias": "chung-khoan-vang-ngoai-te"
+                },
+                "10010": {
+                    "id": 10010,
+                    "name": "C\u01a1 kh\u00ed \/ Ch\u1ebf t\u1ea1o \/ T\u1ef1 \u0111\u1ed9ng h\u00f3a",
+                    "alias": "co-khi-che-tao-tu-dong-hoa"
+                },
+                "10009": {
+                    "id": 10009,
+                    "name": "C\u00f4ng ngh\u1ec7 cao",
+                    "alias": "cong-nghe-cao"
+                },
+                "10052": {
+                    "id": 10052,
+                    "name": "C\u00f4ng ngh\u1ec7 \u00d4 t\u00f4",
+                    "alias": "cong-nghe-o-to"
+                },
+                "10131": {
+                    "id": 10131,
+                    "name": "C\u00f4ng ngh\u1ec7 th\u00f4ng tin",
+                    "alias": "cong-nghe-thong-tin"
+                },
+                "10012": {
+                    "id": 10012,
+                    "name": "D\u1ea7u kh\u00ed\/H\u00f3a ch\u1ea5t",
+                    "alias": "dau-khi-hoa-chat"
+                },
+                "10013": {
+                    "id": 10013,
+                    "name": "D\u1ec7t may \/ Da gi\u00e0y",
+                    "alias": "det-may-da-giay"
+                },
+                "10111": {
+                    "id": 10111,
+                    "name": "\u0110\u1ecba ch\u1ea5t \/ Kho\u00e1ng s\u1ea3n",
+                    "alias": "dia-chat-khoang-san"
+                },
+                "10014": {
+                    "id": 10014,
+                    "name": "D\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng",
+                    "alias": "dich-vu-khach-hang"
+                },
+                "10016": {
+                    "id": 10016,
+                    "name": "\u0110i\u1ec7n \/ \u0110i\u1ec7n t\u1eed \/ \u0110i\u1ec7n l\u1ea1nh",
+                    "alias": "dien-dien-tu-dien-lanh"
+                },
+                "10015": {
+                    "id": 10015,
+                    "name": "\u0110i\u1ec7n t\u1eed vi\u1ec5n th\u00f4ng",
+                    "alias": "dien-tu-vien-thong"
+                },
+                "10011": {
+                    "id": 10011,
+                    "name": "Du l\u1ecbch",
+                    "alias": "du-lich"
+                },
+                "10110": {
+                    "id": 10110,
+                    "name": "D\u01b0\u1ee3c ph\u1ea9m \/ C\u00f4ng ngh\u1ec7 sinh h\u1ecdc",
+                    "alias": "duoc-pham-cong-nghe-sinh-hoc"
+                },
+                "10017": {
+                    "id": 10017,
+                    "name": "Gi\u00e1o d\u1ee5c \/ \u0110\u00e0o t\u1ea1o",
+                    "alias": "giao-duc-dao-tao"
+                },
+                "10113": {
+                    "id": 10113,
+                    "name": "H\u00e0ng cao c\u1ea5p",
+                    "alias": "hang-cao-cap"
+                },
+                "10020": {
+                    "id": 10020,
+                    "name": "H\u00e0ng gia d\u1ee5ng",
+                    "alias": "hang-gia-dung"
+                },
+                "10021": {
+                    "id": 10021,
+                    "name": "H\u00e0ng h\u1ea3i",
+                    "alias": "hang-hai"
+                },
+                "10022": {
+                    "id": 10022,
+                    "name": "H\u00e0ng kh\u00f4ng",
+                    "alias": "hang-khong"
+                },
+                "10117": {
+                    "id": 10117,
+                    "name": "H\u00e0ng ti\u00eau d\u00f9ng",
+                    "alias": "hang-tieu-dung"
+                },
+                "10023": {
+                    "id": 10023,
+                    "name": "H\u00e0nh ch\u00ednh \/ V\u0103n ph\u00f2ng",
+                    "alias": "hanh-chinh-van-phong"
+                },
+                "10018": {
+                    "id": 10018,
+                    "name": "Ho\u00e1 h\u1ecdc \/ Sinh h\u1ecdc",
+                    "alias": "hoa-hoc-sinh-hoc"
+                },
+                "10019": {
+                    "id": 10019,
+                    "name": "Ho\u1ea1ch \u0111\u1ecbnh\/D\u1ef1 \u00e1n",
+                    "alias": "hoach-dinh-du-an"
+                },
+                "10024": {
+                    "id": 10024,
+                    "name": "In \u1ea5n \/ Xu\u1ea5t b\u1ea3n",
+                    "alias": "in-an-xuat-ban"
+                },
+                "10025": {
+                    "id": 10025,
+                    "name": "IT Ph\u1ea7n c\u1ee9ng \/ M\u1ea1ng",
+                    "alias": "it-phan-cung-mang"
+                },
+                "10026": {
+                    "id": 10026,
+                    "name": "IT ph\u1ea7n m\u1ec1m",
+                    "alias": "it-phan-mem"
+                },
+                "10028": {
+                    "id": 10028,
+                    "name": "K\u1ebf to\u00e1n \/ Ki\u1ec3m to\u00e1n",
+                    "alias": "ke-toan-kiem-toan"
+                },
+                "10027": {
+                    "id": 10027,
+                    "name": "Kh\u00e1ch s\u1ea1n \/ Nh\u00e0 h\u00e0ng",
+                    "alias": "khach-san-nha-hang"
+                },
+                "10120": {
+                    "id": 10120,
+                    "name": "Ki\u1ebfn tr\u00fac",
+                    "alias": "kien-truc"
+                },
+                "10001": {
+                    "id": 10001,
+                    "name": "Kinh doanh \/ B\u00e1n h\u00e0ng",
+                    "alias": "kinh-doanh-ban-hang"
+                },
+                "10048": {
+                    "id": 10048,
+                    "name": "Logistics",
+                    "alias": "logistics"
+                },
+                "10036": {
+                    "id": 10036,
+                    "name": "Lu\u1eadt\/Ph\u00e1p l\u00fd",
+                    "alias": "luat-phap-ly"
+                },
+                "10029": {
+                    "id": 10029,
+                    "name": "Marketing \/ Truy\u1ec1n th\u00f4ng \/ Qu\u1ea3ng c\u00e1o",
+                    "alias": "marketing-truyen-thong-quang-cao"
+                },
+                "10030": {
+                    "id": 10030,
+                    "name": "M\u00f4i tr\u01b0\u1eddng \/ X\u1eed l\u00fd ch\u1ea5t th\u1ea3i",
+                    "alias": "moi-truong-xu-ly-chat-thai"
+                },
+                "10031": {
+                    "id": 10031,
+                    "name": "M\u1ef9 ph\u1ea9m \/ Trang s\u1ee9c",
+                    "alias": "my-pham-trang-suc"
+                },
+                "10032": {
+                    "id": 10032,
+                    "name": "M\u1ef9 thu\u1eadt \/ Ngh\u1ec7 thu\u1eadt \/ \u0110i\u1ec7n \u1ea3nh",
+                    "alias": "my-thuat-nghe-thuat-dien-anh"
+                },
+                "10033": {
+                    "id": 10033,
+                    "name": "Ng\u00e2n h\u00e0ng \/ T\u00e0i ch\u00ednh",
+                    "alias": "ngan-hang-tai-chinh"
+                },
+                "11000": {
+                    "id": 11000,
+                    "name": "Ng\u00e0nh ngh\u1ec1 kh\u00e1c",
+                    "alias": "nganh-nghe-khac"
+                },
+                "10132": {
+                    "id": 10132,
+                    "name": "NGO \/ Phi ch\u00ednh ph\u1ee7 \/ Phi l\u1ee3i nhu\u1eadn",
+                    "alias": "ngo-phi-chinh-phu-phi-loi-nhuan"
+                },
+                "10034": {
+                    "id": 10034,
+                    "name": "Nh\u00e2n s\u1ef1",
+                    "alias": "nhan-su"
+                },
+                "10035": {
+                    "id": 10035,
+                    "name": "N\u00f4ng \/ L\u00e2m \/ Ng\u01b0 nghi\u1ec7p",
+                    "alias": "nong-lam-ngu-nghiep"
+                },
+                "10124": {
+                    "id": 10124,
+                    "name": "Phi ch\u00ednh ph\u1ee7 \/ Phi l\u1ee3i nhu\u1eadn",
+                    "alias": "phi-chinh-phu-phi-loi-nhuan"
+                },
+                "10037": {
+                    "id": 10037,
+                    "name": "Qu\u1ea3n l\u00fd ch\u1ea5t l\u01b0\u1ee3ng (QA\/QC)",
+                    "alias": "quan-ly-chat-luong-qa-qc"
+                },
+                "10038": {
+                    "id": 10038,
+                    "name": "Qu\u1ea3n l\u00fd \u0111i\u1ec1u h\u00e0nh",
+                    "alias": "quan-ly-dieu-hanh"
+                },
+                "10125": {
+                    "id": 10125,
+                    "name": "S\u1ea3n ph\u1ea9m c\u00f4ng nghi\u1ec7p",
+                    "alias": "san-pham-cong-nghiep"
+                },
+                "10126": {
+                    "id": 10126,
+                    "name": "S\u1ea3n xu\u1ea5t",
+                    "alias": "san-xuat"
+                },
+                "10130": {
+                    "id": 10130,
+                    "name": "Spa \/ L\u00e0m \u0111\u1eb9p",
+                    "alias": "spa-lam-dep"
+                },
+                "10127": {
+                    "id": 10127,
+                    "name": "T\u00e0i ch\u00ednh \/ \u0110\u1ea7u t\u01b0",
+                    "alias": "tai-chinh-dau-tu"
+                },
+                "10039": {
+                    "id": 10039,
+                    "name": "Thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda",
+                    "alias": "thiet-ke-do-hoa"
+                },
+                "10128": {
+                    "id": 10128,
+                    "name": "Thi\u1ebft k\u1ebf n\u1ed9i th\u1ea5t",
+                    "alias": "thiet-ke-noi-that"
+                },
+                "10042": {
+                    "id": 10042,
+                    "name": "Th\u1eddi trang",
+                    "alias": "thoi-trang"
+                },
+                "10129": {
+                    "id": 10129,
+                    "name": "Th\u01b0 k\u00fd \/ Tr\u1ee3 l\u00fd",
+                    "alias": "thu-ky-tro-ly"
+                },
+                "10043": {
+                    "id": 10043,
+                    "name": "Th\u1ef1c ph\u1ea9m \/ \u0110\u1ed3 u\u1ed1ng",
+                    "alias": "thuc-pham-do-uong"
+                },
+                "10046": {
+                    "id": 10046,
+                    "name": "T\u1ed5 ch\u1ee9c s\u1ef1 ki\u1ec7n \/ Qu\u00e0 t\u1eb7ng",
+                    "alias": "to-chuc-su-kien-qua-tang"
+                },
+                "10045": {
+                    "id": 10045,
+                    "name": "T\u01b0 v\u1ea5n",
+                    "alias": "tu-van"
+                },
+                "10047": {
+                    "id": 10047,
+                    "name": "V\u1eadn t\u1ea3i \/ Kho v\u1eadn",
+                    "alias": "van-tai-kho-van"
+                },
+                "10050": {
+                    "id": 10050,
+                    "name": "X\u00e2y d\u1ef1ng",
+                    "alias": "xay-dung"
+                },
+                "10049": {
+                    "id": 10049,
+                    "name": "Xu\u1ea5t nh\u1eadp kh\u1ea9u",
+                    "alias": "xuat-nhap-khau"
+                },
+                "10051": {
+                    "id": 10051,
+                    "name": "Y t\u1ebf \/ D\u01b0\u1ee3c",
+                    "alias": "y-te-duoc"
+                }
+            };
+            var cities = {
+                "1": {
+                    "id": 1,
+                    "name": "H\u00e0 N\u1ed9i",
+                    "alias": "ha-noi"
+                },
+                "2": {
+                    "id": 2,
+                    "name": "H\u1ed3 Ch\u00ed Minh",
+                    "alias": "ho-chi-minh"
+                },
+                "3": {
+                    "id": 3,
+                    "name": "B\u00ecnh D\u01b0\u01a1ng",
+                    "alias": "binh-duong"
+                },
+                "4": {
+                    "id": 4,
+                    "name": "B\u1eafc Ninh",
+                    "alias": "bac-ninh"
+                },
+                "5": {
+                    "id": 5,
+                    "name": "\u0110\u1ed3ng Nai",
+                    "alias": "dong-nai"
+                },
+                "6": {
+                    "id": 6,
+                    "name": "H\u01b0ng Y\u00ean",
+                    "alias": "hung-yen"
+                },
+                "7": {
+                    "id": 7,
+                    "name": "H\u1ea3i D\u01b0\u01a1ng",
+                    "alias": "hai-duong"
+                },
+                "8": {
+                    "id": 8,
+                    "name": "\u0110\u00e0 N\u1eb5ng",
+                    "alias": "da-nang"
+                },
+                "9": {
+                    "id": 9,
+                    "name": "H\u1ea3i Ph\u00f2ng",
+                    "alias": "hai-phong"
+                },
+                "10": {
+                    "id": 10,
+                    "name": "An Giang",
+                    "alias": "an-giang"
+                },
+                "11": {
+                    "id": 11,
+                    "name": "B\u00e0 R\u1ecba-V\u0169ng T\u00e0u",
+                    "alias": "ba-ria-vung-tau"
+                },
+                "12": {
+                    "id": 12,
+                    "name": "B\u1eafc Giang",
+                    "alias": "bac-giang"
+                },
+                "13": {
+                    "id": 13,
+                    "name": "B\u1eafc K\u1ea1n",
+                    "alias": "bac-kan"
+                },
+                "14": {
+                    "id": 14,
+                    "name": "B\u1ea1c Li\u00eau",
+                    "alias": "bac-lieu"
+                },
+                "15": {
+                    "id": 15,
+                    "name": "B\u1ebfn Tre",
+                    "alias": "ben-tre"
+                },
+                "16": {
+                    "id": 16,
+                    "name": "B\u00ecnh \u0110\u1ecbnh",
+                    "alias": "binh-dinh"
+                },
+                "17": {
+                    "id": 17,
+                    "name": "B\u00ecnh Ph\u01b0\u1edbc",
+                    "alias": "binh-phuoc"
+                },
+                "18": {
+                    "id": 18,
+                    "name": "B\u00ecnh Thu\u1eadn",
+                    "alias": "binh-thuan"
+                },
+                "19": {
+                    "id": 19,
+                    "name": "C\u00e0 Mau",
+                    "alias": "ca-mau"
+                },
+                "20": {
+                    "id": 20,
+                    "name": "C\u1ea7n Th\u01a1",
+                    "alias": "can-tho"
+                },
+                "21": {
+                    "id": 21,
+                    "name": "Cao B\u1eb1ng",
+                    "alias": "cao-bang"
+                },
+                "22": {
+                    "id": 22,
+                    "name": "C\u1eedu Long",
+                    "alias": "cuu-long"
+                },
+                "23": {
+                    "id": 23,
+                    "name": "\u0110\u1eafk L\u1eafk",
+                    "alias": "dak-lak"
+                },
+                "24": {
+                    "id": 24,
+                    "name": "\u0110\u1eafc N\u00f4ng",
+                    "alias": "dac-nong"
+                },
+                "25": {
+                    "id": 25,
+                    "name": "\u0110i\u1ec7n Bi\u00ean",
+                    "alias": "dien-bien"
+                },
+                "26": {
+                    "id": 26,
+                    "name": "\u0110\u1ed3ng Th\u00e1p",
+                    "alias": "dong-thap"
+                },
+                "27": {
+                    "id": 27,
+                    "name": "Gia Lai",
+                    "alias": "gia-lai"
+                },
+                "28": {
+                    "id": 28,
+                    "name": "H\u00e0 Giang",
+                    "alias": "ha-giang"
+                },
+                "29": {
+                    "id": 29,
+                    "name": "H\u00e0 Nam",
+                    "alias": "ha-nam"
+                },
+                "30": {
+                    "id": 30,
+                    "name": "H\u00e0 T\u0129nh",
+                    "alias": "ha-tinh"
+                },
+                "31": {
+                    "id": 31,
+                    "name": "H\u1eadu Giang",
+                    "alias": "hau-giang"
+                },
+                "32": {
+                    "id": 32,
+                    "name": "Ho\u00e0 B\u00ecnh",
+                    "alias": "hoa-binh"
+                },
+                "33": {
+                    "id": 33,
+                    "name": "Kh\u00e1nh Ho\u00e0",
+                    "alias": "khanh-hoa"
+                },
+                "34": {
+                    "id": 34,
+                    "name": "Ki\u00ean Giang",
+                    "alias": "kien-giang"
+                },
+                "35": {
+                    "id": 35,
+                    "name": "Kon Tum",
+                    "alias": "kon-tum"
+                },
+                "36": {
+                    "id": 36,
+                    "name": "Lai Ch\u00e2u",
+                    "alias": "lai-chau"
+                },
+                "37": {
+                    "id": 37,
+                    "name": "L\u00e2m \u0110\u1ed3ng",
+                    "alias": "lam-dong"
+                },
+                "38": {
+                    "id": 38,
+                    "name": "L\u1ea1ng S\u01a1n",
+                    "alias": "lang-son"
+                },
+                "39": {
+                    "id": 39,
+                    "name": "L\u00e0o Cai",
+                    "alias": "lao-cai"
+                },
+                "40": {
+                    "id": 40,
+                    "name": "Long An",
+                    "alias": "long-an"
+                },
+                "41": {
+                    "id": 41,
+                    "name": "Mi\u1ec1n B\u1eafc",
+                    "alias": "mien-bac"
+                },
+                "42": {
+                    "id": 42,
+                    "name": "Mi\u1ec1n Nam",
+                    "alias": "mien-nam"
+                },
+                "43": {
+                    "id": 43,
+                    "name": "Mi\u1ec1n Trung",
+                    "alias": "mien-trung"
+                },
+                "44": {
+                    "id": 44,
+                    "name": "Nam \u0110\u1ecbnh",
+                    "alias": "nam-dinh"
+                },
+                "45": {
+                    "id": 45,
+                    "name": "Ngh\u1ec7 An",
+                    "alias": "nghe-an"
+                },
+                "46": {
+                    "id": 46,
+                    "name": "Ninh B\u00ecnh",
+                    "alias": "ninh-binh"
+                },
+                "47": {
+                    "id": 47,
+                    "name": "Ninh Thu\u1eadn",
+                    "alias": "ninh-thuan"
+                },
+                "48": {
+                    "id": 48,
+                    "name": "Ph\u00fa Th\u1ecd",
+                    "alias": "phu-tho"
+                },
+                "49": {
+                    "id": 49,
+                    "name": "Ph\u00fa Y\u00ean",
+                    "alias": "phu-yen"
+                },
+                "50": {
+                    "id": 50,
+                    "name": "Qu\u1ea3ng B\u00ecnh",
+                    "alias": "quang-binh"
+                },
+                "51": {
+                    "id": 51,
+                    "name": "Qu\u1ea3ng Nam",
+                    "alias": "quang-nam"
+                },
+                "52": {
+                    "id": 52,
+                    "name": "Qu\u1ea3ng Ng\u00e3i",
+                    "alias": "quang-ngai"
+                },
+                "53": {
+                    "id": 53,
+                    "name": "Qu\u1ea3ng Ninh",
+                    "alias": "quang-ninh"
+                },
+                "54": {
+                    "id": 54,
+                    "name": "Qu\u1ea3ng Tr\u1ecb",
+                    "alias": "quang-tri"
+                },
+                "55": {
+                    "id": 55,
+                    "name": "S\u00f3c Tr\u0103ng",
+                    "alias": "soc-trang"
+                },
+                "56": {
+                    "id": 56,
+                    "name": "S\u01a1n La",
+                    "alias": "son-la"
+                },
+                "57": {
+                    "id": 57,
+                    "name": "T\u00e2y Ninh",
+                    "alias": "tay-ninh"
+                },
+                "58": {
+                    "id": 58,
+                    "name": "Th\u00e1i B\u00ecnh",
+                    "alias": "thai-binh"
+                },
+                "59": {
+                    "id": 59,
+                    "name": "Th\u00e1i Nguy\u00ean",
+                    "alias": "thai-nguyen"
+                },
+                "60": {
+                    "id": 60,
+                    "name": "Thanh Ho\u00e1",
+                    "alias": "thanh-hoa"
+                },
+                "61": {
+                    "id": 61,
+                    "name": "Th\u1eeba Thi\u00ean Hu\u1ebf",
+                    "alias": "thua-thien-hue"
+                },
+                "62": {
+                    "id": 62,
+                    "name": "Ti\u1ec1n Giang",
+                    "alias": "tien-giang"
+                },
+                "63": {
+                    "id": 63,
+                    "name": "To\u00e0n Qu\u1ed1c",
+                    "alias": "toan-quoc"
+                },
+                "64": {
+                    "id": 64,
+                    "name": "Tr\u00e0 Vinh",
+                    "alias": "tra-vinh"
+                },
+                "65": {
+                    "id": 65,
+                    "name": "Tuy\u00ean Quang",
+                    "alias": "tuyen-quang"
+                },
+                "66": {
+                    "id": 66,
+                    "name": "V\u0129nh Long",
+                    "alias": "vinh-long"
+                },
+                "67": {
+                    "id": 67,
+                    "name": "V\u0129nh Ph\u00fac",
+                    "alias": "vinh-phuc"
+                },
+                "68": {
+                    "id": 68,
+                    "name": "Y\u00ean B\u00e1i",
+                    "alias": "yen-bai"
+                },
+                "100": {
+                    "id": 100,
+                    "name": "N\u01b0\u1edbc Ngo\u00e0i",
+                    "alias": "nuoc-ngoai"
+                }
+            };
+            var initialParams = [];
+            var suggestionMap = {
+                "Th\u1ef1c t\u1eadp sinh": "thuc tap sinh,internship",
+                "Tr\u1ee3 gi\u1ea3ng": "teacher,tro giang,giang vien",
+                "Gi\u00e1o vi\u00ean": "giao vien,teacher,tro giang,giang vien",
+                "Th\u01b0 k\u00fd": "nhan vien thu ky,secretary",
+                "Nh\u00e2n vi\u00ean k\u1ef9 thu\u1eadt": "nhan vien ky thuat,ky thuat vien,chuyen vien ky thuat,technical support",
+                "IT Helpdesk": "it support,it helpdesk,chuyen vien it,chuyen vien cntt,nhan vien it",
+                "L\u1eadp tr\u00ecnh vi\u00ean PHP": "lap trinh vien php,lap trinh php,php developer,code php,php dev",
+                "L\u1eadp tr\u00ecnh vi\u00ean Javascript": "lap trinh vien javascript,lap trinh javascript,javascript developer,code javascript,javascript dev",
+                "L\u1eadp tr\u00ecnh vi\u00ean ReactJS": "reactjs,react js,lap trinh vien react js,lap trinh vien reactjs,reactjs developer,react js developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean VueJS": "vuejs,vue js,lap trinh vien vue js,lap trinh vien vuejs,vuejs developer,vue js developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean AngularJS": "angularjs,angular js,lap trinh vien angular js,lap trinh vien angularjs,angularjs developer,angular js developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean NodeJS": "nodejs,node js,lap trinh vien node js,lap trinh vien nodejs,nodejs developer,node js developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean Java": "lap trinh vien java,lap trinh java,java developer,code java,java dev",
+                "L\u1eadp tr\u00ecnh vi\u00ean .NET": "lap trinh vien net,net developer,c net,asp net",
+                "L\u1eadp tr\u00ecnh Front-End": "lap trinh front end,lap trinh frontend,frontend developer,front end developer",
+                "L\u1eadp tr\u00ecnh Back-End": "lap trinh back end,lap trinh backend,backend developer,back end developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean iOS": "lap trinh vien ios,lap trinh ios,ios developer,code ios,mobile developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean Android": "lap trinh vien android,lap trinh android,android developer,code android,mobile developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean React Native": "lap trinh vien react native,lap trinh react native,react native developer,code react native,mobile developer",
+                "L\u1eadp tr\u00ecnh vi\u00ean Mobile": "lap trinh vien mobile,lap trinh mobile,lap trinh di dong,lap trinh ung dung di dong,mobile developer,mobile app,app mobile,android developer,ios developer,lap trinh vien android,lap trinh vien ios,lap trinh android,lap trinh ios,react native",
+                "Tester": "nhan vien tester,nhan vien kiem thu phan mem,chuyen vien kiem thu phan mem",
+                "Business Analyst": "business analyst,nhan vien ba,nhan vien phan tich nghiep vu,chuyen vien phan tich nghiep vu",
+                "Data Analyst": "data analyst,phan tich du lieu,chuyen vien phan tich du lieu,nhan vien phan tich du lieu",
+                "L\u1eadp tr\u00ecnh vi\u00ean": "lap trinh vien,ky su lap trinh,nhan vien lap trinh,developer,software engineer,developer",
+                "Fullstack Developer": "fullstack,full stack,full stack developer,fullstack developer,lap trinh fullstack,lap trinh full stack,lap trinh vien",
+                "Unity Developer": "unity developer,lap trinh unity,lap trinh game unity,lap trinh vien unity",
+                "Game Developer": "game developer,lap trinh game,unity developer,cocos",
+                "Nh\u00e2n vi\u00ean Telesales": "nhan vien telesales,nhan vien kinh doanh,nhan vien ban hang",
+                "Nh\u00e2n vi\u00ean kinh doanh": "nhan vien kinh doanh,nhan vien telesales,nhan vien sales,nhan vien ban hang",
+                "Nh\u00e2n vi\u00ean L\u1ec5 t\u00e2n": "nhan vien le tan,receptionist",
+                "Tr\u01b0\u1edfng nh\u00f3m kinh doanh": "truong nhom kinh doanh,sales leader,sales team leader,sales lead,sale lead",
+                "Tr\u01b0\u1edfng ph\u00f2ng kinh doanh": "truong phong kinh doanh,sales manager,sale manager",
+                "Gi\u00e1m \u0111\u1ed1c kinh doanh": "giam doc kinh doanh,sales manager,sale manager,sales director",
+                "Sales Manager": "sales manager,truong phong kinh doanh,giam doc kinh doanh,sales director",
+                "Gi\u00e1m s\u00e1t b\u00e1n h\u00e0ng": "giam sat kinh doanh,giam sat ban hang,sales supervisor",
+                "Nh\u00e2n vi\u00ean b\u00e1n h\u00e0ng": "nhan vien ban hang,ban hang,nhan vien kinh doanh,sales",
+                "Chuy\u00ean vi\u00ean quan h\u1ec7 kh\u00e1ch h\u00e0ng": "nhan vien quan he khach hang,chuyen vien quan he khach hang,quan he khach hang",
+                "Tr\u01b0\u1edfng nh\u00f3m b\u00e1n h\u00e0ng": "truong nhom ban hang",
+                "Qu\u1ea3n l\u00fd Nh\u00e0 h\u00e0ng": "quan ly nha hang",
+                "Qu\u1ea3n l\u00fd B\u00e1n h\u00e0ng": "quan ly ban hang",
+                "Tr\u1ee3 l\u00fd kinh doanh": "tro ly kinh doanh,sales admin,sale admin,sales administrator",
+                "Qu\u1ea3n l\u00fd C\u1eeda h\u00e0ng": "quan ly cua hang,quan ly chuoi cua hang,cua hang truong",
+                "Th\u1ef1c t\u1eadp sinh kinh doanh": "thuc tap sinh kinh doanh,sales intern,thuc tap sales",
+                "Tr\u00ecnh d\u01b0\u1ee3c vi\u00ean": "trinh duoc vien",
+                "Kinh doanh": "kinh doanh,sales,sale,telesale,telesales",
+                "Tr\u01b0\u1edfng ph\u00f2ng ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng": "truong phong cham soc khach hang,truong phong cskh,customer service manager",
+                "Nh\u00e2n vi\u00ean ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng": "nhan vien cham soc khach hang,cham soc khach hang,customer care,customer support,customer service executive,customer service executive,cskh",
+                "Nh\u00e2n vi\u00ean Ph\u00e1t tri\u1ec3n th\u1ecb tr\u01b0\u1eddng": "nhan vien phat trien thi truong,chuyen vien phat trien thi truong,phat trien thi truong",
+                "Nh\u00e2n vi\u00ean Marketing": "nhan vien marketing,marketing executive,marcom,marketer",
+                "Tr\u01b0\u1edfng ph\u00f2ng Marketing": "truong phong marketing,marketing manager",
+                "Gi\u00e1m \u0111\u1ed1c Marketing": "giam doc marketing,marketing director,cmo",
+                "Marketing Manager": "marketing manager",
+                "Tr\u01b0\u1edfng nh\u00f3m Marketing": "truong nhom marketing,marketing leader",
+                "Performance Marketing": "nhan vien performance marketing,performance marketing executive,performance marketing",
+                "Digital Marketing": "marketing online,marcom,nhan vien marketing online,digital marketing,nhan vien digital marketing,digital marketer,performance marketing",
+                "Marketing Online": "marketing online,marcom,nhan vien marketing online,digital marketing,nhan vien digital marketing,digital marketer",
+                "Trade Marketing": "nhan vien trade marketing,trade marketing,chuyen vien trade marketing",
+                "Trade Marketing Manager": "truong phong trade marketing,trade marketing manager",
+                "Nh\u00e2n vi\u00ean Facebook Ads": "nhan vien facebook ads,nhan vien facebook ad,facebook ads,facebook ad,quang cao facebook,facebook marketing",
+                "Telemarketing": "nhan vien telemarketing,nhan vien tele marketing,telemarketing,tele marketing",
+                "Content": "content marketing,content writer,content creator,nhan vien viet bai,copywriter,chuyen vien viet bai,creative content,sang tao noi dung,bien tap vien",
+                "Content Marketing": "content marketing,content creator,content marketer",
+                "Content Writer": "content writer,content creator,nhan vien viet bai,sang tao noi dung,bien tap vien",
+                "Content Creator": "content writer,content creator,nhan vien viet bai,sang tao noi dung,bien tap vien",
+                "Copywriter": "content writer,content creator,nhan vien viet bai,sang tao noi dung,bien tap vien",
+                "Video Editor": "video editor,bien tap video,bien tap vien video,edit video",
+                "Nh\u00e2n vi\u00ean Quay\/D\u1ef1ng video": "nhan vien quay dung video,quay dung video,dung video,quay video,content video,video creator",
+                "Th\u1ef1c t\u1eadp sinh Marketing": "thuc tap sinh marketing,thuc tap marketing,marketing intern",
+                "Nh\u00e2n vi\u00ean SEO": "nhan vien seo,chuyen vien seo,content marketing",
+                "Th\u1ef1c t\u1eadp sinh SEO": "thuc tap sinh seo,thuc tap seo,seo intern",
+                "Bi\u00ean phi\u00ean d\u1ecbch": "bien phien dich,phien dich,bien dich",
+                "Ti\u1ebfng Nh\u1eadt": "tieng nhat,japanese",
+                "Ti\u1ebfng H\u00e0n": "tieng han,korean",
+                "Ti\u1ebfng Trung": "tieng trung quoc,chinese",
+                "Ti\u1ebfng Anh": "tieng anh,english",
+                "Bi\u00ean phi\u00ean d\u1ecbch Ti\u1ebfng Nh\u1eadt": "phien dich tieng nhat,bien dich tieng nhat,bien phien dich tieng nhat",
+                "Bi\u00ean phi\u00ean d\u1ecbch Ti\u1ebfng H\u00e0n": "phien dich tieng han quoc,bien dich tieng han quoc,bien phien dich tieng han quoc",
+                "Bi\u00ean phi\u00ean d\u1ecbch Ti\u1ebfng Trung": "phien dich tieng trung quoc,bien dich tieng trung quoc,bien phien dich tieng trung quoc",
+                "Gi\u00e1o vi\u00ean Ti\u1ebfng Nh\u1eadt": "giao vien tieng nhat,japanese",
+                "Gi\u00e1o vi\u00ean Ti\u1ebfng H\u00e0n": "giao vien tieng han,korean",
+                "Gi\u00e1o vi\u00ean Ti\u1ebfng Trung": "giao vien tieng trung quoc,chinese",
+                "Gi\u00e1o vi\u00ean Ti\u1ebfng Anh": "giao vien tieng anh,english teacher,ielts teacher,tro giang tieng anh,giang vien tieng anh",
+                "Thi\u1ebft k\u1ebf \u0111\u1ed3 ho\u1ea1\/Designer": "thiet ke do hoa,graphic designer,nhan vien thiet ke",
+                "Thi\u1ebft k\u1ebf n\u1ed9i th\u1ea5t": "thiet ke noi that,interior design,thiet ke noi ngoai that,dien hoa noi that",
+                "Thi\u1ebft k\u1ebf website": "thiet ke web,thiet ke website,web designer",
+                "Tr\u01b0\u1edfng ph\u00f2ng nh\u00e2n s\u1ef1": "truong phong nhan su,human resource manager,hr manager",
+                "Tuy\u1ec3n d\u1ee5ng\/Nh\u00e2n s\u1ef1": "chuyen vien tuyen dung,nhan vien tuyen dung,nhan su,recruiter,recruitment consultant",
+                "H\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1": "hanh chinh nhan su",
+                "Nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh": "nhan vien hanh chinh,administrative,nhan vien admin",
+                "Nh\u00e2n vi\u00ean mua h\u00e0ng": "nhan vien mua hang,purchase,purchasing staff,purchasing executive,purchasing admin",
+                "Nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng": "nhan vien van phong,nhan vien hanh chinh van phong",
+                "Nh\u00e2n vi\u00ean nh\u1eadp li\u1ec7u": "nhan vien nhap lieu",
+                "Chuy\u00ean vi\u00ean tuy\u1ec3n d\u1ee5ng": "chuyen vien tuyen dung,nhan vien tuyen dung,nhan su,recruiter,recruitment consultant",
+                "Th\u1ef1c t\u1eadp sinh Nh\u00e2n s\u1ef1": "thuc tap sinh nhan su,thuc tap nhan su,hr intern",
+                "Truy\u1ec1n th\u00f4ng n\u1ed9i b\u1ed9": "truyen thong noi bo,nhan vien truyen thong noi bo,internal communicator",
+                "Truy\u1ec1n th\u00f4ng": "truyen thong,pr,nhan vien pr,nhan vien truyen thong",
+                "Nh\u00e2n vi\u00ean T\u01b0 v\u1ea5n": "nhan vien tu van,chuyen vien tu van,consultant",
+                "Nh\u00e2n vi\u00ean T\u01b0 v\u1ea5n tuy\u1ec3n sinh": "nhan vien tu van tuyen sinh,tu van tuyen sinh",
+                "T\u01b0 v\u1ea5n t\u00e0i ch\u00ednh": "tu van tai chinh",
+                "Nh\u00e2n vi\u00ean K\u1ebf to\u00e1n": "nhan vien ke toan,accountant",
+                "K\u1ebf to\u00e1n tr\u01b0\u1edfng": "ke toan truong,chief accountant,nhan vien ke toan,accountant,accouting",
+                "K\u1ebf to\u00e1n kho": "nhan vien ke toan kho",
+                "K\u1ebf to\u00e1n b\u00e1n h\u00e0ng": "nhan vien ke toan ban hang",
+                "K\u1ebf to\u00e1n t\u1ed5ng h\u1ee3p": "ke toan tong hop,general accountant",
+                "Th\u1ef1c t\u1eadp sinh k\u1ebf to\u00e1n": "thuc tap sinh ke toan,thuc tap ke toan",
+                "Nh\u00e2n vi\u00ean Thu ng\u00e2n": "nhan vien thu ngan,cashier,thu ngan",
+                "Ng\u00e2n h\u00e0ng": "ngan hang,bank",
+                "Nh\u00e2n vi\u00ean kinh doanh b\u1ea5t \u0111\u1ed9ng s\u1ea3n": "nhan vien kinh doanh bat dong san,chuyen vien kinh doanh bat dong san",
+                "Nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n b\u1ea5t \u0111\u1ed9ng s\u1ea3n": "nhan vien tu van bat dong san,chuyen vien tu van bat dong san",
+                "B\u1ea5t \u0111\u1ed9ng s\u1ea3n": "bat dong san",
+                "Ki\u1ec3m to\u00e1n vi\u00ean": "kiem toan vien,nhan vien kiem toan,kiem toan,auditor",
+                "Account Executive": "account executive",
+                "Account Manager": "account manager",
+                "Gi\u00e1m \u0111\u1ed1c d\u1ef1 \u00e1n": "giam doc du an",
+                "Gi\u00e1m \u0111\u1ed1c \u0111i\u1ec1u h\u00e0nh": "giam doc dieu hanh,managing director",
+                "Tr\u1ee3 l\u00fd gi\u00e1m \u0111\u1ed1c": "tro ly giam doc,ceo assistant,tro ly tong giam doc",
+                "Nh\u00e2n vi\u00ean l\u00e1i xe": "nhan vien lai xe,nhan vien tai xe,tai xe lai xe",
+                "Nh\u00e2n vi\u00ean giao h\u00e0ng": "nhan vien giao hang,shipper",
+                "Nh\u00e2n vi\u00ean kho": "nhan vien kho,warehouse staff",
+                "K\u1ef9 s\u01b0 c\u01a1 kh\u00ed": "ky su co khi,mechanical engineer",
+                "B\u00e1n th\u1eddi gian": "part time,parttime,ban thoi gian",
+                "Qu\u1ea3n l\u00fd": "quan ly,manager,director,supervisor,leader,giam doc,truong phong,truong nhom",
+                "Tr\u1ee3 l\u00fd": "tro ly,assistant"
+            };
+
+            function getOriginOptions() {
+                var categoryId = $('#category').val();
+                var cityId = $('#city').val();
+                var keyword = $('#keyword').val().trim();
+                var position = $('#position-advanced').val();
+                var salary = $('#salary-advanced').val();
+                var type = $('#type-advanced').val();
+                var companyField = $('#company-field-advanced').val();
+                var options = {};
+
+                if (keyword) {
+                    options.keyword = keyword;
+                }
+                if (categoryId) {
+                    options.categories = [categories[parseInt(categoryId)]];
+                }
+                if (cityId) {
+                    options.locations = [cities[parseInt(cityId)]];
+                }
+                if (position) {
+                    options.position = position;
+                }
+                if (salary) {
+                    options.salary = salary;
+                }
+                if (type) {
+                    options.types = [type];
+                }
+                if (companyField) {
+                    options.companyField = companyField;
+                }
+                return options;
+            }
+
+            function submitFormSearchJob() {
+                var options = getOriginOptions();
+                var url = generateJobSearchUrl(options);
+                document.location.href = url;
+            }
+            $(document).ready(function () {
+                $("#keyword").autocomplete({
+                    source: function (request, response) {
+                        response($.grep(Object.keys(suggestionMap), function (value) {
+                            var match = suggestionMap[value];
+                            var normalizedTerm = normalize(request.term);
+                            return (match.indexOf(normalizedTerm) !== -1);
+                        }));
+                    },
+                    delay: 100,
+                });
+                $('#frm-search-job').submit(function (e) {
+                    e.preventDefault();
+                    submitFormSearchJob();
+                });
+
+                var categoryTopProfessions = new Vue({
+                    el: '#box-category-top-professions',
+                    data: {
+                        isReplace: false,
+                        categoryTopProfessions: [],
+                        categoryTopProfessionsData: [{
+                            "id": 10001,
+                            "name": "Kinh doanh \/ B\u00e1n h\u00e0ng",
+                            "alias": "kinh-doanh-ban-hang",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 257083,
+                            "access_url": "\/tim-viec-lam-kinh-doanh-ban-hang-c10001"
+                        }, {
+                            "id": 10007,
+                            "name": "B\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+                            "alias": "bat-dong-san",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 47955,
+                            "access_url": "\/tim-viec-lam-bat-dong-san-c10007"
+                        }, {
+                            "id": 10014,
+                            "name": "D\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng",
+                            "alias": "dich-vu-khach-hang",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 95428,
+                            "access_url": "\/tim-viec-lam-dich-vu-khach-hang-c10014"
+                        }, {
+                            "id": 10023,
+                            "name": "H\u00e0nh ch\u00ednh \/ V\u0103n ph\u00f2ng",
+                            "alias": "hanh-chinh-van-phong",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 115273,
+                            "access_url": "\/tim-viec-lam-hanh-chinh-van-phong-c10023"
+                        }, {
+                            "id": 10026,
+                            "name": "IT ph\u1ea7n m\u1ec1m",
+                            "alias": "it-phan-mem",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 87116,
+                            "access_url": "\/tim-viec-lam-it-phan-mem-c10026"
+                        }, {
+                            "id": 10028,
+                            "name": "K\u1ebf to\u00e1n \/ Ki\u1ec3m to\u00e1n",
+                            "alias": "ke-toan-kiem-toan",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 76143,
+                            "access_url": "\/tim-viec-lam-ke-toan-kiem-toan-c10028"
+                        }, {
+                            "id": 10029,
+                            "name": "Marketing \/ Truy\u1ec1n th\u00f4ng \/ Qu\u1ea3ng c\u00e1o",
+                            "alias": "marketing-truyen-thong-quang-cao",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 130073,
+                            "access_url": "\/tim-viec-lam-marketing-truyen-thong-quang-cao-c10029"
+                        }, {
+                            "id": 10033,
+                            "name": "Ng\u00e2n h\u00e0ng \/ T\u00e0i ch\u00ednh",
+                            "alias": "ngan-hang-tai-chinh",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 64630,
+                            "access_url": "\/tim-viec-lam-ngan-hang-tai-chinh-c10033"
+                        }, {
+                            "id": 10034,
+                            "name": "Nh\u00e2n s\u1ef1",
+                            "alias": "nhan-su",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 59059,
+                            "access_url": "\/tim-viec-lam-nhan-su-c10034"
+                        }, {
+                            "id": 10045,
+                            "name": "T\u01b0 v\u1ea5n",
+                            "alias": "tu-van",
+                            "order": 0,
+                            "created_at": "2020-06-29T23:36:42.000000Z",
+                            "updated_at": "2020-06-29T23:36:42.000000Z",
+                            "deleted_at": null,
+                            "enabled_for_job": 1,
+                            "job_category_count": 99658,
+                            "access_url": "\/tim-viec-lam-tu-van-c10045"
+                        }]
+                    },
+                    methods: {
+                        replaceBanner() {
+                            this.categoryTopProfessions = this.categoryTopProfessionsData;
+                        },
+                        loadBanner() {
+                            let self = this;
+                            let distance = $('#box-category-top-professions').offset().top,
+                                $window = $(window);
+                            let windowHeight = $(window).height();
+                            distance -= 50; // Load trước khi cuộn tới 50px
+                            if ($window.scrollTop() + windowHeight >= distance) {
+                                if (!self.isReplace) {
+                                    self.isReplace = true;
+                                    self.replaceBanner();
+                                }
+                            }
+                        }
+                    },
+                    mounted() {
+                        this.loadBanner();
+                        $(window).scroll(() => {
+                            this.loadBanner();
+                        });
+                    },
+
+                    updated() {
+                        $('.center-category-top-professions').slick({
+                            dots: false,
+                            speed: 300,
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            autoplay: true,
+                            autoplaySpeed: 5000,
+                            arrows: true,
+                            responsive: [{
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 3,
+                                    slidesToScroll: 3,
+                                    infinite: true,
+                                    dots: true
+                                }
+                            },
+                            {
+                                breakpoint: 600,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 2
+                                }
+                            },
+                            {
+                                breakpoint: 480,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 1
+                                }
+                            }
+                            ]
+                        });
+                    }
+                });
+
+                var listFeatureJobs = new Vue({
+                    el: '#list-feature-jobs',
+                    mixins: [savedJobIds],
+                    data: {
+                        featureJobs: [],
+                        lazyImages: [],
+                        active: false,
+                        jobsInViewPort: [],
+                        jobPositionMapping: {},
+                        isSent: false,
+                        isLoading: true,
+                        trackedJobIds: new Set(),
+                    },
+                    methods: {
+                        chunkJobs(jobs, size) {
+                            var index = 0;
+                            var jobTotal = jobs.length;
+                            var chunkJobs = [];
+                            for (i = 0; i < jobTotal; i += size) {
+                                chunkJobs.push(jobs.slice(i, i + size));
+                            }
+                            return chunkJobs;
+                        },
+                        differenceOf2Arrays(array1, array2) {
+                            if (array1.length == 0) {
+                                return array2;
+                            }
+                            if (array2.length == 0) {
+                                return array1;
+                            }
+                            var temp = [];
+                            array1 = array1.toString().split(',').map(Number);
+                            array2 = array2.toString().split(',').map(Number);
+
+                            for (var i in array1) {
+                                if (array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
+                            }
+                            for (i in array2) {
+                                if (array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
+                            }
+                            return temp.sort((a, b) => a - b);
+                        },
+
+                        updateJobInViewPort() {
+                            var self = listFeatureJobs;
+                            // updatedJobsInViewPort = [];
+                            $('#list-feature-jobs .slick-active .job-ta').each(function (index, el) {
+                                if ($(el).isInViewport()) {
+                                    let jobId = $(el).data('job-id');
+                                    // updatedJobsInViewPort.push(jobId);
+                                    if (!self.trackedJobIds.has(jobId)) {
+                                        self.trackedJobIds.add(jobId);
+                                        const pos = self.jobPositionMapping[jobId];
+                                        const time = new Date().getTime();
+                                        setTimeout(() => {
+                                            if ($(el).isInViewport()) {
+                                                ta('JobInViewPort', {
+                                                    jb_id: jobId,
+                                                    ts: time,
+                                                    p: 'HomePage',
+                                                    impr_pos: pos,
+                                                    b: 'FeatureJobsBox',
+                                                });
+                                            } else {
+                                                self.trackedJobIds.delete(jobId);
+                                            }
+                                        }, 1000);
+                                    }
+                                    // console.log($(el).data('job-id'));
+                                } else {
+                                    // do something else
+                                }
+                            });
+
+                            // const filteredArray = updatedJobsInViewPort.filter(value => this.jobsInViewPort.includes(value));
+                            // let diff = this.differenceOf2Arrays(updatedJobsInViewPort, filteredArray);
+                            // let diff2 = this.differenceOf2Arrays(this.jobsInViewPort, filteredArray);
+                            // if (diff.length) {
+                            //     // console.log('Bắt đầu vào viewport', diff)
+                            //     for(jobId of diff) {
+                            //
+                            //     }
+                            // }
+                            // if (diff2.length) {
+                            // for(jobId of diff2) {
+                            //     ta('JobOutViewPort',{
+                            //         jb_id: jobId,
+                            //         ts: new Date().getTime(),
+                            //         p: 'HomePage',
+                            //         impr_pos: this.jobPositionMapping[jobId],
+                            //         b: 'FeatureJobsBox',
+                            //     })
+                            // }
+                            // console.log('Bắt đầu ra viewport', diff2)
+                            // }
+
+                            // this.jobsInViewPort = updatedJobsInViewPort;
+                            // console.log('================')
+                        },
+                        lazyLoad() {
+
+                            if (this.active === false) {
+                                this.active = true;
+                                setTimeout(() => {
+                                    this.lazyImages.forEach((lazyImage) => {
+                                        if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                                            lazyImage.src = lazyImage.dataset.src;
+                                            lazyImage.classList.remove("lazy");
+
+                                            this.lazyImages = this.lazyImages.filter((image) => {
+                                                return image !== lazyImage;
+                                            });
+
+                                            if (this.lazyImages.length === 0) {
+                                                document.removeEventListener("scroll", this.lazyLoad());
+                                                window.removeEventListener("resize", this.lazyLoad());
+                                                window.removeEventListener("orientationchange", this.lazyLoad());
+                                            }
+                                        }
+                                    });
+
+                                    this.active = false;
+                                }, 200);
+                            }
+                        },
+                        loadJobs() {
+                            let self = this;
+                            let distance = $('#box-feature-jobs').offset().top,
+                                $window = $(window);
+                            let windowHeight = $(window).height();
+                            distance -= 50; // Load trước khi cuộn tới 50px
+                            if ($window.scrollTop() + windowHeight >= distance) {
+                                if (!self.isSent) {
+                                    self.isSent = true;
+                                    self.sendAjaxGetJobs();
+                                }
+                            }
+                        },
+                        sendAjaxGetJobs() {
+                            $('[data-toggle="tooltip"]').tooltip();
+                            var vm = this;
+                            $.ajax({
+                                url: '',
+                                type: 'GET',
+                                data: {
+                                    limit: 1000,
+                                    city: getIdCitySmartFeatureJobs()
+                                },
+                            })
+                                .done(function (response) {
+                                    if (response.status == 'success') {
+                                        var size = 18;
+                                        var screenWidth = window.innerWidth;
+                                        if (768 <= screenWidth && screenWidth <= 991) {
+                                            size = 12;
+                                        } else if (screenWidth <= 767) {
+                                            size = 6;
+                                        }
+                                        listFeatureJobs.featureJobs = listFeatureJobs.chunkJobs(response.jobs, size);
+
+                                        let jobRenderedIds = [];
+                                        let jobPositionMapping = {};
+                                        for (let jobItemIndex in response.jobs) {
+                                            let jobId = response.jobs[jobItemIndex].id;
+                                            jobPositionMapping[jobId] = parseInt(jobItemIndex) + 1;
+                                            jobRenderedIds.push(jobId);
+                                        }
+                                        vm.jobPositionMapping = jobPositionMapping;
+
+                                        if (onFeatureTrackingTa && jobRenderedIds.length) {
+                                            ta('jobRendered', {
+                                                ts: new Date().getTime(),
+                                                p: 'HomePage',
+                                                b: 'FeatureJobsBox',
+                                                jb_ids: jobRenderedIds,
+                                            })
+                                        }
+                                        Vue.nextTick(function () {
+                                            $('[data-toggle="tooltip"]').tooltip({
+                                                container: 'body'
+                                            });
+                                            let self = listFeatureJobs;
+                                            $('.feature-jobs').slick({
+                                                dots: true,
+                                                slidesToShow: 1,
+                                                slidesToScroll: 1,
+                                                fade: true,
+                                                infinite: true,
+                                                speed: 500,
+                                                autoplay: true,
+                                                autoplaySpeed: 10000,
+                                                arrows: true,
+                                            }).on('afterChange', function () {
+                                                self.lazyLoad();
+                                            });
+                                            $('.feature-jobs').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                                                var i = (currentSlide ? currentSlide : 0) + 1;
+                                                $('.slick-pagination').text(i + '/' + slick.slideCount);
+                                                self.updateJobInViewPort();
+                                            });
+                                            self.updateJobInViewPort();
+
+                                            self.lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+                                            self.lazyLoad();
+                                            document.addEventListener("scroll", self.lazyLoad());
+                                            window.addEventListener("resize", self.lazyLoad());
+                                            window.addEventListener("orientationchange", self.lazyLoad());
+                                        })
+                                    }
+                                })
+                                .fail(function () {
+                                    console.log('Đã có lỗi xảy ra.');
+                                })
+                                .always(function () {
+                                    // $('#list-feature-jobs .loading-feature-jobs').css('display', 'none');
+                                    vm.isLoading = false
+                                });
+                        },
+                        handleReloadInstance() {
+                            this.isLoading = true
+                            this.featureJobs = []
+                            $(".feature-jobs").removeClass('slick-initialized')
+                            $(".feature-jobs").removeClass('slick-slider')
+                            $(".feature-jobs").removeClass('slick-dotted')
+                            $(".feature-jobs").html("")
+                            this.sendAjaxGetJobs()
+                        }
+                    },
+                    mounted() {
+                        this.loadJobs();
+                        $(window).scroll((event) => {
+                            this.loadJobs();
+                        });
+                        window.addEventListener('scroll', this.lazyLoad);
+                        $(window).on('scroll resize', () => this.updateJobInViewPort());
+                        loadScrollLocation()
+                    },
+                    updated() {
+
+                    }
+                });
+                $(document).on("click", ".box-smart-feature-jobs .box-smart-item", function () {
+                    $(".box-smart-feature-jobs .box-smart-item").removeClass("active");
+                    $(this).addClass("active");
+                    listFeatureJobs.handleReloadInstance()
+                })
+
+            });
+        </script>
+        <style>
+            .slide-down {
+                top: 0px !important;
+                display: block !important;
+            }
+
+            #topcv-popover-container.slide-down #topcv-popover-dialog {
+                width: 500px;
+                -webkit-animation-name: slideDownEnter;
+                -webkit-animation-iteration-count: 1;
+                -webkit-animation-timing-function: ease-out;
+                -webkit-animation-duration: .4s;
+                -webkit-animation-fill-mode: forwards;
+                animation-name: slideDownEnter;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-out;
+                animation-duration: .4s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes slideDownEnter {
+                0% {
+                    transform: translateY(-150%)
+                }
+
+                to {
+                    transform: translateY(0)
+                }
+            }
+
+            @keyframes slideDownExit {
+                0% {
+                    transform: translateY(0)
+                }
+
+                to {
+                    transform: translateY(-150%)
+                }
+            }
+
+            @keyframes slideUpEnter {
+                0% {
+                    transform: translateY(150%)
+                }
+
+                to {
+                    transform: translateY(0)
+                }
+            }
+
+            @keyframes slideUpExit {
+                0% {
+                    transform: translateY(0)
+                }
+
+                to {
+                    transform: translateY(150%)
+                }
+            }
+        </style>
+
+        <div id="g_id_onload" data-prompt_parent_id="g_id_onload" data-cancel_on_tap_outside="false"
+            style="position: fixed; top: 80px; right: 0px; z-index: 1040;">
+        </div>
+ 
+</body>
+
+</html>

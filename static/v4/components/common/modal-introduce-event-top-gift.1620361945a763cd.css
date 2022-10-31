@@ -1,0 +1,157 @@
+#modal-introduce-event-top-gift .text-danger {
+    color: red
+}
+
+#modal-introduce-event-top-gift .modal-body {
+    padding: 0
+}
+
+#modal-introduce-event-top-gift .modal-dialog {
+    background: #fff;
+    border-radius: 10px
+}
+
+#modal-introduce-event-top-gift .modal-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 35px
+}
+
+#modal-introduce-event-top-gift .modal-footer:after,
+#modal-introduce-event-top-gift .modal-footer:before {
+    content: none
+}
+
+#modal-introduce-event-top-gift .header img {
+    border-radius: 10px 10px 0 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+#modal-introduce-event-top-gift .btn-view-detail {
+    background: #ffc200;
+    border-color: #ffc200;
+    border-radius: 5px;
+    color: #01501f;
+    font-weight: 700;
+    height: 38px;
+    min-width: 216px;
+    outline: none !important;
+    padding: 8px 12px;
+    transition: .4s
+}
+
+#modal-introduce-event-top-gift .btn-close {
+    background: hsla(0, 0%, 84%, .6);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 9px;
+    position: absolute;
+    right: 20px;
+    top: 12px
+}
+
+#modal-introduce-event-top-gift .box-checkbox {
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+    padding-left: 40px;
+    position: relative
+}
+
+#modal-introduce-event-top-gift .box-checkbox input[type=text] {
+    font-size: 15px
+}
+
+#modal-introduce-event-top-gift .box-checkbox input[type=text]:focus {
+    border: 1px solid #00b14f !important
+}
+
+#modal-introduce-event-top-gift .box-checkbox input[type=checkbox] {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0
+}
+
+#modal-introduce-event-top-gift .box-checkbox input[type=checkbox]:checked~.checkmark:after {
+    display: block
+}
+
+#modal-introduce-event-top-gift .box-checkbox .checkmark:after {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    height: 12px;
+    left: 7px;
+    top: 3px;
+    transform: rotate(45deg);
+    width: 9px
+}
+
+#modal-introduce-event-top-gift .box-checkbox .checkmark {
+    border: 1px solid #000;
+    border-radius: 6px;
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24px
+}
+
+#modal-introduce-event-top-gift .box-checkbox .checkmark:after {
+    content: "";
+    display: none;
+    position: absolute
+}
+
+#modal-introduce-event-top-gift .box-checkbox span:first-child {
+    font-size: 15px;
+    min-width: 110px
+}
+
+@media(max-width:425px) {
+    #modal-introduce-event-top-gift .modal-footer {
+        padding: 14px
+    }
+    #modal-introduce-event-top-gift .btn-view-detail {
+        min-width: 125px
+    }
+    #modal-introduce-event-top-gift .box-checkbox {
+        line-height: 18px;
+        padding-left: 30px
+    }
+    #modal-introduce-event-top-gift .box-checkbox input[type=checkbox] {
+        cursor: pointer;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        width: 0
+    }
+    #modal-introduce-event-top-gift .box-checkbox input[type=checkbox]:checked~.checkmark:after {
+        display: block
+    }
+    #modal-introduce-event-top-gift .box-checkbox .checkmark:after {
+        border: solid #000;
+        border-width: 0 2px 2px 0;
+        height: 10px;
+        left: 5px;
+        top: 2px;
+        transform: rotate(45deg);
+        width: 6px
+    }
+    #modal-introduce-event-top-gift .box-checkbox .checkmark {
+        height: 18px;
+        width: 18px
+    }
+    #modal-introduce-event-top-gift .box-checkbox span:first-child {
+        font-size: 12px
+    }
+}

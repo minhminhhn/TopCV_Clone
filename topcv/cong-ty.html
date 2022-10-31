@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="icon" href="https://www.topcv.vn/v3/images/new/favicon.ico" type="image/x-icon">
+    <title>Danh sách tổ chức, doanh nghiệp đang tuyển dụng nhân sự</title>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N3ZZ7MK');
+    </script>
+
+
+    <script>
+        window.header = {
+            referer: './viec-lam.html'
+        }
+
+        window.trackingSource = '';
+        if (!window.trackingSource) {
+            window.trackingSource = localStorage.getItem('ta_source');
+        } else {
+            localStorage.setItem('ta_source', window.trackingSource);
+        }
+    </script>
+    <script type="text/javascript">
+        let taVersion = '1.0.0';
+        (function (w, d, v) {
+            w['ta'] = w['ta'] || function () {
+                (w['ta'].q = w['ta'].q || []).push([...arguments])
+            }
+            var po = d.createElement('script');
+            po.type = 'text/javascript';
+            po.async = true;
+
+            po.src = 'https://ta.toprework.vn/dist/browser-platform/index.js?id=topcv_vn&version=' + v;
+            var s = d.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(po, s);
+        })(window, document, taVersion);
+    </script>
+    <script>
+        var search = new URLSearchParams(location.search);
+        ta('pageview', {
+            u_s: search.get('utm_source'),
+            u_m: search.get('utm_medium'),
+            u_c: search.get('utm_campaign')
+        });
+
+        const startTracking = new Date();
+
+        function setUpSseListener() {
+            if (ta.addSseListener && typeof ta.addSseListener === 'function') {
+                let sent3mins = false;
+                let sent7mins = false;
+                const threeMinutes = 3 * 60 * 1000;
+                const sevenMinutes = 7 * 60 * 1000;
+                // const threeMinutes = 3 * 1000;
+                // const sevenMinutes = 7 * 1000;
+                ta.addSseListener((event) => {
+                    const currentTimestamp = event.timeStamp;
+                    if (!sent3mins && currentTimestamp >= threeMinutes) {
+                        console.log('Sent ga 3 mins, the timestamp is: ' + (new Date().valueOf() - startTracking.valueOf()));
+                        sent3mins = true;
+                        gtag('event', 'OnSite3Mins', {
+                            'send_to': 'AW-823531084/3_X7CI3YnYYDEMys2IgD'
+                        });
+                    }
+                    if (!sent7mins && currentTimestamp >= sevenMinutes) {
+                        console.log('sent ga 7 mins, the timestamp is: ' + (new Date().valueOf() - startTracking.valueOf()));
+                        sent7mins = true;
+                        gtag('event', 'OnSite7Mins', {
+                            'send_to': 'AW-823531084/krRuCK7exoYDEMys2IgD'
+                        });
+                    }
+                })
+            } else {
+                setTimeout(setUpSseListener, 1000);
+            }
+        }
+
+        setUpSseListener();
+    </script>
+    <link rel="stylesheet" href="./v2/bootstrap/css/bootstrap.min.css?v=1.1.1">
+    <link rel="stylesheet" href="./v2/plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="./v3/css/notification.css?v=1.0.9">
+    <link rel="stylesheet" href="https://static.topcv.vn/v4/css/app.min.17482ab77c017e10.css">
+    <link rel="stylesheet" href="https://static.topcv.vn/v4/css/navbar_bs.48a14966e2c4f3ce.css">
+    <link rel="stylesheet" href="https://static.topcv.vn/v4/css/components/desktop/company.min.2c4c64450d171984.css">
+    <link rel="stylesheet"
+        href="https://static.topcv.vn/v4/css/components/desktop/partials/icon-verified-employer.min.b79f9d8bd7063f2f.css">
+    <style>
+        #toast-container>div {
+            opacity: unset;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        .feed-jobs .job-title {
+            margin: 0px;
+        }
+
+        .feed-job-title .job-updated-at {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .box-save-job {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .box-group-search {
+            margin-bottom: 15px;
+        }
+
+        .feed-jobs .box-relative {
+            padding: 20px 20px 10px;
+        }
+
+        /*rate*/
+
+        .stars-container {
+            position: relative;
+            display: inline-block;
+            color: transparent;
+        }
+
+        .stars-container:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "\f005\f005\f005\f005\f005";
+            font-family: "FontAwesome";
+            color: lightgray;
+        }
+
+        .stars-container:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "\f005\f005\f005\f005\f005";
+            font-family: "FontAwesome";
+            color: #f5db4b;
+            overflow: hidden;
+        }
+
+        .stars-0:after {
+            width: 0%;
+        }
+
+        .stars-1:after {
+            width: 1%;
+        }
+
+        .stars-2:after {
+            width: 2%;
+        }
+
+        .stars-3:after {
+            width: 3%;
+        }
+
+        .stars-4:after {
+            width: 4%;
+        }
+
+        .stars-5:after {
+            width: 5%;
+        }
+
+        .stars-6:after {
+            width: 6%;
+        }
+
+        .stars-7:after {
+            width: 7%;
+        }
+
+        .stars-8:after {
+            width: 8%;
+        }
+
+        .stars-9:after {
+            width: 9%;
+        }
+
+        .stars-10:after {
+            width: 10%;
+        }
+
+        .stars-11:after {
+            width: 11%;
+        }
+
+        .stars-12:after {
+            width: 12%;
+        }
+
+        .stars-13:after {
+            width: 13%;
+        }
+
+        .stars-14:after {
+            width: 14%;
+        }
+
+        .stars-15:after {
+            width: 15%;
+        }
+
+        .stars-16:after {
+            width: 16%;
+        }
+
+        .stars-17:after {
+            width: 17%;
+        }
+
+        .stars-18:after {
+            width: 18%;
+        }
+
+        .stars-19:after {
+            width: 19%;
+        }
+
+        .stars-20:after {
+            width: 20%;
+        }
+
+        .stars-21:after {
+            width: 21%;
+        }
+
+        .stars-22:after {
+            width: 22%;
+        }
+
+        .stars-23:after {
+            width: 23%;
+        }
+
+        .stars-24:after {
+            width: 24%;
+        }
+
+        .stars-25:after {
+            width: 25%;
+        }
+
+        .stars-26:after {
+            width: 26%;
+        }
+
+        .stars-27:after {
+            width: 27%;
+        }
+
+        .stars-28:after {
+            width: 28%;
+        }
+
+        .stars-29:after {
+            width: 29%;
+        }
+
+        .stars-30:after {
+            width: 30%;
+        }
+
+        .stars-31:after {
+            width: 31%;
+        }
+
+        .stars-32:after {
+            width: 32%;
+        }
+
+        .stars-33:after {
+            width: 33%;
+        }
+
+        .stars-34:after {
+            width: 34%;
+        }
+
+        .stars-35:after {
+            width: 35%;
+        }
+
+        .stars-36:after {
+            width: 36%;
+        }
+
+        .stars-37:after {
+            width: 37%;
+        }
+
+        .stars-38:after {
+            width: 38%;
+        }
+
+        .stars-39:after {
+            width: 39%;
+        }
+
+        .stars-40:after {
+            width: 40%;
+        }
+
+        .stars-41:after {
+            width: 41%;
+        }
+
+        .stars-42:after {
+            width: 42%;
+        }
+
+        .stars-43:after {
+            width: 43%;
+        }
+
+        .stars-44:after {
+            width: 44%;
+        }
+
+        .stars-45:after {
+            width: 45%;
+        }
+
+        .stars-46:after {
+            width: 46%;
+        }
+
+        .stars-47:after {
+            width: 47%;
+        }
+
+        .stars-48:after {
+            width: 48%;
+        }
+
+        .stars-49:after {
+            width: 49%;
+        }
+
+        .stars-50:after {
+            width: 50%;
+        }
+
+        .stars-51:after {
+            width: 51%;
+        }
+
+        .stars-52:after {
+            width: 52%;
+        }
+
+        .stars-53:after {
+            width: 53%;
+        }
+
+        .stars-54:after {
+            width: 54%;
+        }
+
+        .stars-55:after {
+            width: 55%;
+        }
+
+        .stars-56:after {
+            width: 56%;
+        }
+
+        .stars-57:after {
+            width: 57%;
+        }
+
+        .stars-58:after {
+            width: 58%;
+        }
+
+        .stars-59:after {
+            width: 59%;
+        }
+
+        .stars-60:after {
+            width: 60%;
+        }
+
+        .stars-61:after {
+            width: 61%;
+        }
+
+        .stars-62:after {
+            width: 62%;
+        }
+
+        .stars-63:after {
+            width: 63%;
+        }
+
+        .stars-64:after {
+            width: 64%;
+        }
+
+        .stars-65:after {
+            width: 65%;
+        }
+
+        .stars-66:after {
+            width: 66%;
+        }
+
+        .stars-67:after {
+            width: 67%;
+        }
+
+        .stars-68:after {
+            width: 68%;
+        }
+
+        .stars-69:after {
+            width: 69%;
+        }
+
+        .stars-70:after {
+            width: 70%;
+        }
+
+        .stars-71:after {
+            width: 71%;
+        }
+
+        .stars-72:after {
+            width: 72%;
+        }
+
+        .stars-73:after {
+            width: 73%;
+        }
+
+        .stars-74:after {
+            width: 74%;
+        }
+
+        .stars-75:after {
+            width: 75%;
+        }
+
+        .stars-76:after {
+            width: 76%;
+        }
+
+        .stars-77:after {
+            width: 77%;
+        }
+
+        .stars-78:after {
+            width: 78%;
+        }
+
+        .stars-79:after {
+            width: 79%;
+        }
+
+        .stars-80:after {
+            width: 80%;
+        }
+
+        .stars-81:after {
+            width: 81%;
+        }
+
+        .stars-82:after {
+            width: 82%;
+        }
+
+        .stars-83:after {
+            width: 83%;
+        }
+
+        .stars-84:after {
+            width: 84%;
+        }
+
+        .stars-85:after {
+            width: 85%;
+        }
+
+        .stars-86:after {
+            width: 86%;
+        }
+
+        .stars-87:after {
+            width: 87%;
+        }
+
+        .stars-88:after {
+            width: 88%;
+        }
+
+        .stars-89:after {
+            width: 89%;
+        }
+
+        .stars-90:after {
+            width: 90%;
+        }
+
+        .stars-91:after {
+            width: 91%;
+        }
+
+        .stars-92:after {
+            width: 92%;
+        }
+
+        .stars-93:after {
+            width: 93%;
+        }
+
+        .stars-94:after {
+            width: 94%;
+        }
+
+        .stars-95:after {
+            width: 95%;
+        }
+
+        .stars-96:after {
+            width: 96%;
+        }
+
+        .stars-97:after {
+            width: 97%;
+        }
+
+        .stars-98:after {
+            width: 98%;
+        }
+
+        .stars-99:after {
+            width: 99%;
+        }
+
+        .stars-100:after {
+            width: 100%;
+        }
+
+        .radio-choose-active {
+            display: inline-block;
+            position: relative;
+            margin: 10px 0 0;
+        }
+
+        .radio-choose-active input[type='radio'] {
+            display: none;
+        }
+
+        .radio-choose-active label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .radio-choose-active label:before {
+            content: " ";
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            margin: 0 15px 0 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 11px;
+            border: 10px solid rgb(0, 0, 0, .2);
+        }
+
+        .radio-choose-active input[type=radio]:checked+label:after {
+            border-radius: 10px;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            content: " ";
+            display: block;
+            background: #00B14F;
+        }
+
+        .transform-job-title {
+            /*text-transform: capitalize;*/
+        }
+    </style>
+
+    <script src="./v2/js/jquery-1.11.2.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-823531084"></script>
+    <script>
+        window.insider_object = {
+            user: {
+                "email": "anilinform23@gmail.com",
+                "name": "do minh",
+                "login": true,
+                "user_name": "minh",
+                "gdpr_optin": true,
+                "sms_optin": true,
+                "cv": false,
+                "interest": "IT ph\u1ea7n m\u1ec1m",
+                "salary": 2,
+                "user_type": "user",
+                "email_optin": true,
+                "list_id": [15]
+            },
+        };
+
+        window.topcvUser = {
+            id: "5561812",
+            email: "anilinform23@gmail.com",
+            fullname: "do minh",
+        }
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-823531084');
+    </script>
+    <script type="text/javascript">
+        var trackingQueue = []
+    </script>
+
+    <script>
+        ! function (w, d, t) {
+            w.TiktokAnalyticsObject = t;
+            var ttq = w[t] = w[t] || [];
+            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) {
+                t[e] = function () {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            };
+            for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+            ttq.instance = function (t) {
+                for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                return e
+            }, ttq.load = function (e, n) {
+                var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+                ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                var o = document.createElement("script");
+                o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t;
+                var a = document.getElementsByTagName("script")[0];
+                a.parentNode.insertBefore(o, a)
+            };
+
+            ttq.load('C3DCKS2TO1NMNN16KQ1G');
+            ttq.page();
+        }(window, document, 'ttq');
+
+        ttq.instance('C3DCKS2TO1NMNN16KQ1G').track('Browse');
+    </script>
+
+
+    <script>
+        (function (a, b, d, c, e) {
+            a[c] = a[c] || [];
+            a[c].push({
+                "atm.start": (new Date).getTime(),
+                event: "atm.js"
+            });
+            a = b.getElementsByTagName(d)[0];
+            b = b.createElement(d);
+            b.async = !0;
+            b.src = "//deqik.com/tag/corejs/" + e + ".js";
+            a.parentNode.insertBefore(b, a)
+        })(window, document, "script", "atmDataLayer", "ATMHMAX03KRJ8");
+    </script>
+
+<body>
+
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3ZZ7MK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3306437339585114');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=3306437339585114&ev=PageView&noscript=1" /></noscript>
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" href="./v2/css/font.css?v=1.1.1">
+
+        <link rel="stylesheet" href="./v2/css/animate.css?v=1.1.1">
+        <link rel="stylesheet" href="./v3/css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="./v3/css/cropper.min.css">
+        <link rel="stylesheet" type="text/css" href="./packages/cvo/cropper/style.css?v=2.1">
+        <link rel="stylesheet" href="./v3/plugins/icon8/css/styles.min.css">
+        <link rel="stylesheet" href="./v2/plugins/switchery/switchery.min.css">
+        <link rel="stylesheet" href="./v3/css/toastr.min.css">
+    </noscript>
+    <script>
+        var loadDeferredStyles = function () {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function () {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=1478418029113221';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <nav class="navbar ta-top">
+        <div class="container-fluid px-30">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">
+                    <img src="./v3/images/topcv-logo-4.png?v=1.0.1" alt="TopCV tuyen dung tai TopCV"
+                        title="TopCV tuyển dụng tại TopCV" class="">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="navbar-left__item group ">
+                    <a href="./viec-lam.html">
+                        Việc làm
+                    </a>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <li class="navbar-menu__item ">
+                                <a href="./viec-lam.html" class="text-sm">
+                                    <i class="icon fa-light fa-radar"></i>
+                                    Tìm việc làm
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item  mb-0 border-b-1  ">
+                                <a href="./lich-su-ung-tuyen.html" class="text-sm">
+                                    <i class="icon fa-light fa-briefcase"></i>
+                                    Việc làm đã ứng tuyển
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="" class="text-sm">
+                                    <i class="icon fa-light fa-heart"></i>
+                                    Việc làm đã lưu
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="" class="text-sm">
+                                    <i class="icon fa-light fa-user-robot"></i>
+                                    Việc làm phù hợp
+                                    <span class="label label-primary">Hot</span>
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="./viec-lam-it.html" class="text-sm">
+                                    <i class="fa-light fa-display-code icon"></i>
+                                    Việc làm IT <span class="label label-new">Mới</span>
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="viec-lam-senior.html" class="text-sm">
+                                    <i class="icon fa-light fa-user-graduate"></i>
+                                    Việc làm Senior <span class="label label-new">Mới</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="box-img-job ">
+                            <img src="./v4/image/nav-job.png?v=1.0.0" alt="Việc làm">
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-left__item group
+            ">
+                    <a href=" ./quan-ly-cv.html " title="Hồ sơ & CV">
+                        Hồ sơ & CV
+                    </a>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <li class="navbar-menu__item mb-0 border-b-1 ">
+                                <a href="./quan-ly-cv.html" class="text-sm">
+                                    <i class="icon fa-light fa-file-user"></i>
+                                    Quản lý CV
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="https://www.topcv.vn/quan-ly-cover-letter" class="text-sm">
+                                    <i class="icon fa-light fa-file-lines"></i>
+                                    Quản lý Cover Letter
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mb-0 border-b-1 ">
+                                <a href="https://www.topcv.vn/mau-cv" class="text-sm">
+                                    <i class="icon fa-light fa-id-badge"></i>
+                                    Mẫu CV
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="https://www.topcv.vn/mau-cover-letter-thu-xin-viec" class="text-sm">
+                                    <i class="icon fa-light fa-file-lines"></i>
+                                    Mẫu Cover Letter
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mb-0 border-b-1">
+                                <a href="https://reviewcv.topcv.vn/" target="_blank" class="text-sm">
+                                    <i class="icon fa-light fa-file-user"></i>
+                                    Dịch vụ tư vấn CV
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0">
+                                <a href="https://www.topcv.vn/huong-dan-viet-cv-chi-tiet-theo-nganh" target="_blank"
+                                    class="text-sm">
+                                    <i class="icon fa-light fa-file-user"></i>
+                                    Hướng dẫn viết CV theo ngành nghề
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="https://www.topcv.vn/profile" class="text-sm">
+                                    <i class="icon fa-light fa-pager"></i>
+                                    TopCV Profile
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="box-img  box-cv ">
+                            <img src="./v4/image/nav-cv.png?v=1.0.0" alt="CV & hồ sơ">
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-left__item group active">
+                    <a href="./cong-ty.html" title="Công ty">
+                        Công ty
+                    </a>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <li class="navbar-menu__item mb-0 border-b-1 active">
+                                <a href="./cong-ty.html" class="text-sm">
+                                    <i class="icon fa-light fa-building"></i>
+                                    Danh sách công ty
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="./top-cong-ty.html" class="text-sm">
+                                    <i class="icon fa-light fa-buildings"></i>
+                                    Top công ty
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li v-cloak id="topcv-connect" class="navbar-right__item icon">
+                    <a href="http://candidate.topcvconnect.com" target="_blank">
+                        <i style="font-size: 20px" class="fa fa-comments noti-icon"></i>
+                        <span v-if="unreadConversationCount" class="notification-count">{{ unreadConversationCount
+                            }}</span>
+                    </a>
+                </li>
+                <li v-cloak id="nav-notification" class="navbar-right__item icon dropdown notification"
+                    :class="{ open: open }" @click="toggle">
+                    <a href="javascript:void(0)" class="dropdown-toggle">
+                        <i class="fa fa-bell noti-icon"></i>
+                        <span v-if="newNotification" class="notification-count">{{ newNotification }}</span>
+                    </a>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu loading" v-if="isFirstLoading">
+                            <li class="header">Đang tải...</li>
+                            <li class="body">
+                                <ul class="notification-list">
+                                    <li class="notification-item text-center" style="color: #fff"><img
+                                            src="./v3/images/loader.gif" style="width: 15px;"
+                                            alt="" /></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <template v-else>
+                            <ul v-if="notifications.length > 0" class="dropdown-menu nav navbar-menu">
+                                <li class="header">
+                                    <span class="title">Thông báo</span>
+                                    <div class="pull-right">
+                                        <a class="mark-viewed-all text-highlight"
+                                            href="https://www.topcv.vn/notification/mark-viewed-all"
+                                            @click.prevent="markViewedAll">Đánh dấu tất cả là đã đọc</a>
+                                    </div>
+                                </li>
+                                <li class="body done">
+                                    <ul class="notification-list">
+                                        <li class="notification-item" v-for="notification in notifications"
+                                            :class="{ 'not-read': !notification.viewed }">
+                                            <a :href="notification.url" target="_blank"
+                                                @click="markViewed(notification)">
+                                                <div class="notification-item-title">
+                                                    <i class="fa-light notification-item-icon"
+                                                        :class="notification.icon"></i> <span>{{ notification.headings
+                                                        }}</span>
+                                                </div>
+                                                <div class="notification-item-text">{{ notification.contents }}</div>
+                                            </a>
+                                            <div class="notification-item-sub row">
+                                                <div class="col-xs-6">
+                                                    <span class="notification-item-time">{{ notification.ago }}</span>
+                                                </div>
+                                                <div class="col-xs-6 text-right">
+                                                    <a href="" @click.prevent="toggleViewed(notification)"
+                                                        class="mark-viewed" :class="{ viewed: notification.viewed }"
+                                                        data-toggle="tooltip-body" data-placement="top"
+                                                        :data-original-title="notification.viewed ? 'Đánh dấu là chưa đọc' : 'Đánh dấu là đã đọc'">
+                                                        <i class="fa fa-check icon"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li v-if="loading" class="notification-item text-center" style="color: #fff">
+                                            <img src="./v3/images/loader.gif" style="width: 15px;"
+                                                alt="" /></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul v-else class="nav navbar-menu empty">
+                                <div class="empty-text">Bạn không có thông báo nào</div>
+                            </ul>
+                        </template>
+                    </div>
+                </li>
+                <li class="navbar-right__item group">
+                    <div class="title">
+                        <a href="javascript:void(0)">
+                            <img src="./images/avatar-default.jpg" alt="do minh">
+                            <span class="fullname">do minh</span>
+                        </a>
+                    </div>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <div class="dropdown-menu__info">
+                                <img src="./images/avatar-default.jpg" alt="do minh">
+                                <div class="caption">
+                                    <p class="name">do minh</p>
+                                    <p class="description">Mã ứng viên: <span class="code">#5561812</span></p>
+                                </div>
+                            </div>
+                            <li class="navbar-menu__item mb-0 border-b-1 ">
+                                <a href="https://www.topcv.vn/tai-khoan/nang-cap" class="text-sm">
+                                    <i class="icon fa-light fa-circle-up"></i>
+                                    Nâng cấp tài khoản VIP
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="https://www.topcv.vn/qua-tang" class="text-sm">
+                                    <i class="icon fa-light fa-gift-card"></i>
+                                    Kích hoạt quà tặng
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mb-0 border-b-1 ">
+                                <a href="https://www.topcv.vn/xem-ho-so" class="text-sm">
+                                    <i class="icon fa-light fa-eyes"></i>
+                                    Nhà tuyển dụng xem hồ sơ
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 mb-0 border-b-1 ">
+                                <a href="https://www.topcv.vn/cai-dat-goi-y-viec-lam" class="text-sm">
+                                    <i class="icon fa-light fa-list-check"></i>
+                                    Cài đặt gợi ý việc làm
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="https://www.topcv.vn/tai-khoan/cai-dat-thong-bao" class="text-sm">
+                                    <i class="icon fa-light fa-envelope-dot"></i>
+                                    Cài đặt nhận email
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mb-0 border-b-1 ">
+                                <a href="https://www.topcv.vn/tai-khoan/bao-mat" class="text-sm">
+                                    <i class="icon fa-light fa-shield-check"></i>
+                                    Cài đặt bảo mật
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 ">
+                                <a href="https://www.topcv.vn/tai-khoan/mat-khau" class="text-sm">
+                                    <i class="icon fa-light fa-shield-keyhole"></i>
+                                    Đổi mật khẩu
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item mt-0 logout">
+                                <a href="javascript:void(0)"
+                                    onclick="document.getElementById('user-logout-form').submit();" class="text-sm">
+                                    <i class="icon fa-light fa-left-to-line"></i>
+                                    Đăng xuất
+                                </a>
+                                <form action="https://www.topcv.vn/sign-out" id="user-logout-form" method="POST">
+                                    <input type="hidden" name="_token" value="RHrPKGETcsbH0VeHwdPvVSk0D3PcWbc8oiR3IdjE">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="main">
+        <div class="company">
+            <div class="box-search-company">
+                <div class="container d-flex">
+                    <div class="box-search">
+                        <ul class="nav header">
+                            <li class="nav-item">
+                                <a href="./cong-ty.html" class="nav-link  active ">Danh sách công ty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./top-cong-ty.html" class="nav-link ">Top công ty</a>
+                            </li>
+                        </ul>
+                        <div class="caption">
+                            <h1 class="title">Khám phá 100.000+ công ty nổi bật</h1>
+                            <p class="description">Tra cứu thông tin công ty và tìm kiếm nơi làm việc tốt nhất dành cho
+                                bạn</p>
+                        </div>
+                        <form action="./cong-ty/tim-kiem.html" class="form-search border-hover">
+                            <i class="fa-light fa-magnifying-glass"></i>
+                            <input class="form-control" placeholder="Nhập tên công ty" id="keyword" name="keyword">
+                            <button class="btn btn-search btn-primary-hover">
+                                Tìm kiếm
+                            </button>
+                        </form>
+                    </div>
+                    <div class="box-img">
+                        <img src="./v4/image/company-billBoard.svg" class="w-100" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="featured-companies">
+                <div class="company-header text-center">
+                    <h2 class="title">DANH SÁCH CÁC CÔNG TY NỔI BẬT</h2>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-misa/3786.html">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/NFyPXViRhcxCR7NMgKYq.jpg"
+                                                alt="Công ty Cổ phần MISA" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-misa/3786.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/YVVFSY05ZUhqjlVHtBl2kOD1a189WFj0_1652947920____d78c5dd2ab820dcbb9a367b40e712067.jpg"
+                                                alt="Công ty Cổ phần MISA">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-misa/3786.html"
+                                            class="company-name" target="_blank">Công ty Cổ phần MISA</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" MISA Jointstock Company is one of the leading software companies in
+                                            Vietnam. We develop and offer management softwares for small and medium
+                                            enterprises, government and individual utility applications. MISA ‘s
+                                            headquarter is located in Hanoi with 5 branches in Hanoi, Da Nang, Buon Ma
+                                            Thuot, Ho Chi Minh City and Can Tho. MISA has been awarded with a number of
+                                            prizes from the Government of Vietnam and other oganizations
+                                            such..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/cong-ty/cong-ty-tnhh-cmc-global/2872.html">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/cong-ty-tnhh-cmc-global-5e3dc09f007df09930dcb7b36f9cbd11-60c33177cb4c7.jpg"
+                                                alt="Công ty TNHH CMC GLOBAL" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-tnhh-cmc-global/2872.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-tnhh-cmc-global-1d94bf2be044cc832cd72d2f4f8fad66-5e72d0edadcfb.jpg"
+                                                alt="Công ty TNHH CMC GLOBAL">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-tnhh-cmc-global/2872.html"
+                                            class="company-name" target="_blank">Công ty TNHH CMC GLOBAL</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" CMC Global ra đời từ kinh nghiệm 25 năm trong lĩnh vực ICT và hơn 10 năm
+                                            kinh nghiệm trong lĩnh vực Outsourcing của Tập đoàn công nghệ CMC, với sứ
+                                            mệnh trở thành đơn vị cung cấp nhân lực kỹ sư phần mềm chất lượng
+                                            cao, cung cấp các giải pháp, dịch vụ CNTT cho thị trường quốc tế. Hiện CMC
+                                            Global đang sở hữu đến 700++ nhân viên,..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a
+                                        href="https://www.topcv.vn/cong-ty/ngan-hang-tmcp-viet-nam-thinh-vuong-vpbank/493.html">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/Nb4sWTWAzahLcXAuffCb.jpg"
+                                                alt="Ngân Hàng TMCP Việt Nam Thịnh Vượng (VPBank)" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a
+                                            href="https://www.topcv.vn/cong-ty/ngan-hang-tmcp-viet-nam-thinh-vuong-vpbank/493.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/ngan-hang-tmcp-viet-nam-thinh-vuong-vpbank-610d052a2213d.jpg"
+                                                alt="Ngân Hàng TMCP Việt Nam Thịnh Vượng (VPBank)">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/ngan-hang-tmcp-viet-nam-thinh-vuong-vpbank/493.html"
+                                            class="company-name" target="_blank">Ngân Hàng TMCP Việt Nam Thịnh Vượng
+                                            (VPBank)</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" VPBank tiếp tục theo đuổi mục tiêu khẳng định vị thế của ngân hàng trên thị
+                                            trường, đó là nằm trong nhóm 5 Ngân hàng TMCP tư nhân và nhóm 3 Ngân hàng
+                                            TMCP tư nhân bán lẻ hàng đầu về quy mô cho vay khách hàng,
+                                            huy động khách hàng và lợi nhuận và chú trọng tăng trưởng chất lượng hoạt
+                                            động.Những thành quả đạt được trong giai đoạn..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-babylons/10691.html">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/fUO18EkwjslmizyMCfwf.jpg"
+                                                alt="CÔNG TY CỔ PHẦN BABYLONS" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-babylons/10691.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-co-phan-babylons-6030ee679da94.jpg"
+                                                alt="CÔNG TY CỔ PHẦN BABYLONS">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-babylons/10691.html"
+                                            class="company-name" target="_blank">CÔNG TY CỔ PHẦN BABYLONS</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" KHÁC BIỆT TẠO THÀNH CÔNGBabylons là một doanh nghiệp hoạt động trong lĩnh
+                                            vực giáo dục. Với tâm niệm “giáo dục là vũ khí giúp thay đổi thế giới”, ông
+                                            Phạm Tuấn Sơn - Giám đốc và là người sáng lập Babylons, cho
+                                            rằng, để đạt được thành công, thì tư duy chiếm đến 80%, còn lại 20% là kỹ
+                                            năng, không chỉ với Babylons mà các doanh nghiệp khác..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/cong-ty/tek-experts-vietnam/21670.html">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/tek-experts-vietnam-e6c9e99f0ee1d1d75c565e940e83f5c3-62a6f70cc2dbb.jpg"
+                                                alt="Tek Experts Vietnam" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/cong-ty/tek-experts-vietnam/21670.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/tek-experts-vietnam-62a553577f2a7.jpg"
+                                                alt="Tek Experts Vietnam">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/tek-experts-vietnam/21670.html"
+                                            class="company-name" target="_blank">Tek Experts Vietnam</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Tek Experts là một công ty đa quốc gia chuyên về giải pháp phần mềm, cung
+                                            cấp các dịch vụ hỗ trợ kỹ thuật nhanh chóng và chuyên sâu hàng đầu thế
+                                            giới.Vượt qua các rào cản về địa lý, ngôn ngữ và múi giờ, Tek Experts
+                                            đảm bảo cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 trong suốt 365 ngày cho hai
+                                            đối tác lớn mang tầm thế..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a
+                                        href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-cau-lac-bo-ky-nghi-viet-nam/89130.html">
+                                        <div class="cover-wraper">
+                                            <img src="./images/default_cover/topcv_cover_4.jpg"
+                                                class="img-fluid" alt="CÔNG TY CỔ PHẦN CÂU LẠC BỘ KỲ NGHỈ VIỆT NAM">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a
+                                            href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-cau-lac-bo-ky-nghi-viet-nam/89130.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/T9Lkdgphu8T14RecAJiUfNtFSETMHCPj_1645266507____ac5771125f2dbd4fa092b24bc60920ab.jpg"
+                                                alt="CÔNG TY CỔ PHẦN CÂU LẠC BỘ KỲ NGHỈ VIỆT NAM">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-cau-lac-bo-ky-nghi-viet-nam/89130.html"
+                                            class="company-name" target="_blank">CÔNG TY CỔ PHẦN CÂU LẠC BỘ KỲ NGHỈ VIỆT
+                                            NAM</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Vietnam Vacation Club là công ty Quản lý Quỹ Tư vấn, Đầu tư và Phát triển
+                                            các dự án Timeshares chuyên nghiệp tiên phong tại Việt Nam được đầu tư bởi
+                                            VPASS Châu Á và các nhà đầu tư uy tín trong lĩnh vực tài chính,
+                                            ngân hàng và hàng không du lịch.Timeshare là gì?Timeshare là hình thức một
+                                            nhóm người mua chung phần tài sản là bất động sản..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a
+                                        href="https://www.topcv.vn/cong-ty/tap-doan-giao-duc-va-dao-tao-quoc-te-dai-tay-duong-atlantic-group/104800.html">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/tap-doan-giao-duc-va-dao-tao-quoc-te-dai-tay-duong-atlantic-group-2ba200df795d973ad273e325de92920c-62bab39e276c0.jpg"
+                                                alt="Tập đoàn Giáo dục và Đào tạo Quốc tế Đại Tây Dương (Atlantic Group)"
+                                                class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a
+                                            href="https://www.topcv.vn/cong-ty/tap-doan-giao-duc-va-dao-tao-quoc-te-dai-tay-duong-atlantic-group/104800.html">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/0epZPx6pPGDmA0yK45EzfcX7cWSt1i4s_1656571106____a45d9bacc902a2eea273dba56af72e3d.jpg"
+                                                alt="Tập đoàn Giáo dục và Đào tạo Quốc tế Đại Tây Dương (Atlantic Group)">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/cong-ty/tap-doan-giao-duc-va-dao-tao-quoc-te-dai-tay-duong-atlantic-group/104800.html"
+                                            class="company-name" target="_blank">Tập đoàn Giáo dục và Đào tạo Quốc tế
+                                            Đại Tây Dương (Atlantic Group)</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" ATLANTIC GROUP was founded in 2003. Over the last 19 years, Atlantic Group
+                                            has been ceaselessly growing and become one of the leading education groups
+                                            in Vietnam. We have done so by providing the following services:1.
+                                            Study Abroad Consultancy: As certified members of VIECA and ICEF, with more
+                                            than 17 years of experience in the field of international study consultancy.
+                                            Atlantic Overseas Studies consultancy company has helped
+                                            students transition to..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/tksic">
+                                        <div class="cover-wraper">
+                                            <img src="./images/default_cover/topcv_cover_1.jpg"
+                                                class="img-fluid" alt="CÔNG TY TNHH TKSIC">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/tksic">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/tdIQM7vpRQJsm1bnAXD983M2w2kldJxV_1637147953____6a69b820aca1139f96d09b1e4fc88bc1.JPG"
+                                                alt="CÔNG TY TNHH TKSIC">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/tksic" class="company-name"
+                                            target="_blank">CÔNG TY TNHH TKSIC</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" TKSIC mang đến những giải pháp mới mẻ, toàn diện và chuyên biệt nhất về đầu
+                                            tư thông minh, đem lại giá trị bền vững cho khách hàng Chúng tôi hướng đến
+                                            mục tiêu trở thành công ty chuyên cung cấp các sản phẩm và
+                                            dịch vụ tài chính có hiệu quả vượt trội và đẳng cấp quốc tế tại thị trường
+                                            Việt Nam"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/vegacorporation">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/oaP711c7rQvWmU4NgHlg.jpg"
+                                                alt="Vega Corporation" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/vegacorporation">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/vega-corporation-57982df94b6e3_rs.jpg"
+                                                alt="Vega Corporation">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/vegacorporation" class="company-name"
+                                            target="_blank">Vega Corporation</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Vega Corporation được thành lập từ tháng 6/2003, thời gian đầu hợp tác với
+                                            các nhà mạng để triển khai các dịch vụ giá trị gia tăng trên các thiết bị
+                                            số. Vega là một trong trong các đối tác lớn của các nhà mạng
+                                            trong và ngoài nước (Viettel, Vinaphone, Mobifone, Metfone, Natcom,
+                                            Unitel…).Trải qua nhiều năm phát triển và trưởng thành, với đội ngũ nhân
+                                            viên tài năng..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/educa">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/educa-corporation-6025408517e96e7aa4be4a7198a8e938-61b05cbdccaaa.jpg"
+                                                alt="EDUPIA" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/educa">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-cp-giao-duc-educa-corporation-6d67556358b65494d801a26a77be21fb-5ea7b55a0ca31.jpg"
+                                                alt="EDUPIA">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/educa" class="company-name"
+                                            target="_blank">EDUPIA</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Edupia là thương hiệu hàng đầu trong lĩnh vực Edtech tại Việt Nam. Được
+                                            thành lập năm 2018, qua 4 năm hoạt động Edupia hiện có quy mô hơn 700 nhân
+                                            sự và hàng trăm ngàn học viên tại Việt Nam và Đông Nam Á. Edupia
+                                            cũng vinh dự nhận giải thưởng Ứng dụng số tốt nhất trong lĩnh vực đào tạo
+                                            2018, Top 50 Thương hiệu vàng ASEAN 2019..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/sailun">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/2lAQQ7FpkWGG7z9HsAi5.jpg"
+                                                alt="Công ty TNHH Sailun Việt Nam" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/sailun">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/AK8dYLObqs47aftcn37npQI1KCtTcVil_1662625881____61718388ab3bdaf566bd08cd670e114a.png"
+                                                alt="Công ty TNHH Sailun Việt Nam">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/sailun" class="company-name"
+                                            target="_blank">Công ty TNHH Sailun Việt Nam</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Tập Đoàn Sailun được thành lập năm 2002, là công ty lốp xe tư nhân hạng A
+                                            đầu tiên của Trung Quốc(Mã chứng khoán: 601058), tích hợp nghiên cứu và phát
+                                            triển, sản xuất, bán hàng và dịch vụ lốp xe, được xây dựng
+                                            tại Thanh Đảo, Đông Dương, Thẩm Dương và Việt Nam. Có các nhà máy sản xuất
+                                            lốp xe hiện đại, với mạng lưới bán hàng và..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/datxanhmientrung">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/cong-ty-co-phan-dat-xanh-mien-trung-8d5aff047e4cbe63882cf81719baf7a9-62f5aee60046a.jpg"
+                                                alt="Công Ty Cổ Phần Đất Xanh Miền Trung" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/datxanhmientrung">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-co-phan-dat-xanh-mien-trung-62f31d414ed86.jpg"
+                                                alt="Công Ty Cổ Phần Đất Xanh Miền Trung">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/datxanhmientrung" class="company-name"
+                                            target="_blank">Công Ty Cổ Phần Đất Xanh Miền Trung</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Công ty CP Đất Xanh Miền Trung là thành viên Tập đoàn Đất Xanh. Chính thức
+                                            đi vào hoạt động từ ngày 8/4/2011, sau 11 năm xây dựng và phát triển, Đất
+                                            Xanh Miền Trung đã và đang từng bước trở thành một trong những
+                                            công ty đầu tư bất động sản chuyên nghiệp và uy tín hàng đầu tại khu vực
+                                            miền Trung cũng như cả nước. Đất Xanh..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/concentrix">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/DdzvuyJVOuBcILv9oMI5.jpg"
+                                                alt="Công ty TNHH Concentrix Service Vietnam" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/concentrix">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-tnhh-concentrix-service-vietnam-5d2887eec8342.jpg"
+                                                alt="Công ty TNHH Concentrix Service Vietnam">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/concentrix" class="company-name"
+                                            target="_blank">Công ty TNHH Concentrix Service Vietnam</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Concentrix là một công ty hàng đầu thế giới của Mỹ trong lĩnh vực dịch vụ
+                                            chăm sóc khách hàng có mặt ở trên 44 quốc gia với tổng số nhân sự lên tới
+                                            trên 250.000 nhân viên.Concentrix Việt Nam luôn đầu tư và nỗ
+                                            lực nhằm cung cấp môi trường tốt nhất như:Cơ hội học hỏi &amp; phát triểnKết
+                                            nối thường xuyên với nhân viên, tạo môi trường tốt..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/tekyholdings">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/cong-ty-co-phan-cong-nghe-amp-sang-tao-tre-teky-holdings-e12015c13f4e11ba3282a4a7ad44b64a-629715f971980.jpg"
+                                                alt="CÔNG TY CỔ PHẦN CÔNG NGHỆ &amp; SÁNG TẠO TRẺ TEKY HOLDINGS"
+                                                class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/tekyholdings">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-co-phan-cong-nghe-sang-tao-tre-teky-holdings-6297130b27e96.jpg"
+                                                alt="CÔNG TY CỔ PHẦN CÔNG NGHỆ &amp; SÁNG TẠO TRẺ TEKY HOLDINGS">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/tekyholdings" class="company-name"
+                                            target="_blank">CÔNG TY CỔ PHẦN CÔNG NGHỆ &amp; SÁNG TẠO TRẺ TEKY
+                                            HOLDINGS</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Young can do ITTEKY là Tổ chức giáo dục công nghệ STEAM K12 chuẩn Mỹ tiên
+                                            phong và dẫn đầu tại Việt Nam với hệ sinh thái Học viện - Nền tảng edtech -
+                                            Hợp tác trường, nhằm thực hiện sứ mệnh Đổi mới giáo dục, mang
+                                            đến cho thế hệ trẻ Việt Nam kiến thức toàn diện về STEAM (Science -
+                                            Technology - Engineering - Art - Math), đặc..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/cong-ty-co-phan-dau-tu-va-cong-nghe-dai-viet">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/cong-ty-co-phan-propertyguru-viet-nam-a23705940bc106c8bb945347866606ce-62eb4f26e35bc.jpg"
+                                                alt="Công ty Cổ phần PropertyGuru Việt Nam" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a
+                                            href="https://www.topcv.vn/brand/cong-ty-co-phan-dau-tu-va-cong-nghe-dai-viet">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-co-phan-propertyguru-viet-nam-62eb3ec4db432.jpg"
+                                                alt="Công ty Cổ phần PropertyGuru Việt Nam">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/cong-ty-co-phan-dau-tu-va-cong-nghe-dai-viet"
+                                            class="company-name" target="_blank">Công ty Cổ phần PropertyGuru Việt
+                                            Nam</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Công ty Cổ phần PropertyGuru Việt Nam - thuộc tập đoàn PropertuGuru
+                                            Singapore - Tập đoàn Công nghệ - Bất động sản lớn nhất Đông Nam Á. Hơn 16
+                                            năm xây dựng và phát triển, Công ty đã khẳng định vững chắc chỗ đứng
+                                            của mình và được biết đến là một trong số ít các công ty truyền thông trẻ
+                                            tuổi có tốc độ phát triển nhanh chóng, năng..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/datxanhmiennam">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/cong-ty-cp-dau-tu-va-dich-vu-dat-xanh-mien-nam-f6d1d2726888a2a1f90682ba3c7894db-62fc5723ce2e9.jpg"
+                                                alt="Công ty CP Đầu tư và Dịch vụ Đất Xanh Miền Nam" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/datxanhmiennam">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-cp-dau-tu-va-dich-vu-dat-xanh-mien-nam-60d3e4afd0fb7.jpg"
+                                                alt="Công ty CP Đầu tư và Dịch vụ Đất Xanh Miền Nam">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/datxanhmiennam" class="company-name"
+                                            target="_blank">Công ty CP Đầu tư và Dịch vụ Đất Xanh Miền Nam</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Đất Xanh Miền Nam được hình thành từ năm 2009, với mục tiêu mang lại cho
+                                            khách hàng những sản phẩm bất động sản tốt nhất bằng dịch vụ chuyên nghiệp
+                                            nhất. Trải qua chặng đường hơn 10 năm hình thành và phát triển,
+                                            ĐXMN đã là đơn vị phân phối bất động sản uy tín hàng đầu tại TP.HCM và ngày
+                                            càng chuyển mình mạnh mẽ khi chính thức..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/techwworld">
+                                        <div class="cover-wraper">
+                                            <img src="./images/default_cover/topcv_cover_2.jpg"
+                                                class="img-fluid" alt="CÔNG TY TNHH TECHWORLD VIỆT NAM">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/techwworld">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-tnhh-techworld-viet-nam-60b1c0708736f.jpg"
+                                                alt="CÔNG TY TNHH TECHWORLD VIỆT NAM">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/techwworld" class="company-name"
+                                            target="_blank">CÔNG TY TNHH TECHWORLD VIỆT NAM</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Hiện tại, Công ty TNHH TECHWORLD VIỆT NAM (Techworldmobile) đã có tuổi đời
+                                            hơn 8 năm và đã xây dựng cho mình 1 loạt hệ thống cửa hàng, showroom khang
+                                            trang, đầy đủ tiện nghi, máy móc để đáp ứng nhu cầu mua sắm
+                                            ngày càng lớn của người tiêu dùng.Tính đến thời điểm tháng 5/2021, Hệ thống
+                                            cửa hàng Techworldmobile đã có 2 showroom lớn tại Hà Nội gồm..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/babilala">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/babilala-ung-dung-tieng-anh-online-cho-tre-em-tang-truong-bac-nhat-dong-nam-a-122cc4c2434103edc7956f78b425c5bd-6285ffb359873.jpg"
+                                                alt="Babilala - Ứng dụng Tiếng Anh Online cho trẻ em tăng trưởng bậc nhất Đông Nam Á"
+                                                class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/babilala">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/7HR6M4Qky6xohl6u4zXj3dnZKNlPYQvv_1650971284____b6720fbcc7f86af447dc71be105da054.png"
+                                                alt="Babilala - Ứng dụng Tiếng Anh Online cho trẻ em tăng trưởng bậc nhất Đông Nam Á">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/babilala" class="company-name"
+                                            target="_blank">Babilala - Ứng dụng Tiếng Anh Online cho trẻ em tăng trưởng
+                                            bậc nhất Đông Nam Á</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Babilala ra mắt thị trường Việt Nam đầu tiên vào tháng 9/2020. Babilala
+                                            được thiết kế bởi các chuyên gia giáo dục sớm Việt Nam và Quốc tế, gắn liền
+                                            với tiêu chuẩn ngôn ngữ Châu âu CEFR. Phù hợp với trẻ trong giai
+                                            đoạn từ 3 đến 8 tuổi cam kết sẽ giúp trẻ: Chủ động, tích cực học tiếng Anh,
+                                            khả năng tiếp thu từ mới x 10..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/icanread">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/I2ryfRAfys7baqC8fh3p.jpg"
+                                                alt="I Can Read" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/icanread">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/i-can-read-5d1c7587834f5.jpg"
+                                                alt="I Can Read">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/icanread" class="company-name"
+                                            target="_blank">I Can Read</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Hệ thống I Can Read cung cấp một môi trường giáo dục tiếng Anh chuyên
+                                            nghiệp được thiết kế dành riêng cho trẻ em từ 2,5 đến 14 tuổi, với phương
+                                            pháp giảng dạy tập trung tối đa vào việc hỗ trợ khả năng ngôn ngữ
+                                            của trẻ. Với hơn 140 trung tâm ở 10 quốc gia trên thế giới, hệ thống I Can
+                                            Read đã đạt được thành tựu..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/milensea">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/cong-ty-tnhh-milensea-retail-22ed6842f5eef556a54c6ca78f2dfa62-61b1b5a941607.jpg"
+                                                alt="Công ty TNHH Milensea Retail" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/milensea">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-tnhh-milensea-retail-5f48b397545db.jpg"
+                                                alt="Công ty TNHH Milensea Retail">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/milensea" class="company-name"
+                                            target="_blank">Công ty TNHH Milensea Retail</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" “Cuộc sống là sẻ chia”, với phương châm sống này, từ năm 2010, Ông Tal
+                                            Siman Tov cùng vợ là Bà Sima Siman Tov, 2 người con của vùng đất thánh
+                                            Jerusalem, đã mang những bí truyền làm đẹp từ quê hương sở tại đi khắp
+                                            khu vực Đông Nam Á với mong muốn chăm sóc và giữ gìn vẻ đẹp cùng làn da cho
+                                            người phụ nữ Á Đông.Đem..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/smartosc">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/JAREvfjbD7kDcxVhtUzG.jpg"
+                                                alt="CÔNG TY CỔ PHẦN SMARTOSC" class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/smartosc">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-co-phan-smartosc-61d50e76c4aec.jpg"
+                                                alt="CÔNG TY CỔ PHẦN SMARTOSC">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/smartosc" class="company-name"
+                                            target="_blank">CÔNG TY CỔ PHẦN SMARTOSC</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Được thành lập năm 2006, SmartOSC là công ty hàng đầu cung cấp các giải
+                                            pháp toàn diện về Thương Mại Điện Tử trên nền tảng Magento, Sitecore, Adobe,
+                                            Hybris, Kentico mang tính hiệu quả cao, từ việc thiết kế cho
+                                            đến xây dựng các chiến lược kinh doanh hay quản lý hoạt động ở các cửa hàng.
+                                            Hiện này, SmartOSC đã cung cấp giải pháp cho hơn 500 khách..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box-company item-hover">
+                                <div class="company-banner">
+                                    <a href="https://www.topcv.vn/brand/xnkphattriendongduong">
+                                        <div class="cover-wraper">
+                                            <img src="https://static.topcv.vn/company_covers/TbzwIRdJSP5h9vPuEjRB.jpg"
+                                                alt="CÔNG TY TNHH XUẤT NHẬP KHẨU PHÁT TRIỂN ĐÔNG DƯƠNG - TẬP ĐOÀN THỂ THAO KINGSPORT"
+                                                class="img-fluid">
+                                        </div>
+                                    </a>
+                                    <div class="company-logo">
+                                        <a href="https://www.topcv.vn/brand/xnkphattriendongduong">
+                                            <img class="img-fluid"
+                                                src="https://static.topcv.vn/company_logos/cong-ty-tnhh-xuat-nhap-khau-phat-trien-dong-duong-61110a502ad40.jpg"
+                                                alt="CÔNG TY TNHH XUẤT NHẬP KHẨU PHÁT TRIỂN ĐÔNG DƯƠNG - TẬP ĐOÀN THỂ THAO KINGSPORT">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="company-info">
+                                    <h3>
+                                        <a href="https://www.topcv.vn/brand/xnkphattriendongduong" class="company-name"
+                                            target="_blank">CÔNG TY TNHH XUẤT NHẬP KHẨU PHÁT TRIỂN ĐÔNG DƯƠNG - TẬP ĐOÀN
+                                            THỂ THAO KINGSPORT</a>
+                                    </h3>
+                                    <div class="company-description">
+                                        <p>" Công ty TNHH XNK PT Đông Dương - Tập đoàn thể thao KINGSPORT được thành lập
+                                            năm 2009 với nghành nghề kinh doanh chính: Kinh doanh thiết bị gia dụng
+                                            &amp; hàng thể thao. Qua gần 12 năm phát triển hiện nay chúng
+                                            tôi đã và đang là nhà cung cấp thiết bị thể thao lớn nhất Việt Nam với
+                                            thương hiệu KINGSPORT, với hệ thống cửa hàng bán lẻ..."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://static.topcv.vn/v4/css/footer/footer-desktop.min.f262303e116e3cf0.css">
+    <footer id="footer-desktop">
+        <div class="footer-common-search-keywords">
+            <div class="container keyword-seo">
+                <a target="_blank" href="https://www.topcv.vn/cv-la-gi">cv là gì</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cv">Mẫu CV</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cv">mẫu cv tiếng việt</a>
+                <a target="_blank" href="https://www.topcv.vn/tai-mau-so-yeu-ly-lich-chuan-mien-phi">Sơ yếu lý lịch</a>
+                <a target="_blank" href="https://www.topcv.vn/tong-hop-cv-tham-khao-cac-nhom-nganh">CV tham khảo</a>
+                <a target="_blank" href="https://www.topcv.vn/tong-hop-cv-tham-khao-cho-lap-trinh-vien">tổng hợp CV tham
+                    khảo cho lập trình viên</a>
+                <a target="_blank" href="https://www.topcv.vn/giay-to-thu-tuc-ho-so-xin-viec">giấy tờ thủ tục hồ sơ xin
+                    việc</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-email-xin-viec-bang-tieng-anh">Email xin việc
+                    bằng tiếng anh</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-viec">Mẫu đơn xin việc</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-nghi-viec">mẫu đơn xin nghỉ việc</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-nghi-phep">Cách viết đơn xin nghỉ phép</a>
+                <a target="_blank" href="https://www.topcv.vn/viet-cv-the-nao-cho-chuan">Cách viết CV xin việc</a>
+                <a target="_blank" href="https://www.topcv.vn/viet-cv-nganh-kinh-doanh-ban-hang-nhu-the-nao">cách viết
+                    CV Ngành Kinh doanh/Bán hàng</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-cv-nganh-ke-toan-kiem-toan">cách viết CV Ngành
+                    Kế Toán/Kiểm Toán</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-cv-nganh-nhan-su">cách viết CV Ngành Nhân Sự</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-hoc-bong">cách viết CV xin Học
+                    bổng</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh">cách viết CV Tiếng
+                    Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-nhat">cách viết CV Tiếng Nhật</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-trung">cách viết CV Tiếng
+                    Trung</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-han">cách viết CV Tiếng Hàn</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-nam-nhat-danh-cho-sinh-vien">cẩm nang năm nhất
+                    cho sinh viên</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-thuc-tap-chuan-cho-sinh-vien">Mẫu đơn xin thực
+                    tập</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-sua-loi-go-tieng-viet-unikey">Hướng dẫn sửa lỗi
+                    gõ tiếng Việt</a>
+                <a target="_blank" href="https://www.topcv.vn/nganh-du-lich-lam-nhung-cong-viec-gi">Ngành du lịch làm
+                    việc gì</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-nhan-su">Cẩm nang xin việc ngành
+                    nhân sự</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-cong-nghe-thong-tin">Xin việc ngành công
+                    nghệ thông tin</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-marketing">Cẩm nang xin việc ngành
+                    marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-ke-toan-kiem-toan">Cẩm nang xin việc ngành
+                    kế toán kiểm toán </a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-cong-nghe-thuc-pham">Cẩm nang xin việc
+                    ngành công nghệ thực phẩm</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-tai-chinh-ngan-hang">Cẩm nang xin
+                    việc ngành tài chính ngân hàng</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-luat">Cẩm nang xin việc ngành luật</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-xay-dung-dia-oc">Cẩm nang xin việc ngành
+                    xây dựng - địa ốc</a>
+                <a target="_blank" href="https://www.topcv.vn/trac-nghiem-tinh-cach-mbti">Trắc nghiệm tính cách MBTI</a>
+                <a target="_blank" href="https://www.topcv.vn/viec-lam-remote">Việc làm online tại nhà</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2">Tìm việc làm tại
+                    TP. HCM</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cover-letter-thu-xin-viec">Cách viết cover letter xin
+                    việc</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh">CV xin việc bằng
+                    tiếng Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/cv-cho-sinh-vien-chua-tot-nghiep">CV cho sinh viên chưa
+                    tốt nghiệp</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-hanh-chinh-nhan-su">Việc làm hành chính nhân
+                    sự</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-trung">Thư xin việc bằng tiếng
+                    Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/cong-viec-nganh-logistic">Ngành logistic là gì</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-phong-l9">Việc làm Hải
+                    Phòng</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-dinh-l16">Việc làm Bình
+                    Định</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-content-marketing">Tuyển dụng Content
+                    Marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-php">Tuyển lập trình viên
+                    PHP</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java">Tuyển lập trình viên
+                    Java</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-net">Tuyển lập trình viên
+                    .Net</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-kinh-doanh">Tuyển dụng nhân viên
+                    kinh doanh</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-marketing">Tuyển dụng nhân viên
+                    marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-ke-toan">Tìm việc kế toán</a>
+            </div>
+        </div>
+        <div class="box-menu-footer">
+            <div class="container">
+                <div class="col-md-3">
+                    <ul>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Về TopCV
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/gioi-thieu">Giới thiệu</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/gioi-thieu#bao-chi">Góc báo
+                                            chí</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank"
+                                            href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-topcv-viet-nam/105.html">Tuyển
+                                            dụng</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/gioi-thieu#lien-he">Liên hệ</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/faqs">Hỏi đáp</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/privacy-policy">Chính sách bảo
+                                            mật</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/terms-of-service">Điều khoản dịch
+                                            vụ</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://static.topcv.vn/manual/Quy_che_san_TMDT_TopCV.pdf"
+                                            target="_blank">Quy chế hoạt động</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Cộng đồng TopCV
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.facebook.com/topcv.vn" target="_blank">Facebook Fanpage</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.youtube.com/c/TopCVpro" target="_blank">Youtube Official
+                                            Channel</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.linkedin.com/company/topcv-vietnam"
+                                            target="_blank">Linkedin</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.tiktok.com/@topcv" target="_blank">Tiktok Official
+                                            Channel</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Đối tác
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.testcenter.vn/" target="_blank">TestCenter</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://tophr.vn" target="_blank">TopHR</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.viecngay.vn/" target="_blank">ViecNgay</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.happytimeapp.vn/" target="_blank">Happy Time</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Hồ sơ và CV
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a href="./quan-ly-cv.html" target="_blank">Quản lý CV của bạn</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/profile" target="_blank">TopCV Profile</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a target="_blank" href="https://www.topcv.vn/viet-cv-the-nao-cho-chuan">Hướng
+                                            dẫn viết CV</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://reviewcv.topcv.vn/" target="_blank">Review CV</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Khám phá
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/app" target="_blank">Ứng dụng di động TopCV</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/tinh-luong-gross-net" target="_blank">Tính lương
+                                            Gross - Net</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/tinh-lai-kep" target="_blank">Tính lãi suất
+                                            kép</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/lap-ke-hoach-tiet-kiem" target="_blank">Lập kế
+                                            hoạch tiết kiệm</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/cong-cu-tinh-muc-huong-bao-hiem-that-nghiep"
+                                            target="_blank">Tính bảo hiểm thất nghiệp</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/tinh-bao-hiem-xa-hoi-mot-lan" target="_blank">Tính
+                                            bảo hiểm xã hội một lần</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/trac-nghiem-tinh-cach-mbti" target="_blank">Trắc
+                                            nghiệm MBTI</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/trac-nghiem-da-tri-thong-minh-multiple-intelligences-test"
+                                            target="_blank">Trắc nghiệm MI</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Xây dựng sự nghiệp
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/viec-lam-tot-nhat" target="_blank">Việc làm tốt
+                                            nhất</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/viec-lam-luong-cao" target="_blank">Việc làm lương
+                                            cao</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/viec-lam-quan-ly" target="_blank">Việc làm quản lý
+                                        </a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/viec-lam-remote" target="_blank">Việc làm từ xa
+                                            (remote)</a>
+                                    </li>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://www.topcv.vn/tim-viec-lam-ban-thoi-gian-t3"
+                                            target="_blank">Việc làm bán thời gian</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="box-menu-item">
+                            <div class="title">
+                                Phát triển bản thân
+                            </div>
+                            <div class="box-menu-child">
+                                <ul>
+                                    <li class="box-menu-child-item">
+                                        <a href="https://contest.topcv.vn/" target="_blank">TopCV Contest</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-bottom-mobile text-dark-gray">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                © 2014 - 2022 <b>Công ty cổ phần TopCV Việt Nam</b> <br>
+                                <strong>Trụ sở HN:</strong> <br> Tầng 3, 4 tòa FS - GoldSeason số 47 Nguyễn Tuân, Thanh
+                                Xuân Trung, Thanh Xuân, Hà Nội <br>
+                                <strong>Chi nhánh TP HCM:</strong> <br> Tầng 12, Tòa nhà Dali, 24C Phan Đăng Lưu, Phường
+                                6, Quận Bình Thạnh, TP Hồ Chí Minh
+                            </div>
+                            <div class="col-md-4 pr-0">
+                                <div class="box-image">
+                                    <a href="http://online.gov.vn/Home/WebDetails/25388" target="_blank">
+                                        <img src="https://www.topcv.vn/images/bct.jpg" alt="Dang ky Bo Cong thuong"
+                                            title="Đăng ký Bộ Công thương" class="img-bct">
+                                    </a>
+                                    <a href="https://www.topcv.vn">
+                                        <img src="./v3/images/topcv-logo-4.png?v=1.0.1"
+                                            class="img-logo-footer" alt="TopCV tuyen dung tai TopCV"
+                                            title="TopCV tuyển dụng tại TopCV">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    </script>
+    <div class="modal fade" id="sign-in-popup" tabindex="-1" aria-labelledby="sign-in-popup-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="nav nav-tabs" id="auth-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                                type="button" role="tab" aria-controls="login" aria-selected="true">Đăng Nhập</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                                type="button" role="tab" aria-controls="register" aria-selected="false">Đăng Ký</button>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form id="form-login" action="">
+                                <div id="sign-error" class="alert-danger d-none"></div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="mb-1">Email</label>
+                                    <div class="input-group border-hover">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-light fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="Nhập email của bạn" aria-label="Nhập email của bạn" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="password" class="mb-1">Mật khẩu</label>
+                                    <div class="input-group border-hover">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-light fa-shield-keyhole"></i></span>
+                                        </div>
+                                        <input type="password" id="password" name="password" class="form-control"
+                                            placeholder="Nhập mật khẩu" aria-label="Nhập mật khẩu">
+                                        <div class="input-group-prepend">
+                                            <button type="button" tabindex="-1" data-input-target="#password"
+                                                class="input-group-text toggle-password"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <button type="submit"
+                                        class="btn btn-sign input-block-level w-100 h-40 mb-3 btn-primary-hover">Đăng
+                                        nhập</button>
+                                    <p class="or text-center mb-0 fz-12px">Hoặc đăng nhập bằng tài khoản mạng xã hội
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-center flex-nowrap">
+                                    <a id="login-with-facebook"
+                                        class="btn btn-social btn-primary input-block-level mx-1 h-40 my-3">
+                                        <i class="fa-brands fa-facebook-square"></i>
+                                        <span class="ml-2">Facebook</span>
+                                    </a>
+                                    <a id="login-with-google"
+                                        class="btn btn-social btn-default input-block-level mx-1 h-40 my-3">
+                                        <i class="fa-brands fa-google"></i>
+                                        <span class="ml-2">Google</span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&amp;client_id=86umgx5hytpk2k&amp;redirect_uri=https%3A%2F%2Fwww.topcv.vn%2Fcallback-linkedin&amp;scope=r_liteprofile+r_emailaddress"
+                                        class="btn btn-linkedin btn-social btn-default input-block-level mx-1 h-40 my-3">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        <span class="ml-2">Linkedin</span>
+                                    </a>
+                                </div>
+                            </form>
+                            <div class="mt-3 d-flex justify-content-between option-auth">
+                                <div>
+                                    <span>Bạn chưa có tài khoản?</span>
+                                    <a class="text-success font-weight-bold" href="https://www.topcv.vn/sign-up">
+                                        Đăng ký ngay
+                                    </a>
+                                </div>
+                                <a class="text-success font-weight-bold" href="https://www.topcv.vn/forgot-password">
+                                    Quên mật khẩu
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form id="form-register" action="">
+                                <div id="register-error" class="alert-danger d-none"></div>
+                                <div class="form-group mb-3">
+                                    <label for="fullname" class="mb-1">Họ tên</label>
+                                    <div class="input-group border-hover">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-light fa-circle-user"></i></span>
+                                        </div>
+                                        <input type="text" name="fullname" class="form-control"
+                                            placeholder="Nhập họ tên của bạn" aria-label="Nhập email của bạn" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="mb-1">Email</label>
+                                    <div class="input-group border-hover">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa-light fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="Nhập email của bạn" aria-label="Nhập email của bạn" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="password_register" class="mb-1">Mật khẩu</label>
+                                    <div class="input-group border-hover">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-light fa-shield-keyhole"></i></span>
+                                        </div>
+                                        <input type="password" id="password_register" name="password"
+                                            class="form-control" placeholder="Nhập mật khẩu" aria-label="Nhập mật khẩu">
+                                        <div class="input-group-prepend">
+                                            <button type="button" tabindex="-1" data-input-target="#password_register"
+                                                class="input-group-text toggle-password"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="password_confirm" class="mb-1">Xác nhận mật khẩu</label>
+                                    <div class="input-group border-hover">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i
+                                                    class="fa-light fa-shield-keyhole"></i></span>
+                                        </div>
+                                        <input type="password" id="password_confirm" name="password_confirmation"
+                                            class="form-control" placeholder="Nhập mật khẩu" aria-label="Nhập mật khẩu">
+                                        <div class="input-group-prepend">
+                                            <button type="button" tabindex="-1" data-input-target="#password_confirm"
+                                                class="input-group-text toggle-password"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <p class="agree-term">
+                                        Bằng việc đăng ký tài khoản, bạn đã đồng ý với <a target="_blank"
+                                            href="https://www.topcv.vn/terms-of-service" class="text-highlight">Điều
+                                            khoản dịch vụ</a> và <a target="_blank"
+                                            href="https://www.topcv.vn/privacy-policy" class="text-highlight">Chính sách
+                                            bảo
+                                            mật</a> của chúng tôi
+                                    </p>
+                                    <button type="submit"
+                                        class="btn btn-sign input-block-level w-100 h-40 mb-3 btn-primary-hover">Đăng
+                                        ký</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-bold">Bạn gặp khó khăn khi tạo tài khoản?</p>
+                    <p class="text-nomral">Vui lòng gọi tới số 024 6680 5588 (giờ hành chính).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://static.topcv.vn/v4/css/icon.min.5d7e3e3f97d92afb.css">
+    <link rel="stylesheet" href="https://static.topcv.vn/v4/css/sign-in-popup.cdceb173f044271b.css">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="https://static.topcv.vn/v4/js/sign-in-popup.min.568a85498ffc4422.js"></script>
+    <script type="text/javascript">
+        window.ROUTE_LOGIN_WITH_SOCIAL = 'https://www.topcv.vn/login-width-social';
+        window.ROUTE_LOGIN_USING_ACCOUNT = 'https://www.topcv.vn/login-ajax';
+        window.ROUTE_REGISTER_ACCOUNT = 'https://www.topcv.vn/sign-up-ajax';
+        window.CONFIG_OAUTH_GOOGLE_ID = '856359690731-a0j3qaaq21iorl92btoo15nqqsvffsgd.apps.googleusercontent.com';
+    </script>
+    <script>
+        function showLoginPopup(redirect_url, note, is_download, showSignUp) {
+            $('#sign-in-popup').modal('show');
+
+            if (showSignUp) {
+                $(".nav-link").removeClass('active');
+                $(".tab-pane").removeClass('active');
+
+                $("button[data-bs-target='#register']").addClass('active');
+                $("#register").addClass('active');
+            } else {
+                $(".nav-link").removeClass('active');
+                $(".tab-pane").removeClass('active');
+
+                $("button[data-bs-target='#login']").addClass('active');
+                $("#login").addClass('active');
+            }
+
+
+        }
+    </script>
+    <script src="./v3/js/common.js?v=2.0.2"></script>
+    <script>
+        IS_LOGGED_IN = true;
+    </script>
+    <script src="./v3/js/vue.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./v2/plugins/select2/js/select2.min.js"></script>
+    <script src="./v2/plugins/select2/js/i18n/vi.js"></script>
+    <script src="./js/stacktrace-1.1.0.min.js"></script>
+    <script src="./js/error-tracking.js?v=2.0.0"></script>
+    <script type="text/javascript" src="./js/tracking.js?v=2.0.4"></script>
+    <script src="./v3/js/tracking.js?v=1.0.1"></script>
+    <script src="./v3/js/tracking_handlers.js?v=1.0.3"></script>
+    <script src="./js/jquery.popupoverlay.js"></script>
+    <script src="./v2/bootstrap/js/bootstrap.min.js?v=1.1.1"></script>
+    <script src="./v3/js/navigation-mobile.js?v=1.0.6"></script>
+    <script src="./js/jquery.form.js" type="text/javascript"></script>
+    <script src="./v3/js/cropper.min.js"></script>
+    <script src="./v3/js/axios.js"></script>
+    <script src="./v2/plugins/switchery/switchery.min.js"></script>
+    <script src="./v3/js/jquery-ui.min.js"></script>
+    <script src="./v3/js/jobs.js?v=2.0.8" type="text/javascript"></script>
+    <script src="./v3/js/init-cropper.js?v=1.0.1"></script>
+    <script src="./v3/js/toastr.min.js" type="text/javascript"></script>
+    <script src="./v3/js/jquery.timeago.js"></script>
+    <script src="./v3/js/script.js?v=1.0.2"></script>
+    <script src="./v3/js/notification.js?v=1.0.6"></script>
+    <script src="./v3/js/topcv-connect.js?v=1.0.6"></script>
+    <script>
+        var vietnameseRestoreSignMap = {
+            "nhan vien kinh doanh": "nh\u00e2n vi\u00ean kinh doanh",
+            "chuyen vien kinh doanh": "chuy\u00ean vi\u00ean kinh doanh",
+            "tro ly kinh doanh": "tr\u1ee3 l\u00fd kinh doanh",
+            "nhan vien ban hang": "nh\u00e2n vi\u00ean b\u00e1n h\u00e0ng",
+            "tu van ban hang": "t\u01b0 v\u1ea5n b\u00e1n h\u00e0ng",
+            "receptionist": "receptionist",
+            "nhan vien mua hang": "nh\u00e2n vi\u00ean mua h\u00e0ng",
+            "purchasing": "purchasing",
+            "nhan vien thu mua": "nh\u00e2n vi\u00ean thu mua",
+            "office manager": "office manager",
+            "truong phong kinh doanh": "tr\u01b0\u1edfng ph\u00f2ng kinh doanh",
+            "quan ly kinh doanh": "qu\u1ea3n l\u00fd kinh doanh",
+            "tong dai vien": "t\u1ed5ng \u0111\u00e0i vi\u00ean",
+            "nhan vien goi dien": "nh\u00e2n vi\u00ean g\u1ecdi \u0111i\u1ec7n",
+            "sales manager": "sales manager",
+            "sales admin": "sales admin",
+            "giam doc dieu hanh": "gi\u00e1m \u0111\u1ed1c \u0111i\u1ec1u h\u00e0nh",
+            "giam doc du an": "gi\u00e1m \u0111\u1ed1c d\u1ef1 \u00e1n",
+            "tro ly giam doc": "tr\u1ee3 l\u00fd gi\u00e1m \u0111\u1ed1c",
+            "tro ly tong giam doc giam doc": "tr\u1ee3 l\u00fd t\u1ed5ng gi\u00e1m \u0111\u1ed1c gi\u00e1m \u0111\u1ed1c",
+            "ceo assistant": "ceo assistant",
+            "giam doc kinh doanh": "gi\u00e1m \u0111\u1ed1c kinh doanh",
+            "truong nhom kinh doanh": "tr\u01b0\u1edfng nh\u00f3m kinh doanh",
+            "sales team leader": "sales team leader",
+            "nhan vien telesales": "nh\u00e2n vi\u00ean telesales",
+            "truong phong cham soc khach hang": "tr\u01b0\u1edfng ph\u00f2ng ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng",
+            "nhan vien cham soc khach hang": "nh\u00e2n vi\u00ean ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng",
+            "cham soc khach hang": "ch\u0103m s\u00f3c kh\u00e1ch h\u00e0ng",
+            "customer service manager": "customer service manager",
+            "customer service": "customer service",
+            "telesales": "telesales",
+            "giam sat ban hang": "gi\u00e1m s\u00e1t b\u00e1n h\u00e0ng",
+            "nhan vien tu van tuyen sinh": "nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n tuy\u1ec3n sinh",
+            "nhan vien tu van": "nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n",
+            "tu van tuyen sinh": "t\u01b0 v\u1ea5n tuy\u1ec3n sinh",
+            "chuyen vien tu van": "chuy\u00ean vi\u00ean t\u01b0 v\u1ea5n",
+            "giao dich vien": "giao d\u1ecbch vi\u00ean",
+            "tu van tin dung": "t\u01b0 v\u1ea5n t\u00edn d\u1ee5ng",
+            "thuc tap sinh kinh doanh": "th\u1ef1c t\u1eadp sinh kinh doanh",
+            "dich vu khach hang": "d\u1ecbch v\u1ee5 kh\u00e1ch h\u00e0ng",
+            "dai dien kinh doanh": "\u0111\u1ea1i di\u1ec7n kinh doanh",
+            "sales representative": "sales representative",
+            "quan ly nha hang": "qu\u1ea3n l\u00fd nh\u00e0 h\u00e0ng",
+            "quan ly cua hang": "qu\u1ea3n l\u00fd c\u1eeda h\u00e0ng",
+            "giao vien tieng anh": "gi\u00e1o vi\u00ean ti\u1ebfng anh",
+            "giao vien": "gi\u00e1o vi\u00ean",
+            "tro giang": "tr\u1ee3 gi\u1ea3ng",
+            "nhan vien le tan": "nh\u00e2n vi\u00ean l\u1ec5 t\u00e2n",
+            "le tan": "l\u1ec5 t\u00e2n",
+            "trinh duoc vien": "tr\u00ecnh d\u01b0\u1ee3c vi\u00ean",
+            "nhan vien hanh chinh van phong": "nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh v\u0103n ph\u00f2ng",
+            "nhan vien van phong": "nh\u00e2n vi\u00ean v\u0103n ph\u00f2ng",
+            "truong phong hanh chinh nhan su": "tr\u01b0\u1edfng ph\u00f2ng h\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1",
+            "truong phong hanh chinh": "tr\u01b0\u1edfng ph\u00f2ng h\u00e0nh ch\u00ednh",
+            "truong phong nhan su": "tr\u01b0\u1edfng ph\u00f2ng nh\u00e2n s\u1ef1",
+            "hanh chinh nhan su": "h\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1",
+            "nhan vien hanh chinh": "nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh",
+            "nhan vien admin": "nh\u00e2n vi\u00ean admin",
+            "nhan vien hanh chinh nhan su": "nh\u00e2n vi\u00ean h\u00e0nh ch\u00ednh nh\u00e2n s\u1ef1",
+            "tuyen dung nhan su": "tuy\u1ec3n d\u1ee5ng nh\u00e2n s\u1ef1",
+            "chuyen vien tuyen dung": "chuy\u00ean vi\u00ean tuy\u1ec3n d\u1ee5ng",
+            "thuc tap sinh nhan su": "th\u1ef1c t\u1eadp sinh nh\u00e2n s\u1ef1",
+            "nhan vien phap che": "nh\u00e2n vi\u00ean ph\u00e1p ch\u1ebf",
+            "chuyen vien phap che": "chuy\u00ean vi\u00ean ph\u00e1p ch\u1ebf",
+            "chuyen vien quan he khach hang": "chuy\u00ean vi\u00ean quan h\u1ec7 kh\u00e1ch h\u00e0ng",
+            "quan he khach hang": "quan h\u1ec7 kh\u00e1ch h\u00e0ng",
+            "nhan vien nhap lieu": "nh\u00e2n vi\u00ean nh\u1eadp li\u1ec7u",
+            "nhan vien phuc vu": "nh\u00e2n vi\u00ean ph\u1ee5c v\u1ee5",
+            "sales executive": "sales executive",
+            "sales": "sales",
+            "hanh chinh": "h\u00e0nh ch\u00ednh",
+            "nhan su": "nh\u00e2n s\u1ef1",
+            "truong phong marketing": "tr\u01b0\u1edfng ph\u00f2ng marketing",
+            "brand manager": "brand manager",
+            "marketing facebook": "marketing facebook",
+            "facebook marketing": "facebook marketing",
+            "fb marketing": "fb marketing",
+            "performance marketing": "performance marketing",
+            "digital marketing": "digital marketing",
+            "marketing online": "marketing online",
+            "online marketing": "online marketing",
+            "facebook ads": "facebook ads",
+            "content marketing": "content marketing",
+            "truong phong trade marketing": "tr\u01b0\u1edfng ph\u00f2ng trade marketing",
+            "trade marketing": "trade marketing",
+            "nhan vien marketing": "nh\u00e2n vi\u00ean marketing",
+            "chuyen vien marketing": "chuy\u00ean vi\u00ean marketing",
+            "marketing executive": "marketing executive",
+            "thuc tap sinh marketing": "th\u1ef1c t\u1eadp sinh marketing",
+            "marketing manager": "marketing manager",
+            "marketing leader": "marketing leader",
+            "truong nhom marketing": "tr\u01b0\u1edfng nh\u00f3m marketing",
+            "giam doc marketing": "gi\u00e1m \u0111\u1ed1c marketing",
+            "marketing director": "marketing director",
+            "telemarketing": "telemarketing",
+            "marketing & sales": "marketing & sales",
+            "sales & marketing": "sales & marketing",
+            "nhan vien seo": "nh\u00e2n vi\u00ean seo",
+            "content writer": "content writer",
+            "content creator": "content creator",
+            "nhan vien sang tao noi dung": "nh\u00e2n vi\u00ean s\u00e1ng t\u1ea1o n\u1ed9i dung",
+            "nhan vien chay quang cao": "nh\u00e2n vi\u00ean ch\u1ea1y qu\u1ea3ng c\u00e1o",
+            "nhan vien truyen thong": "nh\u00e2n vi\u00ean truy\u1ec1n th\u00f4ng",
+            "truyen thong noi bo": "truy\u1ec1n th\u00f4ng n\u1ed9i b\u1ed9",
+            "internal communicator": "internal communicator",
+            "truyen thong": "truy\u1ec1n th\u00f4ng",
+            "nhan vien quang cao": "nh\u00e2n vi\u00ean qu\u1ea3ng c\u00e1o",
+            "nhan vien phat trien thi truong": "nh\u00e2n vi\u00ean ph\u00e1t tri\u1ec3n th\u1ecb tr\u01b0\u1eddng",
+            "video editor": "video editor",
+            "quay dung video": "quay d\u1ef1ng video",
+            "google ads": "google ads",
+            "communication leader": "communication leader",
+            "account executive": "account executive",
+            "product coordinator": "product coordinator",
+            "nhan vien dieu phoi": "nh\u00e2n vi\u00ean \u0111i\u1ec1u ph\u1ed1i",
+            "product marketing": "product marketing",
+            "nhan vien quay phim": "nh\u00e2n vi\u00ean quay phim",
+            "marketing intern": "marketing intern",
+            "marketing": "marketing",
+            "copywriter": "copywriter",
+            "nhan vien ke toan": "nh\u00e2n vi\u00ean k\u1ebf to\u00e1n",
+            "ke toan vien": "k\u1ebf to\u00e1n vi\u00ean",
+            "ke toan truong": "k\u1ebf to\u00e1n tr\u01b0\u1edfng",
+            "ke toan tong hop": "k\u1ebf to\u00e1n t\u1ed5ng h\u1ee3p",
+            "ke toan thue": "k\u1ebf to\u00e1n thu\u1ebf",
+            "ke toan kho": "k\u1ebf to\u00e1n kho",
+            "ke toan tien luong": "k\u1ebf to\u00e1n ti\u1ec1n l\u01b0\u01a1ng",
+            "ke toan ban hang": "k\u1ebf to\u00e1n b\u00e1n h\u00e0ng",
+            "ke toan du an": "k\u1ebf to\u00e1n d\u1ef1 \u00e1n",
+            "ke toan sieu thi": "k\u1ebf to\u00e1n si\u00eau th\u1ecb",
+            "thuc tap sinh ke toan": "th\u1ef1c t\u1eadp sinh k\u1ebf to\u00e1n",
+            "ke toan cong no": "k\u1ebf to\u00e1n c\u00f4ng n\u1ee3",
+            "ke toan hanh chinh": "k\u1ebf to\u00e1n h\u00e0nh ch\u00ednh",
+            "ke toan thanh toan": "k\u1ebf to\u00e1n thanh to\u00e1n",
+            "ke toan doanh thu": "k\u1ebf to\u00e1n doanh thu",
+            "nhan vien thu ngan": "nh\u00e2n vi\u00ean thu ng\u00e2n",
+            "thu ngan": "thu ng\u00e2n",
+            "nhan vien kiem soat noi bo": "nh\u00e2n vi\u00ean ki\u1ec3m so\u00e1t n\u1ed9i b\u1ed9",
+            "ke toan noi bo": "k\u1ebf to\u00e1n n\u1ed9i b\u1ed9",
+            "ke toan ngan hang": "k\u1ebf to\u00e1n ng\u00e2n h\u00e0ng",
+            "accountant collaborator": "accountant collaborator",
+            "ke toan": "k\u1ebf to\u00e1n",
+            "accountant": "accountant",
+            "lap trinh vien php": "l\u1eadp tr\u00ecnh vi\u00ean php",
+            "php developer": "php developer",
+            "lap trinh php": "l\u1eadp tr\u00ecnh php",
+            "lap trinh javascript": "l\u1eadp tr\u00ecnh javascript",
+            "lap trinh vien javascript": "l\u1eadp tr\u00ecnh vi\u00ean javascript",
+            "lap trinh vien java": "l\u1eadp tr\u00ecnh vi\u00ean java",
+            "javascript developer": "javascript developer",
+            "java developer": "java developer",
+            "web developer": "web developer",
+            "lap trinh web": "l\u1eadp tr\u00ecnh web",
+            "react native developer": "react native developer",
+            "lap trinh vien react native": "l\u1eadp tr\u00ecnh vi\u00ean react native",
+            ".net developer": ".net developer",
+            "lap trinh vien .net": "l\u1eadp tr\u00ecnh vi\u00ean .net",
+            "front end developer": "front end developer",
+            "front end engineer": "front end engineer",
+            "frontend developer": "frontend developer",
+            "lap trinh frontend": "l\u1eadp tr\u00ecnh frontend",
+            "lap trinh front end": "l\u1eadp tr\u00ecnh front end",
+            "frontend engineer": "frontend engineer",
+            "backend developer": "backend developer",
+            "backend engineer": "backend engineer",
+            "back end developer": "back end developer",
+            "back end engineer": "back end engineer",
+            "lap trinh backend": "l\u1eadp tr\u00ecnh backend",
+            "lap trinh back end": "l\u1eadp tr\u00ecnh back end",
+            "mobile developer": "mobile developer",
+            "mobile engineer": "mobile engineer",
+            "business analyst": "business analyst",
+            "phan tich nghiep vu": "ph\u00e2n t\u00edch nghi\u1ec7p v\u1ee5",
+            "nhan vien phan tich nghiep vu": "nh\u00e2n vi\u00ean ph\u00e2n t\u00edch nghi\u1ec7p v\u1ee5",
+            "chuyen vien phan tich nghiep vu": "chuy\u00ean vi\u00ean ph\u00e2n t\u00edch nghi\u1ec7p v\u1ee5",
+            "data analyst": "data analyst",
+            "nhan vien phan tich du lieu": "nh\u00e2n vi\u00ean ph\u00e2n t\u00edch d\u1eef li\u1ec7u",
+            "chuyen vien vien phan tich du lieu": "chuy\u00ean vi\u00ean vi\u00ean ph\u00e2n t\u00edch d\u1eef li\u1ec7u",
+            "phan tich du lieu": "ph\u00e2n t\u00edch d\u1eef li\u1ec7u",
+            "data engineer": "data engineer",
+            "xu ly du lieu": "x\u1eed l\u00fd d\u1eef li\u1ec7u",
+            "solution architect": "solution architect",
+            "mobile app developer": "mobile app developer",
+            "game developer": "game developer",
+            "game artist": "game artist",
+            "unity developer": "unity developer",
+            "magento developer": "magento developer",
+            "ai engineer": "ai engineer",
+            "ky su ai": "k\u1ef9 s\u01b0 ai",
+            "machine learning engineer": "machine learning engineer",
+            "system engineer": "system engineer",
+            "system admin": "system admin",
+            "quan tri he thong": "qu\u1ea3n tr\u1ecb h\u1ec7 th\u1ed1ng",
+            "lap trinh game": "l\u1eadp tr\u00ecnh game",
+            "game designer": "game designer",
+            "game design": "game design",
+            "lap trinh vien mobile": "l\u1eadp tr\u00ecnh vi\u00ean mobile",
+            "ios developer": "ios developer",
+            "android developer": "android developer",
+            "ui\/ux designer": "ui\/ux designer",
+            "ux designer": "ux designer",
+            "ui designer": "ui designer",
+            "design ui\/ux": "design ui\/ux",
+            "fullstack developer": "fullstack developer",
+            "full stack developer": "full stack developer",
+            "fullstack engineer": "fullstack engineer",
+            "full stack engineer": "full stack engineer",
+            "senior developer": "senior developer",
+            "nhan vien it": "nh\u00e2n vi\u00ean it",
+            "chuyen vien it": "chuy\u00ean vi\u00ean it",
+            "it support": "it support",
+            "it helpdesk": "it helpdesk",
+            "nhan vien kiem thu phan mem": "nh\u00e2n vi\u00ean ki\u1ec3m th\u1eed ph\u1ea7n m\u1ec1m",
+            "test engineer": "test engineer",
+            "thiet ke do hoa designer": "thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda designer",
+            "nhan vien thiet ke do hoa": "nh\u00e2n vi\u00ean thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda",
+            "nhan vien thiet ke": "nh\u00e2n vi\u00ean thi\u1ebft k\u1ebf",
+            "thiet ke do hoa": "thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda",
+            "graphic designer": "graphic designer",
+            "thiet ke noi that": "thi\u1ebft k\u1ebf n\u1ed9i th\u1ea5t",
+            "thiet ke noi ngoai that": "thi\u1ebft k\u1ebf n\u1ed9i ngo\u1ea1i th\u1ea5t",
+            "dien hoa noi that": "di\u1ec5n ho\u1ea1 n\u1ed9i th\u1ea5t",
+            "thiet ke website": "thi\u1ebft k\u1ebf website",
+            "thiet ke web": "thi\u1ebft k\u1ebf web",
+            "web designer": "web designer",
+            "chuyen vien phan tich": "chuy\u00ean vi\u00ean ph\u00e2n t\u00edch",
+            "project manager": "project manager",
+            "quan tri website": "qu\u1ea3n tr\u1ecb website",
+            "qa\/qc": "qa\/qc",
+            "quality control": "quality control",
+            "quality assurance": "quality assurance",
+            "devops engineer": "devops engineer",
+            "nhan vien kinh doanh phan mem": "nh\u00e2n vi\u00ean kinh doanh ph\u1ea7n m\u1ec1m",
+            "nhan vien quan tri mang": "nh\u00e2n vi\u00ean qu\u1ea3n tr\u1ecb m\u1ea1ng",
+            "networking admin": "networking admin",
+            "data scientist": "data scientist",
+            "thuc tap sinh it": "th\u1ef1c t\u1eadp sinh it",
+            "nhan vien pqa": "nh\u00e2n vi\u00ean pqa",
+            "it comtor": "it comtor",
+            "comtor": "comtor",
+            "ky su cau noi": "k\u1ef9 s\u01b0 c\u1ea7u n\u1ed1i",
+            "brse": "brse",
+            "javascript": "javascript",
+            "java": "java",
+            "python": "python",
+            "php": "php",
+            "nodejs": "nodejs",
+            "react native": "react native",
+            "reactjs": "reactjs",
+            "react js": "react js",
+            "vuejs": "vuejs",
+            "vue js": "vue js",
+            "nuxtjs": "nuxtjs",
+            "nuxt js": "nuxt js",
+            "angularjs": "angularjs",
+            "angular js": "angular js",
+            "ios": "ios",
+            "android": "android",
+            "unity": "unity",
+            "tester": "tester",
+            "devops": "devops",
+            "magento": "magento",
+            "drupal": "drupal",
+            "seo": "seo",
+            "asp.net": "asp.net",
+            "angular": "angular",
+            "ui\/ux": "ui\/ux",
+            "laravel": "laravel",
+            "pqa": "pqa",
+            "machine learning": "machine learning",
+            "software engineer": "software engineer",
+            "software developer": "software developer",
+            "lap trinh vien": "l\u1eadp tr\u00ecnh vi\u00ean",
+            "ky su lap trinh": "k\u1ef9 s\u01b0 l\u1eadp tr\u00ecnh",
+            "developer": "developer",
+            "ruby on rails": "ruby on rails",
+            "designer": "designer",
+            "sua chua o to": "s\u1eeda ch\u1eefa \u00f4 t\u00f4",
+            "van hanh may": "v\u1eadn h\u00e0nh m\u00e1y",
+            "ky su may": "k\u1ef9 s\u01b0 m\u00e1y",
+            "ky su co khi": "k\u1ef9 s\u01b0 c\u01a1 kh\u00ed",
+            "tho han": "th\u1ee3 h\u00e0n",
+            "nhan vien co dien": "nh\u00e2n vi\u00ean c\u01a1 \u0111i\u1ec7n",
+            "nhan vien ky thuat": "nh\u00e2n vi\u00ean k\u1ef9 thu\u1eadt",
+            "phien dich tieng nhat": "phi\u00ean d\u1ecbch ti\u1ebfng nh\u1eadt",
+            "tieng trung": "ti\u1ebfng trung",
+            "tieng nhat": "ti\u1ebfng nh\u1eadt",
+            "tieng anh": "ti\u1ebfng anh",
+            "tieng han": "ti\u1ebfng h\u00e0n",
+            "tieng tay ban nha": "ti\u1ebfng t\u00e2y ban nha",
+            "phien dich": "phi\u00ean d\u1ecbch",
+            "bien dich": "bi\u00ean d\u1ecbch",
+            "nhan vien ban ve may bay": "nh\u00e2n vi\u00ean b\u00e1n v\u00e9 m\u00e1y bay",
+            "huong dan vien du lich": "h\u01b0\u1edbng d\u1eabn vi\u00ean du l\u1ecbch",
+            "dieu hanh tour": "\u0111i\u1ec1u h\u00e0nh tour",
+            "thuc tap sinh": "th\u1ef1c t\u1eadp sinh",
+            "nhan vien xu ly don hang": "nh\u00e2n vi\u00ean x\u1eed l\u00fd \u0111\u01a1n h\u00e0ng",
+            "chuyen vien thu hoi no": "chuy\u00ean vi\u00ean thu h\u1ed3i n\u1ee3",
+            "chuyen vien xu ly no": "chuy\u00ean vi\u00ean x\u1eed l\u00fd n\u1ee3",
+            "nhan vien thu hoi no": "nh\u00e2n vi\u00ean thu h\u1ed3i n\u1ee3",
+            "thu ky": "th\u01b0 k\u00fd",
+            "nhan vien kho": "nh\u00e2n vi\u00ean kho",
+            "nhan vien xuat nhap khau": "nh\u00e2n vi\u00ean xu\u1ea5t nh\u1eadp kh\u1ea9u",
+            "ky su xay dung": "k\u1ef9 s\u01b0 x\u00e2y d\u1ef1ng",
+            "giam sat thi cong": "gi\u00e1m s\u00e1t thi c\u00f4ng",
+            "dieu duong": "\u0111i\u1ec1u d\u01b0\u1ee1ng",
+            "quan ly chat luong": "qu\u1ea3n l\u00fd ch\u1ea5t l\u01b0\u1ee3ng",
+            "lai xe": "l\u00e1i xe",
+            "tai xe": "t\u00e0i x\u1ebf",
+            "nhan vien giao hang": "nh\u00e2n vi\u00ean giao h\u00e0ng",
+            "shipper": "shipper",
+            "ban thoi gian": "b\u00e1n th\u1eddi gian",
+            "ngan hang": "ng\u00e2n h\u00e0ng",
+            "kinh doanh": "kinh doanh",
+            "bat dong san": "b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+            "nhan vien kinh doanh bat dong san": "nh\u00e2n vi\u00ean kinh doanh b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+            "chuyen vien kinh doanh bat dong san": "chuy\u00ean vi\u00ean kinh doanh b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+            "nhan vien tu van bat dong san": "nh\u00e2n vi\u00ean t\u01b0 v\u1ea5n b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+            "chuyen vien tu van bat dong san": "chuy\u00ean vi\u00ean t\u01b0 v\u1ea5n b\u1ea5t \u0111\u1ed9ng s\u1ea3n",
+            "quan ly": "qu\u1ea3n l\u00fd",
+            "tro ly": "tr\u1ee3 l\u00fd"
+        };
+    </script>
+    <script>
+        window.routes = {
+            'upload-avatar-user': 'https://www.topcv.vn/ajax-upload-avatar',
+        }
+    </script>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p style="font-size:18px" id="confirm-title">Xác nhận</p>
+                </div>
+                <div class="modal-body">
+                    <span id="confirm-message"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" id="btn-confirm-no">Quay lại</button>
+                    <button type="button" id="btn-confirm-yes">Tiếp tục</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-error">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p style="font-size:18px" class="modal-title text-danger">Thông báo</p>
+                </div>
+                <div class="modal-body">
+                    <span id="error-message"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-success">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p style="font-size:18px" class="modal-title text-highlight">Thành công</p>
+                </div>
+                <div class="modal-body">
+                    <span id="success-message"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var saveJobUrl = "https://www.topcv.vn/viec-lam/luu-viec";
+        var unsaveJobUrl = "https://www.topcv.vn/viec-lam/bo-luu-viec";
+        var savedJobListUrl = "https://www.topcv.vn/viec-lam-da-luu";
+    </script>
+    <script src="./v3/js/save-job.js?v=1.4" type="text/javascript"></script>
+    <style>
+        .slide-down {
+            top: 0px !important;
+            display: block !important;
+        }
+
+        #topcv-popover-container.slide-down #topcv-popover-dialog {
+            width: 500px;
+            -webkit-animation-name: slideDownEnter;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease-out;
+            -webkit-animation-duration: .4s;
+            -webkit-animation-fill-mode: forwards;
+            animation-name: slideDownEnter;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-duration: .4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes slideDownEnter {
+            0% {
+                transform: translateY(-150%)
+            }
+
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes slideDownExit {
+            0% {
+                transform: translateY(0)
+            }
+
+            to {
+                transform: translateY(-150%)
+            }
+        }
+
+        @keyframes slideUpEnter {
+            0% {
+                transform: translateY(150%)
+            }
+
+            to {
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes slideUpExit {
+            0% {
+                transform: translateY(0)
+            }
+
+            to {
+                transform: translateY(150%)
+            }
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js"></script>
+</body>
+
+</html>

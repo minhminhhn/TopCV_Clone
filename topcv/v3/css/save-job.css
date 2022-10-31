@@ -1,0 +1,38 @@
+.box-save-job {
+    text-align: center;
+    margin-top: 20px
+}
+
+.box-save-job a {
+    background: #f2fbf6;
+    border-radius: 3px;
+    padding: 5px
+}
+
+.box-save-job .save {
+    font-size: 13px;
+    text-decoration: none
+}
+
+.box-save-job .unsave {
+    font-size: 13px;
+    text-decoration: none
+}
+
+.box-save-job a:focus {
+    color: #00b14f
+}
+
+.job-saved .save {
+    display: none
+}
+
+.job-notsave .unsave {
+    display: none
+}
+
+.box-saved-job .not-save-job {
+    display: none
+}
+
+.box-not-save-job .saved-job {}
